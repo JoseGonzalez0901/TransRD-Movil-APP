@@ -16,21 +16,26 @@ namespace TransRD.ViewModels
                     Line = "Línea 1 - Centro",
                     Time = "10 min · 3 paradas",
                     Status = "A tiempo",
-                    StatusColor = Colors.Green
+                    StatusColor = Colors.Green,
+                    Icon= "train_white_icon.png"
                 },
                 new Route
                 {
                     Line = "Línea 2 - Pedro Mir",
                     Time = "22 min · 8 paradas",
                     Status = "5 min de retraso",
-                    StatusColor = Colors.Red
+                    StatusColor = Colors.Red,
+                    Icon= "train_white_icon.png"
+
                 },
                 new Route
                 {
                     Line = "Línea 1 - Casandra Damirón",
                     Time = "35 min · 10 paradas",
                     Status = "A tiempo",
-                    StatusColor = Colors.Green
+                    StatusColor = Colors.Green,
+                    Icon= "train_white_icon.png"
+
                 }
             };
         }

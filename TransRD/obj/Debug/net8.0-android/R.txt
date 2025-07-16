@@ -3086,8 +3086,9 @@ int drawable test_level_drawable 0x7f0700c6
 int drawable tooltip_frame_dark 0x7f0700c7
 int drawable tooltip_frame_light 0x7f0700c8
 int drawable train_icon 0x7f0700c9
-int drawable visibility_icon 0x7f0700ca
-int drawable visibilityoff_icon 0x7f0700cb
+int drawable train_white_icon 0x7f0700ca
+int drawable visibility_icon 0x7f0700cb
+int drawable visibilityoff_icon 0x7f0700cc
 int id accelerate 0x7f080000
 int id accessibility_action_clickable_span 0x7f080001
 int id accessibility_custom_action_0 0x7f080002

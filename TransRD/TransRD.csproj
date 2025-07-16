@@ -74,6 +74,7 @@
 	  <None Remove="Resources\Images\perfil_icon.png" />
 	  <None Remove="Resources\Images\route_icon.png" />
 	  <None Remove="Resources\Images\train_icon.png" />
+	  <None Remove="Resources\Images\train_white_icon.png" />
 	</ItemGroup>
 
 
@@ -81,6 +82,7 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.90" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -8,5 +8,7 @@ namespace TransRD.Models
         public string Time { get; set; }
         public string Status { get; set; }
         public Color StatusColor { get; set; }
+
+        public string Icon { get; set; } 
     }
 }
