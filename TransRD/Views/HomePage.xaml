@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:TransRD.ViewModels"
+             xmlns:models="clr-namespace:TransRD.Models"
+             x:Class="TransRD.Views.HomePage"
+             x:DataType="viewmodel:HomeViewModel"
+             xmlns:controls="clr-namespace:TransRD.Controls"
+             BackgroundColor="White"
+             Title="TransRD"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Encabezado -->
+            <Grid ColumnDefinitions="Auto,Auto,Auto,*" VerticalOptions="Center">
+                
+                <controls:CircleIcon
+                Size="50"
+                IconSize="30"
+                BackgroundColor="#2477f7"
+                ImageSource="route_icon.png"
+                Grid.Column="0"/>
+                <Label Text="TransRD" 
+                       FontSize="24" 
+                       TextColor="Black" 
+                       FontAttributes="Bold" 
+                       Grid.Column="1"
+                       Margin="020"/>
+                <controls:CircleIcon
+                Size="30"
+                IconSize="24"
+                BackgroundColor="#fafafa"
+                ImageSource="notification_icon.png"
+                Grid.Column="2"/>       
+                <controls:CircleIcon
+                Size="50"
+                IconSize="24"
+                BackgroundColor="#fafafa"
+                ImageSource="perfil_icon.png"
+                Grid.Column="3"
+                HorizontalOptions="End"/>
+            </Grid>
+
+          
+           
+
+            <!-- Buscador -->
+            <Frame CornerRadius="10" BackgroundColor="#fafafa" Padding="10">
+                <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                    <Image Source="location_icon.png" HeightRequest="24" WidthRequest="24" Grid.Column="0" VerticalOptions="Center"/>
+                    <Entry Placeholder="¿A dónde vas?" Grid.Column="1" VerticalOptions="Center"/>
+                    <Image Source="mic_icon.png" HeightRequest="24" WidthRequest="24" Grid.Column="2" VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+
+            <!-- Mapa -->
+            <Frame CornerRadius="15" HasShadow="True" Padding="0">
+                <Image Source="map_placeholder.png" Aspect="AspectFill" HeightRequest="200"/>
+            </Frame>
+
+            <!-- Filtros -->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button ImageSource="train_icon.png" Text="Metro" BackgroundColor="Orange" TextColor="White" />
+                <Button ImageSource="bus_icon.png" Text="OMSA" BackgroundColor="LightGray"/>
+                <Button ImageSource="car_icon.png" Text="Públicos" BackgroundColor="LightGray"/>
+            </HorizontalStackLayout>
+
+            <!-- Rutas disponibles -->
+            <Label Text="Rutas Disponibles" FontSize="18" FontAttributes="Bold" />
+
+            <!-- Aquí agregamos el CollectionView -->
+            <CollectionView ItemsSource="{Binding AvailableRoutes}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Route">
+                        <Frame CornerRadius="10"
+                   Padding="10"
+                   BackgroundColor="#fafafa">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Line}" FontAttributes="Bold" TextColor="Black"/>
+                                <Label Text="{Binding Time}" FontSize="12" TextColor="Black"/>
+                                <Label Text="{Binding Status}" FontSize="12" TextColor="{Binding StatusColor}"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+            <!-- Botón Planificar Ruta -->
+            <Button 
+                    ImageSource="route_icon.png"
+                    Text="Planificar Ruta"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    CornerRadius="20"
+                    HeightRequest="50"/>
+
+            <!-- Footer -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,20,0,0">
+                <Label Text="Inicio" />
+                <Label Text="Rutas" FontAttributes="Bold"/>
+                <Label Text="Historial" />
+                <Label Text="Perfil" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
