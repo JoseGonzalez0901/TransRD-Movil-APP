@@ -8,7 +8,7 @@
 
 		<!-- SDK de Windows compatible con MVVM Toolkit -->
 		<WindowsSdkPackageVersion>10.0.19041.53</WindowsSdkPackageVersion>
-
+		<TargetFramework>net8.0-android</TargetFramework>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>TransRD</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -36,6 +36,8 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<Configurations>Debug;Release;Android</Configurations>
+		<Platforms>AnyCPU;ARM32</Platforms>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
@@ -80,13 +82,15 @@
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Mapsui.Maui" Version="4.1.9" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
-		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.90" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<MauiXaml Update="Controls\CircleIcon.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Controls\Mapcontrol.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Controls\PasswordEntry.xaml">

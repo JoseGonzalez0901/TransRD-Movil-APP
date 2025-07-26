@@ -1,20 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransRD", "TransRD\TransRD.csproj", "{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransRD", "TransRD\TransRD.csproj", "{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Android|Any CPU = Android|Any CPU
+		Android|ARM32 = Android|ARM32
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM32 = Debug|ARM32
 		Release|Any CPU = Release|Any CPU
+		Release|ARM32 = Release|ARM32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Android|Any CPU.ActiveCfg = Android|Any CPU
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Android|Any CPU.Build.0 = Android|Any CPU
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Android|Any CPU.Deploy.0 = Android|Any CPU
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Android|ARM32.ActiveCfg = Android|ARM32
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Android|ARM32.Build.0 = Android|ARM32
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Android|ARM32.Deploy.0 = Android|ARM32
 		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Debug|ARM32.ActiveCfg = Debug|ARM32
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Debug|ARM32.Build.0 = Debug|ARM32
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Debug|ARM32.Deploy.0 = Debug|ARM32
 		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Release|ARM32.ActiveCfg = Release|ARM32
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Release|ARM32.Build.0 = Release|ARM32
+		{3244C4D3-DD7B-48E3-B8C9-9EA61B0FBE3B}.Release|ARM32.Deploy.0 = Release|ARM32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -29,6 +29,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Controls.CircleIco
 build_metadata.AdditionalFiles.TargetPath = Controls\CircleIcon.xaml
 build_metadata.AdditionalFiles.RelativePath = Controls\CircleIcon.xaml
 
+[C:/Users/3898272/source/repos/TransRD-Movil-APP/TransRD/Controls/Mapcontrol.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Controls.Mapcontrol.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\Mapcontrol.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\Mapcontrol.xaml
+
 [C:/Users/3898272/source/repos/TransRD-Movil-APP/TransRD/Controls/PasswordEntry.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Controls.PasswordEntry.xaml

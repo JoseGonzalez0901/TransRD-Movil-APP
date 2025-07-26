@@ -10,10 +10,10 @@
       "TransRD/1.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.3.2",
+          "Mapsui.Maui": "4.1.9",
           "Microsoft.Extensions.Logging.Debug": "9.0.0",
           "Microsoft.Maui.Controls": "8.0.100",
           "Microsoft.Maui.Controls.Compatibility": "8.0.100",
-          "Microsoft.Maui.Controls.Maps": "9.0.90",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.53"
         },
         "runtime": {
@@ -32,11 +32,135 @@
           }
         }
       },
+      "BruTile/5.0.6": {
+        "runtime": {
+          "lib/net6.0/BruTile.dll": {
+            "assemblyVersion": "5.0.6.0",
+            "fileVersion": "5.0.6.0"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.3.2": {
         "runtime": {
           "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
             "assemblyVersion": "8.3.0.0",
             "fileVersion": "8.3.2.1"
+          }
+        }
+      },
+      "ExCSS/4.2.3": {
+        "runtime": {
+          "lib/net7.0/ExCSS.dll": {
+            "assemblyVersion": "4.2.3.0",
+            "fileVersion": "4.2.3.0"
+          }
+        }
+      },
+      "HarfBuzzSharp/7.3.0.3": {
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "7.3.0.3",
+          "HarfBuzzSharp.NativeAssets.macOS": "7.3.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/HarfBuzzSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "7.3.0.3"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3"
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/7.3.0.3": {},
+      "HarfBuzzSharp.NativeAssets.Win32/7.3.0.3": {
+        "native": {
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Mapsui/4.1.9": {
+        "runtime": {
+          "lib/net6.0/Mapsui.dll": {
+            "assemblyVersion": "4.1.9.0",
+            "fileVersion": "4.1.9.0"
+          }
+        }
+      },
+      "Mapsui.Maui/4.1.9": {
+        "dependencies": {
+          "BruTile": "5.0.6",
+          "HarfBuzzSharp": "7.3.0.3",
+          "Mapsui": "4.1.9",
+          "Mapsui.Nts": "4.1.9",
+          "Mapsui.Rendering.Skia": "4.1.9",
+          "Mapsui.Tiling": "4.1.9",
+          "Microsoft.Maui.Controls": "8.0.100",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.100",
+          "NetTopologySuite": "2.5.0",
+          "NetTopologySuite.IO.GeoJSON4STJ": "4.0.0",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9",
+          "SkiaSharp.NativeAssets.Linux": "2.88.9",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9",
+          "SkiaSharp.Views.Maui.Controls.Compatibility": "2.88.9",
+          "Svg.Skia": "1.0.0.3",
+          "System.Memory": "4.5.5",
+          "Topten.RichTextKit": "0.4.166"
+        },
+        "runtime": {
+          "lib/net8.0/Mapsui.UI.Maui.dll": {
+            "assemblyVersion": "4.1.9.0",
+            "fileVersion": "4.1.9.0"
+          }
+        }
+      },
+      "Mapsui.Nts/4.1.9": {
+        "dependencies": {
+          "Mapsui": "4.1.9",
+          "NetTopologySuite": "2.5.0",
+          "NetTopologySuite.IO.GeoJSON4STJ": "4.0.0",
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/net6.0/Mapsui.Nts.dll": {
+            "assemblyVersion": "4.1.9.0",
+            "fileVersion": "4.1.9.0"
+          }
+        }
+      },
+      "Mapsui.Rendering.Skia/4.1.9": {
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "Mapsui": "4.1.9",
+          "Mapsui.Nts": "4.1.9",
+          "NetTopologySuite": "2.5.0",
+          "NetTopologySuite.IO.GeoJSON4STJ": "4.0.0",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9",
+          "SkiaSharp.NativeAssets.Linux": "2.88.9",
+          "Svg.Skia": "1.0.0.3",
+          "System.Memory": "4.5.5",
+          "Topten.RichTextKit": "0.4.166"
+        },
+        "runtime": {
+          "lib/net6.0/Mapsui.Rendering.Skia.dll": {
+            "assemblyVersion": "4.1.9.0",
+            "fileVersion": "4.1.9.0"
+          }
+        }
+      },
+      "Mapsui.Tiling/4.1.9": {
+        "dependencies": {
+          "BruTile": "5.0.6",
+          "Mapsui": "4.1.9"
+        },
+        "runtime": {
+          "lib/net6.0/Mapsui.Tiling.dll": {
+            "assemblyVersion": "4.1.9.0",
+            "fileVersion": "4.1.9.0"
           }
         }
       },
@@ -311,17 +435,6 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Maps/9.0.90": {
-        "dependencies": {
-          "Microsoft.Maui.Maps": "9.0.90"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "9.0.9025.36106"
-          }
-        }
-      },
       "Microsoft.Maui.Controls.Xaml/8.0.100": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "8.0.0",
@@ -390,14 +503,6 @@
           "lib/net8.0-windows10.0.19041/Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "8.1.24.55705"
-          }
-        }
-      },
-      "Microsoft.Maui.Maps/9.0.90": {
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "9.0.9025.36106"
           }
         }
       },
@@ -475,11 +580,219 @@
           }
         }
       },
+      "NetTopologySuite/2.5.0": {
+        "dependencies": {
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "NetTopologySuite.Features/2.1.0": {
+        "dependencies": {
+          "NetTopologySuite": "2.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.Features.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+        "dependencies": {
+          "NetTopologySuite": "2.5.0",
+          "NetTopologySuite.Features": "2.1.0",
+          "System.Text.Json": "6.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.GeoJSON4STJ.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "ShimSkiaSharp/1.0.0.3": {
+        "runtime": {
+          "lib/net6.0/ShimSkiaSharp.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.9",
+          "SkiaSharp.NativeAssets.macOS": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.9": {},
+      "SkiaSharp.NativeAssets.Win32/2.88.9": {
+        "native": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.WinUI/2.88.9": {
+        "runtime": {
+          "runtimes/win-x64/lib/net6.0-windows10.0.19041/SkiaSharp.Views.WinUI.Native.Projection.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        },
+        "native": {
+          "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.dll": {
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.winmd": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/2.88.9": {
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Core": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.18362.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls.Compatibility/2.88.9": {
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.18362.0/SkiaSharp.Views.Maui.Controls.Compatibility.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/2.88.9": {
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.Views.WinUI": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.18362.0/SkiaSharp.Views.Maui.Core.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/2.88.9": {
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.NativeAssets.WinUI": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041.0/SkiaSharp.Views.Windows.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "Svg.Custom/1.0.0.3": {
+        "dependencies": {
+          "ExCSS": "4.2.3"
+        },
+        "runtime": {
+          "lib/net6.0/Svg.Custom.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
+        }
+      },
+      "Svg.Model/1.0.0.3": {
+        "dependencies": {
+          "ShimSkiaSharp": "1.0.0.3",
+          "Svg.Custom": "1.0.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/Svg.Model.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
+        }
+      },
+      "Svg.Skia/1.0.0.3": {
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9",
+          "Svg.Custom": "1.0.0.3",
+          "Svg.Model": "1.0.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/Svg.Skia.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/9.0.0": {
         "runtime": {
           "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {},
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Text.Encodings.Web/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Text.Json/6.0.3": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0"
+        }
+      },
+      "Topten.RichTextKit/0.4.166": {
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Linux": "2.8.2.3",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9",
+          "SkiaSharp.NativeAssets.Linux": "2.88.9"
+        },
+        "runtime": {
+          "lib/net5.0/Topten.RichTextKit.dll": {
+            "assemblyVersion": "0.4.166.0",
+            "fileVersion": "0.4.166.0"
           }
         }
       }
@@ -496,12 +809,89 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BruTile/5.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JsPmrvFy6rZFH8Q3nHSi+wu8og93hqmnzL+6EhiznHU42yB8LETgeZWPZCfSCUTdMP3JrnwxCQ1UUXYEHhaWww==",
+      "path": "brutile/5.0.6",
+      "hashPath": "brutile.5.0.6.nupkg.sha512"
+    },
     "CommunityToolkit.Mvvm/8.3.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-m8EolE1A0Updj68WTsZSGI6VWb6mUqHPh7QFo0kt7+JPhYMNXRS1ch8TS/oITAdcxTLrwMOp3ku1KjeG1/Zdpg==",
       "path": "communitytoolkit.mvvm/8.3.2",
       "hashPath": "communitytoolkit.mvvm.8.3.2.nupkg.sha512"
+    },
+    "ExCSS/4.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SyeAfu2wL5247sipJoPUzQfjiwQtfSd8hN4IbgoyVcDx4PP6Dud4znwPRibWQzLtTlUxYYcbf5f4p+EfFC7KtQ==",
+      "path": "excss/4.2.3",
+      "hashPath": "excss.4.2.3.nupkg.sha512"
+    },
+    "HarfBuzzSharp/7.3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hq+5+gx10coOvuRgB13KBwiWxJq1QeYuhtVLbA01ZCWaugOnolUahF44KvrQTUUHDNk/C7HB6SMaebsZeOdhgg==",
+      "path": "harfbuzzsharp/7.3.0.3",
+      "hashPath": "harfbuzzsharp.7.3.0.3.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qu1yJSHEN7PD3+fqfkaClnORWN5e2xJ2Xoziz/GUi/oBT1Z+Dp2oZeiONKP6NFltboSOBkvH90QuOA6YN/U1zg==",
+      "path": "harfbuzzsharp.nativeassets.linux/2.8.2.3",
+      "hashPath": "harfbuzzsharp.nativeassets.linux.2.8.2.3.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.macOS/7.3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UAwIYnkbBTzBJv1Id8FijY/i8QiIepRemSXufU8fyzwWhYJdx4+ajG8yQUie5HW/uusbVLFSr26muSlJOFDgSw==",
+      "path": "harfbuzzsharp.nativeassets.macos/7.3.0.3",
+      "hashPath": "harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.Win32/7.3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RPxRXD16KtSs8Yxr2RK9Qs7AwyN9MlpqZIYs0AvfaJwl7RAtVhC0+u2f2SKwX0uMYYd3O98Z+OBA1sj6aWVKQA==",
+      "path": "harfbuzzsharp.nativeassets.win32/7.3.0.3",
+      "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512"
+    },
+    "Mapsui/4.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C+PueUr1PtjGtJ7JdHiZVF7lRfebr6jD1EhS1W0eq7rISFj51U5PGhflEeaocv1N3gJb7iqldrAbmX8GpY4+6A==",
+      "path": "mapsui/4.1.9",
+      "hashPath": "mapsui.4.1.9.nupkg.sha512"
+    },
+    "Mapsui.Maui/4.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cj/6pNtHWb9fn7rzNCZwCU2Qd80FaSCxpIuW9tUdFrxQgNFF0DHmTVvPWHQP+T6DRfb7Lw6mZXAQKgoTblcr0A==",
+      "path": "mapsui.maui/4.1.9",
+      "hashPath": "mapsui.maui.4.1.9.nupkg.sha512"
+    },
+    "Mapsui.Nts/4.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bnNKg/cIafxj1VenxjBiX3QWUradfisqvg88CQbO+X06y4GM1NsAQtY4Q8AspCC1R2cn1/mLzEJjASnRSAws7g==",
+      "path": "mapsui.nts/4.1.9",
+      "hashPath": "mapsui.nts.4.1.9.nupkg.sha512"
+    },
+    "Mapsui.Rendering.Skia/4.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XG+m+NR5pjyx/sZnqNFwVKVY/+aPOdk+i4Z3O/mttkkzulFAxOO1mX53/0L0bAAHh5DcemXUD8xhgPNV75NuQg==",
+      "path": "mapsui.rendering.skia/4.1.9",
+      "hashPath": "mapsui.rendering.skia.4.1.9.nupkg.sha512"
+    },
+    "Mapsui.Tiling/4.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k3D3ERv7/S3vMRYpfviqzFtV98/aCae5bNdjwEKZne9eK1GXPZhp5c9wy29iXb6+DZyDAI1SRvEodIH2R2+bug==",
+      "path": "mapsui.tiling/4.1.9",
+      "hashPath": "mapsui.tiling.4.1.9.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/8.0.0": {
       "type": "package",
@@ -608,13 +998,6 @@
       "path": "microsoft.maui.controls.core/8.0.100",
       "hashPath": "microsoft.maui.controls.core.8.0.100.nupkg.sha512"
     },
-    "Microsoft.Maui.Controls.Maps/9.0.90": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-EXEQrCrop53RFxZQ77EngkO7Ng/vT1q2EnarGb+Zqbfd8iONyT9w+6WrpmFPexTiYLqNUyLIElj4aMdZMHqWgg==",
-      "path": "microsoft.maui.controls.maps/9.0.90",
-      "hashPath": "microsoft.maui.controls.maps.9.0.90.nupkg.sha512"
-    },
     "Microsoft.Maui.Controls.Xaml/8.0.100": {
       "type": "package",
       "serviceable": true,
@@ -650,13 +1033,6 @@
       "path": "microsoft.maui.graphics.win2d.winui.desktop/8.0.100",
       "hashPath": "microsoft.maui.graphics.win2d.winui.desktop.8.0.100.nupkg.sha512"
     },
-    "Microsoft.Maui.Maps/9.0.90": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QtJPeATO5DLtHWYpbiVXRzGB0EZdHbIGJz0Wi6KXZyLTVX6vXfHWPgo4PPIiVVkVDHlOrG8xl4kq6RKqE5UOrw==",
-      "path": "microsoft.maui.maps/9.0.90",
-      "hashPath": "microsoft.maui.maps.9.0.90.nupkg.sha512"
-    },
     "Microsoft.Maui.Resizetizer/8.0.100": {
       "type": "package",
       "serviceable": true,
@@ -678,12 +1054,166 @@
       "path": "microsoft.windowsappsdk/1.5.240802000",
       "hashPath": "microsoft.windowsappsdk.1.5.240802000.nupkg.sha512"
     },
+    "NetTopologySuite/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5/+2O2ADomEdUn09mlSigACdqvAf0m/pVPGtIPEPQWnyrVykYY0NlfXLIdkMgi41kvH9kNrPqYaFBTZtHYH7Xw==",
+      "path": "nettopologysuite/2.5.0",
+      "hashPath": "nettopologysuite.2.5.0.nupkg.sha512"
+    },
+    "NetTopologySuite.Features/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Iq+Ie9WZJj8Pyu3asHZ/UwZLim786QzWC0DmLEzFK2u3BeLHDK7iWfsYBLDb/RCBUql8VBmW6LMlsJ+LKUHduA==",
+      "path": "nettopologysuite.features/2.1.0",
+      "hashPath": "nettopologysuite.features.2.1.0.nupkg.sha512"
+    },
+    "NetTopologySuite.IO.GeoJSON4STJ/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jdm9qBVDcHkrVn3fm3knw6pGu3Ggn31tGVRyIP1/5HSL+8EDPfUnEZF0+oVFBkOKR9tqu9aV2jmEX42Kq8F2Yw==",
+      "path": "nettopologysuite.io.geojson4stj/4.0.0",
+      "hashPath": "nettopologysuite.io.geojson4stj.4.0.0.nupkg.sha512"
+    },
+    "ShimSkiaSharp/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xIvruo8cU+APpa2v4cYYuWt8vml2oI8cxilJrozisgNniPn9ZSugluI93ld+R+R0SDLHvwakVgk9rH+os+2uCw==",
+      "path": "shimskiasharp/1.0.0.3",
+      "hashPath": "shimskiasharp.1.0.0.3.nupkg.sha512"
+    },
+    "SkiaSharp/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3MD5VHjXXieSHCleRLuaTXmL2pD0mB7CcOB1x2kA1I4bhptf4e3R27iM93264ZYuAq6mkUyX5XbcxnZvMJYc1Q==",
+      "path": "skiasharp/2.88.9",
+      "hashPath": "skiasharp.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.HarfBuzz/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5lyjX04CSWTKFYMSNN6SMupV2qzYDr8W/u8S3ZEkr+Sg3kOi0YE06EOqG0tzn/YPBID89xam4L3rz3hUUKOGEQ==",
+      "path": "skiasharp.harfbuzz/2.88.9",
+      "hashPath": "skiasharp.harfbuzz.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.Linux/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cWSaJKVPWAaT/WIn9c8T5uT/l4ETwHxNJTkEOtNKjphNo8AW6TF9O32aRkxqw3l8GUdUo66Bu7EiqtFh/XG0Zg==",
+      "path": "skiasharp.nativeassets.linux/2.88.9",
+      "hashPath": "skiasharp.nativeassets.linux.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.macOS/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nv5spmKc4505Ep7oUoJ5vp3KweFpeNqxpyGDWyeEPTX2uR6S6syXIm3gj75dM0YJz7NPvcix48mR5laqs8dPuA==",
+      "path": "skiasharp.nativeassets.macos/2.88.9",
+      "hashPath": "skiasharp.nativeassets.macos.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.Win32/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wb2kYgU7iy84nQLYZwMeJXixvK++GoIuECjU4ECaUKNuflyRlJKyiRhN1MAHswvlvzuvkrjRWlK0Za6+kYQK7w==",
+      "path": "skiasharp.nativeassets.win32/2.88.9",
+      "hashPath": "skiasharp.nativeassets.win32.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.WinUI/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l/AL4vL/jQDWNeKeMCayodNHC/QVhl7M9PYfSmkEja1JC+BHXFuHdPecfqWHVJl1GR+ALg3I7XpZ2w32BM6LRw==",
+      "path": "skiasharp.nativeassets.winui/2.88.9",
+      "hashPath": "skiasharp.nativeassets.winui.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Maui.Controls/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GXTOwh7vlCkiJAAKaUBSWrF9jRyD+sYSJANgVFeTtf52lRELzBbcvM5+HVM/PI7Z/5yZ/e13n/z7VQLza6hpLQ==",
+      "path": "skiasharp.views.maui.controls/2.88.9",
+      "hashPath": "skiasharp.views.maui.controls.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Maui.Controls.Compatibility/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-skJ5mSGxFpssIMZ2Z/cb6MJ/6kylo5ieMDqqkMhBVpemxzThtVZZ96EzluU4tzlZS6hwqR9QaPo1EDpLV+OMdg==",
+      "path": "skiasharp.views.maui.controls.compatibility/2.88.9",
+      "hashPath": "skiasharp.views.maui.controls.compatibility.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Maui.Core/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KtKtaGGHJRlxr+aY1owzwc11nOTzAoLWUGPN5y6dvw+B7m+V5Y+efPkUnbN4VtaZ37iYtNH3lY7VGqg+NSRjNA==",
+      "path": "skiasharp.views.maui.core/2.88.9",
+      "hashPath": "skiasharp.views.maui.core.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.Views.WinUI/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aZgmQeyhz9HOE8+2jAi8/7hqhmi8i+cUV7oTUREFHWr3h0p8ExyIaML6KckWQwnCFZZlof7ky6vCblgmRL/aCw==",
+      "path": "skiasharp.views.winui/2.88.9",
+      "hashPath": "skiasharp.views.winui.2.88.9.nupkg.sha512"
+    },
+    "Svg.Custom/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QjbtwFhnv7cxf3GkRBMe9fjwJ8NmD/q+f2UdNQa5lO6MypYxi9p93gb58koTaQvUvVzO6/tM7Zx/KFwnD6Fblg==",
+      "path": "svg.custom/1.0.0.3",
+      "hashPath": "svg.custom.1.0.0.3.nupkg.sha512"
+    },
+    "Svg.Model/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JumLfSlV4bg5d+RO4zxW7yGx6eCqqJtAZ3VJHJA3QlH/lJvBc3kSQrNv/p9TF7atl56CR4wD14+DQ591Rnh6sg==",
+      "path": "svg.model/1.0.0.3",
+      "hashPath": "svg.model.1.0.0.3.nupkg.sha512"
+    },
+    "Svg.Skia/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W786IMogol+VImiN6KgANvrZAprQ2Cb5UcaUFgCzwc4OXRxq/fviy1SyIU/X7svNmcWAq+ijzBKkgBQMVFtAhQ==",
+      "path": "svg.skia/1.0.0.3",
+      "hashPath": "svg.skia.1.0.0.3.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/9.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ddppcFpnbohLWdYKr/ZeLZHmmI+DXFgZ3Snq+/E7SwcdW4UnvxmaugkwGywvGVWkHPGCSZjCP+MLzu23AL5SDw==",
       "path": "system.diagnostics.diagnosticsource/9.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "path": "system.text.encodings.web/6.0.0",
+      "hashPath": "system.text.encodings.web.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Bi8pSdTTVNVKcGFiU1o9Iq6FwFyGQmgBgGHxy9pPvZANXc1cT6D72j+r/H/NsyVnWxKIxOgI3o7DrAwC3zcaA==",
+      "path": "system.text.json/6.0.3",
+      "hashPath": "system.text.json.6.0.3.nupkg.sha512"
+    },
+    "Topten.RichTextKit/0.4.166": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QJiqzi31Cd/QrinlAKvqiqIe0GOLijCcBCnLDHYXpOsJ5CmV4VtbUNAZ4a5VErhlInwX4gkMVsfb1ZRR8o1fdA==",
+      "path": "topten.richtextkit/0.4.166",
+      "hashPath": "topten.richtextkit.0.4.166.nupkg.sha512"
     }
   }
 }

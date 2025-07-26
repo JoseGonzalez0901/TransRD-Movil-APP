@@ -70,6 +70,10 @@
               "target": "Package",
               "version": "[8.3.2, )"
             },
+            "Mapsui.Maui": {
+              "target": "Package",
+              "version": "[4.1.9, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -81,10 +85,6 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
-            },
-            "Microsoft.Maui.Controls.Maps": {
-              "target": "Package",
-              "version": "[9.0.90, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -121,6 +121,10 @@
               "target": "Package",
               "version": "[8.3.2, )"
             },
+            "Mapsui.Maui": {
+              "target": "Package",
+              "version": "[4.1.9, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -132,10 +136,6 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
-            },
-            "Microsoft.Maui.Controls.Maps": {
-              "target": "Package",
-              "version": "[9.0.90, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -172,6 +172,10 @@
               "target": "Package",
               "version": "[8.3.2, )"
             },
+            "Mapsui.Maui": {
+              "target": "Package",
+              "version": "[4.1.9, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -183,10 +187,6 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
-            },
-            "Microsoft.Maui.Controls.Maps": {
-              "target": "Package",
-              "version": "[9.0.90, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -224,6 +224,10 @@
               "target": "Package",
               "version": "[8.3.2, )"
             },
+            "Mapsui.Maui": {
+              "target": "Package",
+              "version": "[4.1.9, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -235,10 +239,6 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
-            },
-            "Microsoft.Maui.Controls.Maps": {
-              "target": "Package",
-              "version": "[9.0.90, )"
             }
           },
           "imports": [
