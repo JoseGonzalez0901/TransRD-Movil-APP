@@ -3,17 +3,13 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Maui.Graphics;
 using TransRD.Models;
-using Microsoft.Maui.Graphics;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+
 namespace TransRD.ViewModels
 {
     public class HomeViewModel : ObservableObject
     {
-        // Rutas disponibles
-        public ObservableCollection<Route> AvailableRoutes { get; set; }
+        public ObservableCollection<Route> AvailableRoutes { get; set; } = new();
 
-        // Comando de selección de transporte
         public ICommand SelectTransportCommand { get; }
 
         private string _selectedTransport;
@@ -26,87 +22,95 @@ namespace TransRD.ViewModels
                 {
                     _selectedTransport = value;
                     OnPropertyChanged();
-
-                    // Notificar cambio de estilos visuales
-                    OnPropertyChanged(nameof(MetroBackground));
-                    OnPropertyChanged(nameof(MetroTextColor));
-                    OnPropertyChanged(nameof(OMSA_Background));
-                    OnPropertyChanged(nameof(OMSA_TextColor));
-                    OnPropertyChanged(nameof(PublicosBackground));
-                    OnPropertyChanged(nameof(PublicosTextColor));
+                    UpdateTransportVisuals();
                 }
             }
         }
 
-        // Estilos dinámicos para botón "Metro"
-        public Color MetroBackground => SelectedTransport == "Metro" ? Microsoft.Maui.Graphics.Color.FromArgb("#ff6d00") : Colors.LightGray;
+        // Colores dinámicos para Metro
+        public Color MetroBackground => SelectedTransport == "Metro" ? Color.FromArgb("#ff6d00") : Colors.LightGray;
         public Color MetroTextColor => SelectedTransport == "Metro" ? Colors.White : Colors.Black;
 
-        // Estilos dinámicos para botón "OMSA"
-        public Color OMSA_Background => SelectedTransport == "OMSA" ? Microsoft.Maui.Graphics.Color.FromArgb("#64dd17") : Colors.LightGray;
+        // OMSA
+        public Color OMSA_Background => SelectedTransport == "OMSA" ? Color.FromArgb("#64dd17") : Colors.LightGray;
         public Color OMSA_TextColor => SelectedTransport == "OMSA" ? Colors.White : Colors.Black;
 
-        // Estilos dinámicos para botón "Públicos"
-        public Color PublicosBackground => SelectedTransport == "Públicos" ? Microsoft.Maui.Graphics.Color.FromArgb("#aa00ff") : Colors.LightGray;
+        // Públicos
+        public Color PublicosBackground => SelectedTransport == "Públicos" ? Color.FromArgb("#aa00ff") : Colors.LightGray;
         public Color PublicosTextColor => SelectedTransport == "Públicos" ? Colors.White : Colors.Black;
 
         public HomeViewModel()
         {
-            // Inicializar rutas
-            AvailableRoutes = new ObservableCollection<Route>
-            {
-                new Route
-                {
-                    Line = "Línea 1 - Centro",
-                    Time = "10 min · 3 paradas",
-                    Status = "A tiempo",
-                    StatusColor = Colors.Green,
-                    Icon = "train_white_icon.png",
-                    Backgraound= Microsoft.Maui.Graphics.Color.FromArgb("#ff6d00") // Color del fondo para Metro
-                }
-            };
-
-            // Inicializar comando
             SelectTransportCommand = new Command<string>(OnSelectTransport);
-
-            // Valor inicial
             SelectedTransport = "Metro";
+        }
+
+        public async Task LoadAsync()
+        {
+            // Simulación de carga de datos iniciales
+            await Task.Delay(50); // opcional
+
+            AvailableRoutes.Clear();
+            AvailableRoutes.Add(new Route
+            {
+                Line = "Línea 1 - Centro",
+                Time = "10 min · 3 paradas",
+                Status = "A tiempo",
+                StatusColor = Colors.Green,
+                Icon = "train_white_icon.png",
+                Backgraound = Color.FromArgb("#ff6d00")
+            });
+
+            OnPropertyChanged(nameof(AvailableRoutes));
         }
 
         private void OnSelectTransport(string selected)
         {
             SelectedTransport = selected;
-            AvailableRoutes[0].Icon= selected switch
+
+            var icon = selected switch
             {
                 "Metro" => "train_white_icon.png",
                 "OMSA" => "bus_white_icon.png",
                 "Públicos" => "car_white_icon.png",
-                _ => AvailableRoutes[0].Icon
+                _ => "train_white_icon.png"
             };
-            AvailableRoutes[0].Backgraound = selected switch
+
+            var color = selected switch
             {
-                "Metro" => Microsoft.Maui.Graphics.Color.FromArgb("#ff6d00"),
-                "OMSA" => Microsoft.Maui.Graphics.Color.FromArgb("#64dd17"),
-                "Públicos" => Microsoft.Maui.Graphics.Color.FromArgb("#aa00ff"),
+                "Metro" => Color.FromArgb("#ff6d00"),
+                "OMSA" => Color.FromArgb("#64dd17"),
+                "Públicos" => Color.FromArgb("#aa00ff"),
                 _ => Colors.LightGray
             };
-            if(selected=="Metro")
+
+            var status = selected switch
             {
-                AvailableRoutes[0].Status = "A tiempo";
-                AvailableRoutes[0].StatusColor = Colors.Green;
-            }
-            else if(selected=="OMSA")
+                "Metro" => ("A tiempo", Colors.Green),
+                "OMSA" => ("En ruta", Colors.Orange),
+                "Públicos" => ("Demorado", Colors.Red),
+                _ => ("Desconocido", Colors.Gray)
+            };
+
+            if (AvailableRoutes.Count > 0)
             {
-                AvailableRoutes[0].Status = "En ruta";
-                AvailableRoutes[0].StatusColor = Colors.Orange;
+                var route = AvailableRoutes[0];
+                route.Icon = icon;
+                route.Backgraound = color;
+                route.Status = status.Item1;
+                route.StatusColor = status.Item2;
+                OnPropertyChanged(nameof(AvailableRoutes));
             }
-            else if(selected=="Públicos")
-            {
-                AvailableRoutes[0].Status = "Demorado";
-                AvailableRoutes[0].StatusColor = Colors.Red;
-            }
-            // Aquí puedes agregar lógica adicional si necesitas
-            // como mostrar rutas específicas o colocar pines
+        }
+
+        private void UpdateTransportVisuals()
+        {
+            OnPropertyChanged(nameof(MetroBackground));
+            OnPropertyChanged(nameof(MetroTextColor));
+            OnPropertyChanged(nameof(OMSA_Background));
+            OnPropertyChanged(nameof(OMSA_TextColor));
+            OnPropertyChanged(nameof(PublicosBackground));
+            OnPropertyChanged(nameof(PublicosTextColor));
         }
     }
 }

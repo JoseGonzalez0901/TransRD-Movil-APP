@@ -44,9 +44,10 @@ public partial class BottomMenuView : ContentView
         if (view != null)
         {
             view.UpdateTabVisuals();
-            view.OnTabChanged((BottomMenuTab)newValue);
+            _ = view.OnTabChanged((BottomMenuTab)newValue); // Lanzamos sin bloquear
         }
     }
+
 
     private void Tab_Tapped(object sender, EventArgs e)
     {
@@ -80,24 +81,29 @@ public partial class BottomMenuView : ContentView
     /// <summary>
     /// Lógica local al cambiar pestaña.
     /// </summary>
-    private void OnTabChanged(BottomMenuTab selectedTab)
+    private async Task OnTabChanged(BottomMenuTab selectedTab)
     {
-        switch(selectedTab)
+        switch (selectedTab)
         {
-                case BottomMenuTab.Inicio:
-                Navigate.NavigateToPage(new Views.HomePage(), true);
+            case BottomMenuTab.Inicio:
+                await Shell.Current.GoToAsync("///inicio");
                 break;
-                case BottomMenuTab.Rutas:
-                //Navigate.NavigateToPage(new Views.RutasPage(), true);
+
+            case BottomMenuTab.Rutas:
+                //await Shell.Current.GoToAsync("//rutas");
                 break;
-                case BottomMenuTab.Historial:
-                //Navigate.NavigateToPage(new Views.HistorialPage(), true);
+
+            case BottomMenuTab.Historial:
+               // await Shell.Current.GoToAsync("//historial");
                 break;
-                case BottomMenuTab.Perfil:
-                Navigate.NavigateToPage(new Views.PerfilPage(), true);
+
+            case BottomMenuTab.Perfil:
+                await Shell.Current.GoToAsync("///perfil");
                 break;
         }
-       
-        //TabChanged?.Invoke(selectedTab);
+
+        TabChanged?.Invoke(selectedTab);
     }
+
+
 }

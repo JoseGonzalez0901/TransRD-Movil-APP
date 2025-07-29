@@ -1,21 +1,36 @@
 using Microsoft.Maui.Controls;
 using TransRD.Controls;
+using TransRD.ViewModels;
 
-namespace TransRD.Views;
-
-public partial class HomePage : ContentPage
+namespace TransRD.Views
 {
-    public HomePage()
+    public partial class HomePage : ContentPage
     {
-        InitializeComponent();
+        private bool _isFirstLoad = true;
 
-        BindingContext = new ViewModels.HomeViewModel();
+        public HomePage()
+        {
+            InitializeComponent();
+            BindingContext = new HomeViewModel();
+        }
 
-        // Asegura que el mapa se inicialice correctamente si necesitas personalización
-        var map = MyMapControl.Map;
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
 
-        // Si usas MapControl de MapsUI y necesitas configurar el zoom o posición inicial:
-        // map.Navigator.ZoomTo(1000, Mapsui.Utilities.AnimationLevel.None);
-        // map.Navigator.CenterOn(new Mapsui.Geometries.Point(-69.9, 18.5)); // ejemplo: Santo Domingo
+            if (_isFirstLoad)
+            {
+                _isFirstLoad = false;
+
+                if (BindingContext is HomeViewModel vm)
+                    await vm.LoadAsync();
+
+                var map = MyMapControl.Map;
+
+                // Opcional: configuración inicial del mapa
+                // map.Navigator.CenterOn(new Mapsui.Geometries.Point(-69.9, 18.5));
+                // map.Navigator.ZoomTo(1000, Mapsui.Utilities.AnimationLevel.None);
+            }
+        }
     }
 }

@@ -7,16 +7,18 @@ namespace TransRD
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new HomePage())
-            {
-                BarBackgroundColor = Colors.LightGray,
-                BarTextColor = Colors.Black
-            };
-        }
 
-       /* protected override Window CreateWindow(IActivationState? activationState)
+            MainPage = new AppShell(); // antes: NavigationPage, ahora: Shell
+            GoToStartPage();
+
+        }
+        private async void GoToStartPage()
         {
-            return new Window(new LoginPage());
-        }*/
+            // Esperar a que Shell esté completamente cargado
+            await Task.Delay(100); // opcional pero útil en Android/iOS
+
+            await Shell.Current.GoToAsync("///inicio");
+        }
     }
+
 }

@@ -371,3 +371,10 @@ C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\ios
 C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\rutas.png
 C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\perfil.png
 C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\historial.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\map_icon.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\arrow_right.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\shield_icon.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\language_icon.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\bus_green_icon.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\user_icon.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\credit_card_icon.png

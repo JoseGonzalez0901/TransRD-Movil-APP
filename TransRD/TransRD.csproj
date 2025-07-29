@@ -114,6 +114,9 @@
 		<MauiXaml Update="Controls\PasswordEntry.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Views\AppShell.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\HomePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
