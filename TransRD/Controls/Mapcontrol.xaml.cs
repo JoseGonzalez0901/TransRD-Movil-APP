@@ -54,16 +54,16 @@ public partial class Mapcontrol : ContentView
            
         }
     }
-    private void GoToLocation(double lon, double lat, double zoomLevel = 10000)
+    private void GoToLocation(double lon, double lat, double zoomLevel)
     {
        Position position = new Position(lat, lon);
 
-        MyMap.Map.Navigator.CenterOnAndZoomTo(new Position(position.Latitude, position.Longitude).ToMapsui(), 1000);
+        MyMap.Map.Navigator.CenterOnAndZoomTo(new Position(position.Latitude, position.Longitude).ToMapsui(), zoomLevel);
     }
     private async void OnCenterLocationClicked(object sender, EventArgs e)
     {
         var myLocation = await GetMyLocationAsync();
-        GoToLocation(myLocation.Longitude, myLocation.Latitude, 10);
+        GoToLocation(myLocation.Longitude, myLocation.Latitude, 50);
     }
     private static async Task<Position> GetMyLocationAsync()
     {

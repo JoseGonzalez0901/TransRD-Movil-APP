@@ -1,0 +1,53 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TransRD.Controls"
+             x:Class="TransRD.Controls.BottomMenuView"
+             x:Name="This">
+
+    <Grid Padding="20,10"
+          HeightRequest="80"
+          BackgroundColor="White"
+          ColumnDefinitions="*,*,*,*">
+
+        <!-- INICIO -->
+        <StackLayout Grid.Column="0" HorizontalOptions="Center" Spacing="4"
+                     BindingContext="{x:Static local:BottomMenuTab.Inicio}">
+            <Image x:Name="InicioIcon" HeightRequest="24" WidthRequest="24" />
+            <Label x:Name="InicioLabel" Text="Inicio" FontSize="12" />
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Tab_Tapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <!-- RUTAS -->
+        <StackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="4"
+                     BindingContext="{x:Static local:BottomMenuTab.Rutas}">
+            <Image x:Name="RutasIcon" HeightRequest="24" WidthRequest="24" />
+            <Label x:Name="RutasLabel" Text="Rutas" FontSize="12" />
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Tab_Tapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <!-- HISTORIAL -->
+        <StackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="4"
+                     BindingContext="{x:Static local:BottomMenuTab.Historial}">
+            <Image x:Name="HistorialIcon" HeightRequest="24" WidthRequest="24" />
+            <Label x:Name="HistorialLabel" Text="Historial" FontSize="12" />
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Tab_Tapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <!-- PERFIL -->
+        <StackLayout Grid.Column="3" HorizontalOptions="Center" Spacing="4"
+                     BindingContext="{x:Static local:BottomMenuTab.Perfil}">
+            <Image x:Name="PerfilIcon" HeightRequest="24" WidthRequest="24" />
+            <Label x:Name="PerfilLabel" Text="Perfil" FontSize="12" />
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Tab_Tapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+    </Grid>
+</ContentView>

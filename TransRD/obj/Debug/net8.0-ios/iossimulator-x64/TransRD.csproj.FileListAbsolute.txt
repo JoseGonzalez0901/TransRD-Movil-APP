@@ -361,3 +361,13 @@ C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\ios
 C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\TransRD.pdb
 C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\TransRD.genruntimeconfig.cache
 C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\ref\TransRD.dll
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\inicio_activo.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\rutas_activo.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\inicio.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\car_white_icon.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\historial_activo.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\perfil_activo.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\bus_white_icon.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\rutas.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\perfil.png
+C:\Users\3898272\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\historial.png

@@ -66,17 +66,32 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 <ItemGroup>
+	  <None Remove="Resources\Images\arrow_right.png" />
+	  <None Remove="Resources\Images\bus_green_icon.png" />
 	  <None Remove="Resources\Images\bus_icon.png" />
 	  <None Remove="Resources\Images\car_icon.png" />
+	  <None Remove="Resources\Images\credit_card_icon.png" />
 	  <None Remove="Resources\Images\direction_icon.svg" />
+	  <None Remove="Resources\Images\historial.png" />
+	  <None Remove="Resources\Images\historial_activo.png" />
+	  <None Remove="Resources\Images\inicio.png" />
+	  <None Remove="Resources\Images\inicio_activo.png" />
+	  <None Remove="Resources\Images\language_icon.png" />
 	  <None Remove="Resources\Images\location_icon.png" />
+	  <None Remove="Resources\Images\map_icon.png" />
 	  <None Remove="Resources\Images\mic_icon.png" />
 	  <None Remove="Resources\Images\mic_icono.png" />
 	  <None Remove="Resources\Images\notification_icon.png" />
+	  <None Remove="Resources\Images\perfil.png" />
+	  <None Remove="Resources\Images\perfil_activo.png" />
 	  <None Remove="Resources\Images\perfil_icon.png" />
 	  <None Remove="Resources\Images\route_icon.png" />
+	  <None Remove="Resources\Images\rutas.png" />
+	  <None Remove="Resources\Images\rutas_activo.png" />
+	  <None Remove="Resources\Images\shield_icon.png" />
 	  <None Remove="Resources\Images\train_icon.png" />
 	  <None Remove="Resources\Images\train_white_icon.png" />
+	  <None Remove="Resources\Images\user_icon.png" />
 	</ItemGroup>
 
 
@@ -87,6 +102,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<MauiXaml Update="Controls\BottomMenuView.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Controls\CircleIcon.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
@@ -101,6 +119,9 @@
 		</MauiXaml>
 		<MauiXaml Update="Views\LoginPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\PerfilPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\RecuperarClavePage.xaml">
 			<Generator>MSBuild:Compile</Generator>

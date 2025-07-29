@@ -4,6 +4,16 @@
         <name>TransRD</name>
     </assembly>
     <members>
+        <member name="E:TransRD.Controls.BottomMenuView.TabChanged">
+            <summary>
+            Evento opcional si la página desea reaccionar.
+            </summary>
+        </member>
+        <member name="M:TransRD.Controls.BottomMenuView.OnTabChanged(TransRD.Controls.BottomMenuTab)">
+            <summary>
+            Lógica local al cambiar pestaña.
+            </summary>
+        </member>
         <member name="T:TransRD.ViewModels.LoginViewModel">
             <inheritdoc/>
             <inheritdoc/>
