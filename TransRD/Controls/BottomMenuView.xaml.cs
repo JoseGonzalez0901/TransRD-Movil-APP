@@ -86,7 +86,7 @@ public partial class BottomMenuView : ContentView
         switch (selectedTab)
         {
             case BottomMenuTab.Inicio:
-                await Shell.Current.GoToAsync("///inicio");
+                await Navigation.PushAsync(new Views.HomePage());
                 break;
 
             case BottomMenuTab.Rutas:
@@ -98,7 +98,8 @@ public partial class BottomMenuView : ContentView
                 break;
 
             case BottomMenuTab.Perfil:
-                await Shell.Current.GoToAsync("///perfil");
+                
+
                 break;
         }
 
