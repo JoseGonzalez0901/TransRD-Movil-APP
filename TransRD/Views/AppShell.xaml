@@ -3,9 +3,29 @@
        xmlns:views="clr-namespace:TransRD.Views"
        x:Class="TransRD.AppShell">
 
-    <TabBar>
-        <ShellContent Title="Inicio" Route="inicio" ContentTemplate="{DataTemplate views:HomePage}" />
-        
-        <ShellContent Title="Perfil" Route="perfil" ContentTemplate="{DataTemplate views:PerfilPage}" />
+    <TabBar x:Name="MainTabBar">
+        <ShellContent
+            Title="Inicio"
+            Icon="inicio.png"
+            Route="inicio"
+            ContentTemplate="{DataTemplate views:HomePage}" />
+
+        <ShellContent
+            Title="Rutas"
+            Icon="rutas.png"
+            Route="rutas"
+            ContentTemplate="{DataTemplate views:RoutesPage}" />
+
+        <ShellContent
+            Title="Historial"
+            Icon="historial.png"
+            Route="historial"
+            ContentTemplate="{DataTemplate views:HistorialPage}" />
+
+        <ShellContent
+            Title="Perfil"
+            Icon="perfil.png"
+            Route="perfil"
+            ContentTemplate="{DataTemplate views:PerfilPage}" />
     </TabBar>
 </Shell>

@@ -101,6 +101,13 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
+
+	<ItemGroup>
+	  <Compile Update="Views\RoutesPage1.xaml.cs">
+	    <DependentUpon>RoutesPage1.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
 	<ItemGroup>
 		<MauiXaml Update="Controls\BottomMenuView.xaml">
 		  <Generator>MSBuild:Compile</Generator>
@@ -120,7 +127,13 @@
 		<MauiXaml Update="Views\HistorialPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Views\HomePage.xaml">
+		<MauiXaml Update="Views\HomePage1.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\RoutesPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\RoutesPage1.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\LoginPage.xaml">

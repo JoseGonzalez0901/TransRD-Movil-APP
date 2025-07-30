@@ -11,7 +11,7 @@ namespace TransRD.Views
         public HomePage()
         {
             InitializeComponent();
-            BindingContext = new HomeViewModel();
+            BindingContext = new RoutesViewModel();
         }
 
         protected override async void OnAppearing()
@@ -22,7 +22,7 @@ namespace TransRD.Views
             {
                 _isFirstLoad = false;
 
-                if (BindingContext is HomeViewModel vm)
+                if (BindingContext is RoutesViewModel vm)
                     await vm.LoadAsync();
 
                 var map = MyMapControl.Map;

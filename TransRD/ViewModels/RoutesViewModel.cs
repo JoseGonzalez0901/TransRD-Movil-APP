@@ -6,7 +6,7 @@ using TransRD.Models;
 
 namespace TransRD.ViewModels
 {
-    public class HomeViewModel : ObservableObject
+    public class RoutesViewModel : ObservableObject
     {
         public ObservableCollection<Route> AvailableRoutes { get; set; } = new();
 
@@ -39,7 +39,7 @@ namespace TransRD.ViewModels
         public Color PublicosBackground => SelectedTransport == "Públicos" ? Color.FromArgb("#aa00ff") : Colors.LightGray;
         public Color PublicosTextColor => SelectedTransport == "Públicos" ? Colors.White : Colors.Black;
 
-        public HomeViewModel()
+        public RoutesViewModel()
         {
             SelectTransportCommand = new Command<string>(OnSelectTransport);
             SelectedTransport = "Metro";

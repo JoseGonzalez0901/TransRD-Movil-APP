@@ -6,7 +6,7 @@
              xmlns:models="clr-namespace:TransRD.Models"
              xmlns:controls="clr-namespace:TransRD.Controls"
              x:Class="TransRD.Views.HomePage"
-             x:DataType="viewmodel:HomeViewModel"
+             x:DataType="viewmodel:RoutesViewModel"
              BackgroundColor="White"
              Title="TransRD"
              NavigationPage.HasNavigationBar="False">
@@ -141,7 +141,7 @@
                 HeightRequest="50"
                 HorizontalOptions="FillAndExpand" />
             <!-- Menú inferior -->
-            <controls:BottomMenuView/>
+            
         </VerticalStackLayout>
 
     </Grid>

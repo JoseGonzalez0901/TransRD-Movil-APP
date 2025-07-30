@@ -29,7 +29,7 @@
     <MauiXaml Update="Views\AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\HomePage.xaml">
+    <MauiXaml Update="Views\RoutesPage1.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\PerfilPage.xaml">

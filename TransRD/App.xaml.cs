@@ -8,7 +8,7 @@ namespace TransRD
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.HistorialPage());
+            MainPage = new AppShell();
 
         }
         private async void GoToStartPage()

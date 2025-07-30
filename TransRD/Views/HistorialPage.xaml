@@ -10,20 +10,20 @@
         <VerticalStackLayout Padding="20,0">
 
 
-                <VerticalStackLayout Padding="0,20,0,10" Spacing="20" BackgroundColor="White">
+            <VerticalStackLayout Padding="0,20,0,10" Spacing="20" BackgroundColor="White">
 
-                    <!-- Título -->
-                    <Label Text="Historial"
+                <!-- Título -->
+                <Label Text="Historial"
            FontSize="20"
            FontAttributes="Bold"
            HorizontalTextAlignment="Center"
            TextColor="Black" />
 
-                    <!-- Filtros alineados desde la izquierda -->
-                    <HorizontalStackLayout HorizontalOptions="Fill" Spacing="2">
+                <!-- Filtros alineados desde la izquierda -->
+                <HorizontalStackLayout HorizontalOptions="Fill" Spacing="2">
 
-                        <!-- TODOS (pegado a la izquierda) -->
-                        <Frame BackgroundColor="#2563EB"
+                    <!-- TODOS (pegado a la izquierda) -->
+                    <Frame BackgroundColor="#2563EB"
                CornerRadius="35"
                Padding="5"
                HasShadow="False"
@@ -31,17 +31,17 @@
                WidthRequest="80"
                Margin="0,0,0,0"
                BorderColor="White">
-                            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
-                               
-                                <Label Text="Todos"
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
+
+                            <Label Text="Todos"
                        FontSize="12"
                        TextColor="White"
                        HorizontalTextAlignment="Center"/>
-                            </VerticalStackLayout>
-                        </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                        <!-- METRO -->
-                        <Frame BackgroundColor="#F2F2F2"
+                    <!-- METRO -->
+                    <Frame BackgroundColor="#F2F2F2"
                CornerRadius="35"
                Padding="5"
                HasShadow="False"
@@ -49,17 +49,17 @@
 WidthRequest="80"
 Margin="0,0,0,0"
 BorderColor="White">
-                            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
-                                <Image Source="metro_icon.png" WidthRequest="22" HeightRequest="22" />
-                                <Label Text="Metro"
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
+                            <Image Source="metro_icon.png" WidthRequest="22" HeightRequest="22" />
+                            <Label Text="Metro"
                        FontSize="12"
                        TextColor="Black"
                        HorizontalTextAlignment="Center"/>
-                            </VerticalStackLayout>
-                        </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                        <!-- OMSA -->
-                        <Frame BackgroundColor="#F2F2F2"
+                    <!-- OMSA -->
+                    <Frame BackgroundColor="#F2F2F2"
                CornerRadius="35"
                Padding="5"
                HasShadow="False"
@@ -67,17 +67,17 @@ BorderColor="White">
 WidthRequest="80"
 Margin="0,0,0,0"
 BorderColor="White">
-                            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
-                                <Image Source="omsa_icon.png" WidthRequest="22" HeightRequest="22" />
-                                <Label Text="OMSA"
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
+                            <Image Source="omsa_icon.png" WidthRequest="22" HeightRequest="22" />
+                            <Label Text="OMSA"
                        FontSize="12"
                        TextColor="Black"
                        HorizontalTextAlignment="Center"/>
-                            </VerticalStackLayout>
-                        </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                        <!-- AUTOS -->
-                        <Frame BackgroundColor="#F2F2F2"
+                    <!-- AUTOS -->
+                    <Frame BackgroundColor="#F2F2F2"
                CornerRadius="35"
                Padding="5"
                HasShadow="False"
@@ -85,21 +85,21 @@ BorderColor="White">
 WidthRequest="80"
 Margin="0,0,0,0"
 BorderColor="White">
-                            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
-                                <Image Source="autos_icon.png" WidthRequest="22" HeightRequest="22" />
-                                <Label Text="Autos"
+                        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
+                            <Image Source="autos_icon.png" WidthRequest="22" HeightRequest="22" />
+                            <Label Text="Autos"
                        FontSize="12"
                        TextColor="Black"
                        HorizontalTextAlignment="Center"/>
-                            </VerticalStackLayout>
-                        </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
 
-                </VerticalStackLayout>
+            </VerticalStackLayout>
 
 
-                <!-- Sección Hoy -->
+            <!-- Sección Hoy -->
             <Label Text="Today" FontSize="16" FontAttributes="Bold" Margin="0,20,0,10" TextColor="Black"/>
             <VerticalStackLayout Spacing="10">
                 <!-- Viaje 1 -->
@@ -261,6 +261,4 @@ BorderColor="White">
 
         </VerticalStackLayout>
     </ScrollView>
-    <controls:BottomMenuView/>
-
 </ContentPage>
