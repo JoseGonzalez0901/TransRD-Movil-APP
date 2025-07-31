@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransRD.Views.PersonalDataPage"
+             Title="PersonalDataPage">
+    <ScrollView>
+        <!-- Perfil -->
+        <VerticalStackLayout Padding="20" Spacing="16">
+            <!-- Sección de perfil (foto + nombre + correo) -->
+            <Frame CornerRadius="16" Padding="16" BackgroundColor="White" HasShadow="False">
+                <HorizontalStackLayout Spacing="12">
+                    <!-- Avatar circular -->
+                    <Frame Padding="0"
+                   CornerRadius="40"
+                   HeightRequest="80"
+                   WidthRequest="80"
+                   IsClippedToBounds="True"
+                   BackgroundColor="Transparent"
+                   VerticalOptions="Center">
+                        <Image Source="avatar_demo.png"
+                       WidthRequest="80"
+                       HeightRequest="80"
+                       Aspect="AspectFill" />
+                    </Frame>
+
+                    <!-- Nombre y correo -->
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="María González"
+                       FontAttributes="Bold"
+                       FontSize="16"/>
+                        <Label Text="maria.gonzalez@email.com"
+                       FontSize="14"
+                       TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Información personal -->
+            <Frame CornerRadius="16" BackgroundColor="White" Padding="16" HasShadow="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Información personal" FontAttributes="Bold" FontSize="16"/>
+
+                    <Label Text="Nombre completo" FontSize="13" TextColor="Gray"/>
+                    <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False">
+                        <Entry Text="María Esperanza González Rodríguez"
+                       BackgroundColor="Transparent"
+                       FontSize="14"/>
+                    </Frame>
+
+                    <Label Text="Email" FontSize="13" TextColor="Gray"/>
+                    <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False">
+                        <Entry Text="maria.gonzalez@email.com"
+                       BackgroundColor="Transparent"
+                       FontSize="14"/>
+                    </Frame>
+
+                    <Label Text="Número" FontSize="13" TextColor="Gray"/>
+                    <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False">
+                        <Entry Text="+1 (809) 555-0123"
+                       BackgroundColor="Transparent"
+                       FontSize="14"/>
+                    </Frame>
+
+                    <Label Text="Fecha de nacimiento" FontSize="13" TextColor="Gray"/>
+                    <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False">
+                        <DatePicker Date="1990-03-15"
+                            BackgroundColor="Transparent"
+                            FontSize="14"/>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Notificaciones -->
+            <Frame CornerRadius="16" BackgroundColor="White" Padding="16" HasShadow="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Notificaciones" FontAttributes="Bold" FontSize="16"/>
+
+                    <Grid ColumnDefinitions="*,Auto" Padding="0,6">
+                        <VerticalStackLayout>
+                            <Label Text="Notificaciones push" FontSize="14"/>
+                            <Label Text="Reciba actualizaciones en tiempo real" FontSize="12" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                        <Switch IsToggled="True" Grid.Column="1" VerticalOptions="Center"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,Auto" Padding="0,6">
+                        <VerticalStackLayout>
+                            <Label Text="Alertas de retraso" FontSize="14"/>
+                            <Label Text="Recibir notificaciones de retrasos" FontSize="12" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                        <Switch IsToggled="True" Grid.Column="1" VerticalOptions="Center"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,Auto" Padding="0,6">
+                        <VerticalStackLayout>
+                            <Label Text="Actualizaciones de ruta" FontSize="14"/>
+                            <Label Text="Cambios en sus rutas" FontSize="12" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                        <Switch IsToggled="False" Grid.Column="1" VerticalOptions="Center"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Privacidad y seguridad -->
+            <Frame CornerRadius="16" BackgroundColor="White" Padding="16" HasShadow="False">
+                <VerticalStackLayout Spacing="16">
+                    <Label Text="Privacidad y seguridad" FontAttributes="Bold" FontSize="16"/>
+
+                    <Grid ColumnDefinitions="Auto,*" RowSpacing="12">
+                        <Image Source="lock_icon.png" WidthRequest="20" HeightRequest="20"/>
+                        <Label Text="Cambiar la contraseña" Grid.Column="1"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="Auto,*" RowSpacing="12">
+                        <Image Source="shield2_icon.png" WidthRequest="20" HeightRequest="20"/>
+                        <Label Text="Política de privacidad" Grid.Column="1"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="Auto,*" RowSpacing="12">
+                        <Image Source="pdf_icon.png" WidthRequest="20" HeightRequest="20"/>
+                        <Label Text="Términos de servicio" Grid.Column="1"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Botón -->
+            <Button Text="Guardar cambios"
+            BackgroundColor="#2563EB"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="12"
+            HeightRequest="50"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

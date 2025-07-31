@@ -39,14 +39,15 @@ namespace TransRD
                 var httpClient = new HttpClient(handler);
 
                 // ✅ AQUÍ es donde debes colocar la línea:
-                httpClient.BaseAddress = new Uri("http://10.0.0.9:5203/swagger");
+                httpClient.BaseAddress = new Uri("http://10.0.2.2:5187/");
 
                 return new AuthService(httpClient);
             });
 
             // Registrar VM y Pages
-            builder.Services.AddTransient<LoginViewModel>();
-            builder.Services.AddTransient<LoginPage>();
+            //builder.Services.AddTransient<LoginViewModel>();
+           // builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<PaymentMethodsPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

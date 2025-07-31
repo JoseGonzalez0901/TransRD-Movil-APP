@@ -1,0 +1,132 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransRD.Views.PaymentMethodsPage"
+             Title="Métodos de pago"
+             BackgroundColor="#F5F6FA">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- Scrollable content -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="20" Spacing="16">
+
+                <!-- Título -->
+                <Label Text="Tus métodos de pago"
+                       FontSize="16"
+                       FontAttributes="Bold" />
+
+                <!-- Tarjeta Visa -->
+                <Frame CornerRadius="12" BackgroundColor="White" Padding="12" HasShadow="False">
+                    <Grid ColumnDefinitions="Auto,*,Auto,Auto">
+                        <Image Source="visa_icon.png" WidthRequest="40" HeightRequest="24" VerticalOptions="Center"/>
+                        <VerticalStackLayout Grid.Column="1" Padding="10,0" VerticalOptions="Center">
+                            <Label Text="•••• 4532" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="Expires 12/26" FontSize="12" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                        <ImageButton Source="edit_icon.png" WidthRequest="24" HeightRequest="24" BackgroundColor="Transparent" Grid.Column="2" />
+                        <ImageButton Source="trash_icon.png" WidthRequest="24" HeightRequest="24" BackgroundColor="Transparent" Grid.Column="3" />
+                    </Grid>
+                </Frame>
+
+                <!-- Tarjeta MasterCard -->
+                <Frame CornerRadius="12" BackgroundColor="White" Padding="12" HasShadow="False">
+                    <Grid ColumnDefinitions="Auto,*,Auto,Auto">
+                        <Image Source="mastercard_icon.png" WidthRequest="40" HeightRequest="24" VerticalOptions="Center"/>
+                        <VerticalStackLayout Grid.Column="1" Padding="10,0" VerticalOptions="Center">
+                            <Label Text="•••• 8901" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="Expires 09/25" FontSize="12" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                        <ImageButton Source="edit_icon.png" WidthRequest="24" HeightRequest="24" BackgroundColor="Transparent" Grid.Column="2" />
+                        <ImageButton Source="trash_icon.png" WidthRequest="24" HeightRequest="24" BackgroundColor="Transparent" Grid.Column="3" />
+                    </Grid>
+                </Frame>
+
+                <!-- Formulario para nuevo método -->
+                <Frame CornerRadius="12" BackgroundColor="White" Padding="16" HasShadow="False">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="Agregar un nuevo método de pago" FontSize="16" FontAttributes="Bold"/>
+
+                        <!-- Número tarjeta -->
+                        <Label Text="Número de tarjeta" FontSize="13" TextColor="Gray"/>
+                        <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False" BorderColor="#E0E0E0">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <Entry Placeholder="1234 5678 9012 3456" BackgroundColor="Transparent" FontSize="14"/>
+                                <Image Source="card_icon.png" WidthRequest="24" HeightRequest="24" Grid.Column="1" VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+
+                        <!-- Fecha y CVV -->
+                        <HorizontalStackLayout Spacing="12">
+                            <!-- Fecha -->
+                            <VerticalStackLayout WidthRequest="150" VerticalOptions="Start">
+                                <Label Text="Fecha de expiración"
+                                        FontSize="13"
+                                        TextColor="Gray"
+                                        LineBreakMode="NoWrap" />
+                                <Frame BackgroundColor="#F5F5F5"
+                                       CornerRadius="8"
+                                       Padding="4"
+                                       HasShadow="False"
+                                       BorderColor="#E0E0E0"
+                                       HeightRequest="45">
+                                    <Entry Placeholder="MM/YY"
+                                           BackgroundColor="Transparent"
+                                           FontSize="14"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                            </VerticalStackLayout>
+
+                            <!-- CVV -->
+                            <VerticalStackLayout WidthRequest="100" VerticalOptions="Start">
+                                <Label Text="CVV"
+                                       FontSize="13"
+                                       TextColor="Gray"/>
+                                <Frame BackgroundColor="#F5F5F5"
+                                       CornerRadius="8"
+                                       Padding="4"
+                                       HasShadow="False"
+                                       BorderColor="#E0E0E0"
+                                       HeightRequest="45">
+                                <Entry Placeholder="•••"
+                               BackgroundColor="Transparent"
+                               FontSize="14"
+                               IsPassword="True"
+                               VerticalOptions="Center"/>
+                                </Frame>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+
+                        <!-- Apodo -->
+                        <Label Text="Apodo" FontSize="13" TextColor="Gray"/>
+                        <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False" BorderColor="#E0E0E0">
+                            <Entry Placeholder="John Doe" BackgroundColor="Transparent" FontSize="14"/>
+                        </Frame>
+
+                        <!-- Información de seguridad -->
+                        <Frame BackgroundColor="#EAF2FF" Padding="8" CornerRadius="8" HasShadow="False">
+                            <HorizontalStackLayout Spacing="6">
+                                <Image Source="shieldblue_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center"/>
+                                <Label Text="Su información de pago está encriptada y segura"
+                                       FontSize="12" VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Botón inferior fijo -->
+        <Grid Grid.Row="1" Padding="20,10,20,30" BackgroundColor="#F5F6FA">
+            <Button Text="Agregar el nuevo método de pago"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"/>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
