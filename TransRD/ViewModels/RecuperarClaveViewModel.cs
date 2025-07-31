@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TransRD.Models;
+using TransRD.Views;
 namespace TransRD.ViewModels
 {
     public partial class RecuperarClaveViewModel : ObservableObject
@@ -25,13 +26,15 @@ namespace TransRD.ViewModels
 
             // Aquí iría la lógica real para enviar el enlace de recuperación
             await Application.Current.MainPage.DisplayAlert("Enlace Enviado", "Revisa tu correo para restablecer tu contraseña.", "OK");
-            Navigate.NavigateToPage(new Views.LoginPage(), false);
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+
         }
 
         [RelayCommand]
         private async Task NavigateToLoginAsync()
         {
-            Navigate.NavigateToPage(new Views.LoginPage(), false);
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+
         }
     }
 

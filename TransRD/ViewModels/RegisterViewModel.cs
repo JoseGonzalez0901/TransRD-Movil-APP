@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using TransRD.Models;
+using TransRD.Views;
 namespace TransRD.ViewModels
 {
     public partial class RegisterViewModel : ObservableObject
@@ -53,13 +54,15 @@ namespace TransRD.ViewModels
 
             // Aquí va la lógica de registro real
             await Application.Current.MainPage.DisplayAlert("Éxito", "Usuario registrado correctamente.", "OK");
-            Navigate.NavigateToPage(new Views.LoginPage(),false);
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+
         }
 
         [RelayCommand]
         private async Task NavigateToLoginAsync()
         {
-            Navigate.NavigateToPage(new Views.LoginPage(),false);
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+
         }
     }
 }

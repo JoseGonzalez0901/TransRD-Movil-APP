@@ -1,3 +1,5 @@
+using TransRD.Views;
+
 namespace TransRD;
 
 
@@ -6,7 +8,22 @@ namespace TransRD;
         public AppShell()
         {
             InitializeComponent();
-        }
+            Routing.RegisterRoute("login", typeof(LoginPage));
+            Routing.RegisterRoute("inicio", typeof(Homepage));
+            Routing.RegisterRoute("rutas", typeof(RoutesPage));
+            Routing.RegisterRoute("historial", typeof(HistorialPage));
+            Routing.RegisterRoute("perfil", typeof(PerfilPage));
+            
+
+
+    }
+    private async void GoToStartPage()
+    {
+        // Esperar a que Shell esté completamente cargado
+        await Task.Delay(100); // opcional pero útil en Android/iOS
+
+        await Shell.Current.GoToAsync("/login");
+    }
 
     public void SetActiveTab(string route)
     {

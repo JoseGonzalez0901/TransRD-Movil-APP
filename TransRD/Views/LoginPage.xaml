@@ -5,7 +5,9 @@
              xmlns:controls="clr-namespace:TransRD.Controls"
              x:Class="TransRD.Views.LoginPage"
              x:DataType="viewmodels:LoginViewModel"
-             
+                          Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False">
     <ScrollView>

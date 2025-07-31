@@ -1,12 +1,148 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mapsui="clr-namespace:Mapsui.UI.Maui;assembly=Mapsui.UI.Maui"
+             xmlns:viewmodel="clr-namespace:TransRD.ViewModels"
+             xmlns:models="clr-namespace:TransRD.Models"
+             xmlns:controls="clr-namespace:TransRD.Controls"
              x:Class="TransRD.Views.RoutesPage"
-             Title="RoutesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:DataType="viewmodel:RoutesViewModel"
+             BackgroundColor="White"
+             Title="TransRD"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,Auto,3*,Auto,*,Auto" Padding="15" RowSpacing="10">
+
+        <!-- Encabezado -->
+        <Grid ColumnDefinitions="Auto,Auto,Auto,*" Row="0" VerticalOptions="Center">
+            <controls:CircleIcon
+                Size="50"
+                IconSize="30"
+                BackgroundColor="#2477f7"
+                ImageSource="route_icon.png"
+                Grid.Column="0"/>
+            <Label Text="TransRD" 
+                   FontSize="24" 
+                   TextColor="Black" 
+                   FontAttributes="Bold" 
+                   Grid.Column="1"
+                   Margin="0,20"/>
+            <controls:CircleIcon
+                Size="30"
+                IconSize="24"
+                BackgroundColor="#fafafa"
+                ImageSource="notification_icon.png"
+                Grid.Column="2"/>
+            <controls:CircleIcon
+                Size="50"
+                IconSize="24"
+                BackgroundColor="#fafafa"
+                ImageSource="perfil_icon.png"
+                Grid.Column="3"
+                HorizontalOptions="End"/>
+        </Grid>
+
+        <!-- Buscador -->
+        <Frame CornerRadius="10" BackgroundColor="#fafafa" Padding="10" Grid.Row="1" HorizontalOptions="FillAndExpand">
+            <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                <Image Source="location_icon.png" HeightRequest="24" WidthRequest="24" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry Placeholder="¿A dónde vas?" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                <Image Source="mic_icon.png" HeightRequest="24" WidthRequest="24" Grid.Column="2" VerticalOptions="Center"/>
+            </Grid>
+        </Frame>
+
+        <!-- Mapa -->
+        <Frame Grid.Row="2" Padding="0" HasShadow="True" CornerRadius="15" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <controls:Mapcontrol x:Name="MyMapControl" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        </Frame>
+
+        <!-- Botones filtros secundarios + título -->
+        <VerticalStackLayout Spacing="5" Padding="0,10,0,0" HorizontalOptions="FillAndExpand" Grid.Row="3">
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+        ImageSource="train_icon.png"
+        Text="Metro"
+        BackgroundColor="{Binding MetroBackground}"
+        TextColor="{Binding MetroTextColor}"
+        Command="{Binding SelectTransportCommand}"
+        CommandParameter="Metro"
+        HorizontalOptions="FillAndExpand"
+        HeightRequest="40"/>
+
+                <Button 
+        ImageSource="bus_icon.png"
+        Text="OMSA"
+        BackgroundColor="{Binding OMSA_Background}"
+        TextColor="{Binding OMSA_TextColor}"
+        Command="{Binding SelectTransportCommand}"
+        CommandParameter="OMSA"
+        HorizontalOptions="FillAndExpand"
+        HeightRequest="40"/>
+
+                <Button 
+        ImageSource="car_icon.png"
+        Text="Públicos"
+        BackgroundColor="{Binding PublicosBackground}"
+        TextColor="{Binding PublicosTextColor}"
+        Command="{Binding SelectTransportCommand}"
+        CommandParameter="Públicos"
+        HorizontalOptions="FillAndExpand"
+        HeightRequest="40"/>
+            </HorizontalStackLayout>
+
+            <Label 
+                Text="Rutas Disponibles" 
+                FontSize="18" 
+                FontAttributes="Bold" 
+                TextColor="Black" 
+               
+                Margin="0,10,0,0"/>
+        </VerticalStackLayout>
+
+        <!-- Lista rutas con scroll -->
+        <ScrollView Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <VerticalStackLayout Spacing="15" Padding="0">
+
+                <CollectionView ItemsSource="{Binding AvailableRoutes}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Route">
+                            <Frame CornerRadius="10" Padding="10" BackgroundColor="White" BorderColor="LightGray" HasShadow="False" HorizontalOptions="FillAndExpand">
+                                <Grid ColumnDefinitions="Auto,*" VerticalOptions="Center">
+                                    <controls:CircleIcon Grid.Column="0" Size="30" IconSize="20" BackgroundColor="{Binding Backgraound}" ImageSource="{Binding Icon}" Margin="0,0,15,0" VerticalOptions="Center" />
+                                    <Grid Grid.Column="1" ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" ColumnSpacing="5">
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Line}" FontAttributes="Bold" TextColor="Black" FontSize="14" />
+                                        <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="5" HorizontalOptions="End" VerticalOptions="Center">
+                                            <Label Text="{Binding Status}" FontSize="12" TextColor="{Binding StatusColor}" />
+                                            <controls:CircleIcon Size="12" IconSize="0" BackgroundColor="{Binding StatusColor}" />
+                                        </HorizontalStackLayout>
+                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding Time}" FontSize="12" TextColor="Gray" />
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Botón Planificar Ruta y Footer -->
+        <VerticalStackLayout Grid.Row="5" Spacing="5" Padding="0,10,0,0" HorizontalOptions="FillAndExpand">
+            <Button
+                Margin="5"
+                ImageSource="route_icon.png"
+                Text="Planificar Ruta"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                CornerRadius="20"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand" />
+            <!-- Menú inferior -->
+
+        </VerticalStackLayout>
+
+    </Grid>
 </ContentPage>

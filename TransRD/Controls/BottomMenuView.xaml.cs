@@ -34,7 +34,7 @@ public partial class BottomMenuView : ContentView
 
     public BottomMenuView()
     {
-        InitializeComponent();
+       // InitializeComponent();
         UpdateTabVisuals();
     }
 
@@ -62,10 +62,10 @@ public partial class BottomMenuView : ContentView
 
     private void UpdateTabVisuals()
     {
-        UpdateTab(InicioIcon, InicioLabel, BottomMenuTab.Inicio);
+       /* UpdateTab(InicioIcon, InicioLabel, BottomMenuTab.Inicio);
         UpdateTab(RutasIcon, RutasLabel, BottomMenuTab.Rutas);
         UpdateTab(HistorialIcon, HistorialLabel, BottomMenuTab.Historial);
-        UpdateTab(PerfilIcon, PerfilLabel, BottomMenuTab.Perfil);
+        UpdateTab(PerfilIcon, PerfilLabel, BottomMenuTab.Perfil);*/
     }
 
     private void UpdateTab(Image icon, Label label, BottomMenuTab tab)
@@ -86,7 +86,7 @@ public partial class BottomMenuView : ContentView
         switch (selectedTab)
         {
             case BottomMenuTab.Inicio:
-                await Navigation.PushAsync(new Views.HomePage());
+              //  await Navigation.PushAsync(new Views.HomePage());
                 break;
 
             case BottomMenuTab.Rutas:

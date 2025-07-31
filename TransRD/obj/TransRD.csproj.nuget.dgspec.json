@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joser\\source\\repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj": {}
+    "C:\\Users\\joser\\Source\\Repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joser\\source\\repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj": {
+    "C:\\Users\\joser\\Source\\Repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joser\\source\\repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj",
+        "projectUniqueName": "C:\\Users\\joser\\Source\\Repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj",
         "projectName": "TransRD",
-        "projectPath": "C:\\Users\\joser\\source\\repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj",
+        "projectPath": "C:\\Users\\joser\\Source\\Repos\\TransRD-Movil-APP-\\TransRD\\TransRD.csproj",
         "packagesPath": "C:\\Users\\joser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joser\\source\\repos\\TransRD-Movil-APP-\\TransRD\\obj\\",
+        "outputPath": "C:\\Users\\joser\\Source\\Repos\\TransRD-Movil-APP-\\TransRD\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

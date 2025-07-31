@@ -66,6 +66,7 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 <ItemGroup>
+	  <None Remove="Platforms\Android\Resources\xml\network_security_config.xml" />
 	  <None Remove="Resources\Images\arrow_right.png" />
 	  <None Remove="Resources\Images\bus_green_icon.png" />
 	  <None Remove="Resources\Images\bus_icon.png" />
@@ -101,13 +102,6 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
-
-	<ItemGroup>
-	  <Compile Update="Views\RoutesPage1.xaml.cs">
-	    <DependentUpon>RoutesPage1.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
 	<ItemGroup>
 		<MauiXaml Update="Controls\BottomMenuView.xaml">
 		  <Generator>MSBuild:Compile</Generator>
@@ -127,13 +121,10 @@
 		<MauiXaml Update="Views\HistorialPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Views\HomePage1.xaml">
+		<MauiXaml Update="Views\Homepage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\RoutesPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\RoutesPage1.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\LoginPage.xaml">
