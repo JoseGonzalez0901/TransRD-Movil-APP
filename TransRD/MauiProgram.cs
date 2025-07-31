@@ -47,7 +47,7 @@ namespace TransRD
             // Registrar VM y Pages
             //builder.Services.AddTransient<LoginViewModel>();
            // builder.Services.AddTransient<LoginPage>();
-            builder.Services.AddTransient<PaymentMethodsPage>();
+            builder.Services.AddTransient<ReportarProblemaPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

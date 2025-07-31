@@ -130,6 +130,12 @@
 		<MauiXaml Update="Views\PersonalDataPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Views\PrivacidadPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\ReportarProblemaPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\RoutesPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

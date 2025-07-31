@@ -107,6 +107,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PersonalData
 build_metadata.AdditionalFiles.TargetPath = Views\PersonalDataPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PersonalDataPage.xaml
 
+[C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/PrivacidadPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PrivacidadPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PrivacidadPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PrivacidadPage.xaml
+
 [C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/RecuperarClavePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.RecuperarClavePage.xaml
@@ -118,6 +124,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.RegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RegisterPage.xaml
+
+[C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/ReportarProblemaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ReportarProblemaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ReportarProblemaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ReportarProblemaPage.xaml
 
 [C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/RoutesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
