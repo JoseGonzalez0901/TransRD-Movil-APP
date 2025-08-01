@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransRD.Views.AdminDashboardPage"
+             BackgroundColor="White">
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <VerticalStackLayout Padding="20" Spacing="24">
+
+            <!-- Estadísticas principales -->
+            <Grid RowSpacing="16" ColumnSpacing="16" RowDefinitions="Auto,Auto" ColumnDefinitions="*,*">
+
+                <!-- Vehículos Activos -->
+                <Frame Grid.Row="0" Grid.Column="0" CornerRadius="12" HasShadow="False"
+                       BorderColor="#E5E7EB" BackgroundColor="White" Padding="12">
+                    <HorizontalStackLayout Spacing="12">
+                        <VerticalStackLayout>
+                            <Label Text="Vehículos Activos" FontSize="14" TextColor="#6B7280" />
+                            <Label Text="847" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                        </VerticalStackLayout>
+                        <Frame Padding="4" BackgroundColor="#EEF4FF" CornerRadius="8" HasShadow="False">
+                            <Image Source="busblue_icon.png" WidthRequest="20" HeightRequest="20" />
+                        </Frame>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Usuarios Activos -->
+                <Frame Grid.Row="0" Grid.Column="1" CornerRadius="12" HasShadow="False"
+                       BorderColor="#E5E7EB" BackgroundColor="White" Padding="12">
+                    <HorizontalStackLayout Spacing="12">
+                        <VerticalStackLayout>
+                            <Label Text="Usuarios Activos" FontSize="14" TextColor="#6B7280" />
+                            <Label Text="12.5K" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                        </VerticalStackLayout>
+                        <Frame Padding="4" BackgroundColor="#E9FDF1" CornerRadius="8" HasShadow="False">
+                            <Image Source="icon_users.png" WidthRequest="20" HeightRequest="20" />
+                        </Frame>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Rutas Activas -->
+                <Frame Grid.Row="1" Grid.Column="0" CornerRadius="12" HasShadow="False"
+                       BorderColor="#E5E7EB" BackgroundColor="White" Padding="12">
+                    <HorizontalStackLayout Spacing="12">
+                        <VerticalStackLayout>
+                            <Label Text="Rutas Activas" FontSize="14" TextColor="#6B7280" />
+                            <Label Text="156" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                        </VerticalStackLayout>
+                        <Frame Padding="4" BackgroundColor="#FFF3ED" CornerRadius="8" HasShadow="False">
+                            <Image Source="icon_routes.png" WidthRequest="20" HeightRequest="20" />
+                        </Frame>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Alertas -->
+                <Frame Grid.Row="1" Grid.Column="1" CornerRadius="12" HasShadow="False"
+                       BorderColor="#E5E7EB" BackgroundColor="White" Padding="12">
+                    <HorizontalStackLayout Spacing="12">
+                        <VerticalStackLayout>
+                            <Label Text="Alertas" FontSize="14" TextColor="#6B7280" />
+                            <Label Text="23" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                        </VerticalStackLayout>
+                        <Frame Padding="4" BackgroundColor="#FEE2E2" CornerRadius="8" HasShadow="False">
+                            <Image Source="alert_icon.png" WidthRequest="20" HeightRequest="20" />
+                        </Frame>
+                    </HorizontalStackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Acciones -->
+            <Label Text="Acciones" FontSize="18" FontAttributes="Bold" TextColor="#111827" />
+
+            <HorizontalStackLayout Spacing="12">
+                <!-- Botón 1 -->
+                <Frame CornerRadius="12" BackgroundColor="White" BorderColor="#E5E7EB" Padding="12"
+                       WidthRequest="100" HasShadow="False">
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <Frame BackgroundColor="#EEF4FF" CornerRadius="8" Padding="6" HasShadow="False">
+                            <Image Source="addblue_icon.png" WidthRequest="20" HeightRequest="20" />
+                        </Frame>
+                        <Label Text="Agregar" FontSize="14" HorizontalTextAlignment="Center" TextColor="#111827" />
+                        <Label Text="Vehículo" FontSize="14" HorizontalTextAlignment="Center" TextColor="#111827" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Botón 2 -->
+                <Frame CornerRadius="12" BackgroundColor="White" BorderColor="#E5E7EB" Padding="12"
+                       WidthRequest="100" HasShadow="False">
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <Frame BackgroundColor="#E9FDF1" CornerRadius="8" Padding="6" HasShadow="False">
+                            <Image Source="mapgreen_icon.png" WidthRequest="20" HeightRequest="20" />
+                        </Frame>
+                        <Label Text="Gestionar" FontSize="14" HorizontalTextAlignment="Center" TextColor="#111827" />
+                        <Label Text="Rutas" FontSize="14" HorizontalTextAlignment="Center" TextColor="#111827" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Botón 3 -->
+                <Frame CornerRadius="12" BackgroundColor="White" BorderColor="#E5E7EB" Padding="12"
+                       WidthRequest="100" HasShadow="False">
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <Frame BackgroundColor="#FFF3ED" CornerRadius="8" Padding="6" HasShadow="False">
+                            <Image Source="reportorange_icon.png" WidthRequest="20" HeightRequest="20" />
+                        </Frame>
+                        <Label Text="Reportes" FontSize="14" HorizontalTextAlignment="Center" TextColor="#111827" />
+                    </VerticalStackLayout>
+                </Frame>
+            </HorizontalStackLayout>
+
+            <!-- Estado -->
+            <VerticalStackLayout Spacing="12">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Estado" FontSize="18" FontAttributes="Bold" TextColor="#111827" />
+                    <Label Text="Ver" FontSize="14" TextColor="#2563EB" VerticalOptions="Center" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding VerEstadoCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <Frame BackgroundColor="White" CornerRadius="12" BorderColor="#E5E7EB" Padding="0" HasShadow="False">
+                    <VerticalStackLayout Spacing="0">
+
+                        <!-- Item: Línea 1 Metro -->
+                        <Grid Padding="12" ColumnDefinitions="Auto,10,*,Auto" RowDefinitions="Auto,Auto">
+                            <Frame BackgroundColor="#FFF3ED" Padding="4" CornerRadius="8" Grid.Column="0">
+                                <Image Source="icon_metro.png" WidthRequest="20" HeightRequest="20" />
+                            </Frame>
+                            <Label Grid.Column="2" Text="Linea 1 Metro" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
+                            <Frame Grid.Column="3" BackgroundColor="#E9FDF1" Padding="6,2" CornerRadius="12">
+                                <Label Text="Normal" FontSize="12" TextColor="#065F46" />
+                            </Frame>
+                            <Label Grid.Column="2" Grid.Row="1" Text="12 vagones activos" FontSize="14" TextColor="#6B7280" />
+                        </Grid>
+
+                        <BoxView HeightRequest="1" Color="#E5E7EB" />
+
+                        <!-- Item: OMSA Ruta 47 -->
+                        <Grid Padding="12" ColumnDefinitions="Auto,10,*,Auto" RowDefinitions="Auto,Auto">
+                            <Frame BackgroundColor="#E9FDF1" Padding="4" CornerRadius="8" Grid.Column="0">
+                                <Image Source="icon_bus.png" WidthRequest="20" HeightRequest="20" />
+                            </Frame>
+                            <Label Grid.Column="2" Text="OMSA Ruta 47" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
+                            <Frame Grid.Column="3" BackgroundColor="#FEF3C7" Padding="6,2" CornerRadius="12">
+                                <Label Text="Retrasado" FontSize="12" TextColor="#92400E" />
+                            </Frame>
+                            <Label Grid.Column="2" Grid.Row="1" Text="8 autobuses activos" FontSize="14" TextColor="#6B7280" />
+                        </Grid>
+
+                        <BoxView HeightRequest="1" Color="#E5E7EB" />
+
+                        <!-- Item: Carros Públicos -->
+                        <Grid Padding="12" ColumnDefinitions="Auto,10,*,Auto" RowDefinitions="Auto,Auto">
+                            <Frame BackgroundColor="#F3F0FF" Padding="4" CornerRadius="8" Grid.Column="0">
+                                <Image Source="icon_car.png" WidthRequest="20" HeightRequest="20" />
+                            </Frame>
+                            <Label Grid.Column="2" Text="Carros Públicos" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
+                            <Frame Grid.Column="3" BackgroundColor="#E9FDF1" Padding="6,2" CornerRadius="12">
+                                <Label Text="Normal" FontSize="12" TextColor="#065F46" />
+                            </Frame>
+                            <Label Grid.Column="2" Grid.Row="1" Text="24 carros activos" FontSize="14" TextColor="#6B7280" />
+                        </Grid>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Alertas -->
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Alertas" FontSize="18" FontAttributes="Bold" TextColor="#111827" />
+
+                <Frame BackgroundColor="White" CornerRadius="12" BorderColor="#E5E7EB" Padding="12" HasShadow="False">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Averías de Vehículos" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="OMSA Bus #47-12 problema mecánico reportado" FontSize="14" TextColor="#6B7280" />
+                        <Label Text="Hace 2 min" FontSize="12" TextColor="#9CA3AF" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="White" CornerRadius="12" BorderColor="#E5E7EB" Padding="12" HasShadow="False">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Retraso de la ruta" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Línea 2 Metro con 10 min de retraso" FontSize="14" TextColor="#6B7280" />
+                        <Label Text="Hace 5 min" FontSize="12" TextColor="#9CA3AF" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="White" CornerRadius="12" BorderColor="#E5E7EB" Padding="12" HasShadow="False">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Sistema Actualizado" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Sistema de rastreo GPS actualizado" FontSize="14" TextColor="#6B7280" />
+                        <Label Text="Hace 15 min" FontSize="12" TextColor="#9CA3AF" />
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

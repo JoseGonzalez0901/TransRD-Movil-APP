@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransRD.Views.AgregarVehiculoPage"
+             Title="Agregar Vehículo"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Sección contenedora -->
+            <Frame CornerRadius="16" BorderColor="#E5E7EB" BackgroundColor="White" Padding="20" HasShadow="False">
+                <VerticalStackLayout Spacing="16">
+
+                    <!-- Título de sección -->
+                    <Label Text="Datos Generales"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#111827" />
+                    <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
+
+                    <!-- Campo Marca -->
+                    <Label Text="Marca" FontSize="14" TextColor="#111827" />
+                    <Entry Placeholder="Marca" Text="Toyota" BackgroundColor="#F9FAFB" HeightRequest="44" />
+
+                    <!-- Campo Modelo -->
+                    <Label Text="Modelo" FontSize="14" TextColor="#111827" />
+                    <Entry Placeholder="Modelo" Text="Corolla" BackgroundColor="#F9FAFB" HeightRequest="44" />
+
+                    <!-- Campo Año -->
+                    <Label Text="Año" FontSize="14" TextColor="#111827" />
+                    <Entry Placeholder="Año" Text="2015" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
+
+                    <!-- Campo Tipo de Vehículo -->
+                    <Label Text="Tipo de Vehículo" FontSize="14" TextColor="#111827" />
+                    <Entry Placeholder="Tipo de Vehículo" Text="Carro público" BackgroundColor="#F9FAFB" HeightRequest="44" />
+
+                    <!-- Campo Cantidad de Asientos -->
+                    <Label Text="Cantidad de Asientos" FontSize="14" TextColor="#111827" />
+                    <Entry Placeholder="Cantidad de Asientos" Text="5" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
+
+                    <!-- Campo Placa -->
+                    <Label Text="Placa" FontSize="14" TextColor="#111827" />
+                    <Entry Placeholder="Placa" Text="A123456" BackgroundColor="#F9FAFB" HeightRequest="44" />
+
+                    <!-- Botón Guardar -->
+                    <Button Text="Guardar"
+                            BackgroundColor="#2563EB"
+                            TextColor="White"
+                            CornerRadius="12"
+                            HeightRequest="48"
+                            FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AgvSF+CMoQg=",
+  "dgSpecHash": "gm+ZspvFchA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\xavie\\Source\\Repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj",
+  "projectFilePath": "C:\\Users\\xavie\\source\\repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xavie\\.nuget\\packages\\brutile\\5.0.6\\brutile.5.0.6.nupkg.sha512",
     "C:\\Users\\xavie\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",

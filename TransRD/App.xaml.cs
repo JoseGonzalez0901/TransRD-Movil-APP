@@ -5,7 +5,7 @@ namespace TransRD
 {
     public partial class App : Application
     {
-        public App(ReportarProblemaPage homePage)
+        public App(AgregarVehiculoPage homePage)
         {
             InitializeComponent();
 

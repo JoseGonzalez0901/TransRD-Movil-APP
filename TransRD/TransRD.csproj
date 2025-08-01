@@ -102,6 +102,13 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
+
+	<ItemGroup>
+	  <Compile Update="Views\AgregarVehiculoPage.xaml.cs">
+	    <DependentUpon>AgregarVehiculoPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
 	<ItemGroup>
 		<MauiXaml Update="Controls\BottomMenuView.xaml">
 		  <Generator>MSBuild:Compile</Generator>
@@ -114,6 +121,12 @@
 		</MauiXaml>
 		<MauiXaml Update="Controls\PasswordEntry.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\AgregarVehiculoPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\AdminDashboardPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\AppShell.xaml">
 		  <Generator>MSBuild:Compile</Generator>

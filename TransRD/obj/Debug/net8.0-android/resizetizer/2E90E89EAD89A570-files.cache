@@ -1,8 +1,12 @@
-﻿obj\Debug\net8.0-android\resizetizer\r\drawable\arrow_icon.png
+﻿obj\Debug\net8.0-android\resizetizer\r\drawable\addblue_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\add_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\alert_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\arrow_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\arrow_right.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\basura_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bigshield_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bluelocation_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\busblue_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bus_green_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bus_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bus_white_icon.png
@@ -16,9 +20,12 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\delete_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\eye_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\historial.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\historial_activo.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\icon_alert.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\icon_bus.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\icon_car.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\icon_metro.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\icon_routes.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\icon_users.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\inicio.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\inicio_activo.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\language_icon.png
@@ -27,6 +34,7 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\location2_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\location_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\lock_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\logo_transrd.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\mapgreen_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\map_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\mastercard_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\mic_icon.png
@@ -38,6 +46,8 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\perfil.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\perfil_activo.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\perfil_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\point_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\reportorange_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\report_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\route_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\rutas.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\rutas_activo.png

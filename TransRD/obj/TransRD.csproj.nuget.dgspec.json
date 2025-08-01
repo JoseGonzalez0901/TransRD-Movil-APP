@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xavie\\Source\\Repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj": {}
+    "C:\\Users\\xavie\\source\\repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xavie\\Source\\Repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj": {
+    "C:\\Users\\xavie\\source\\repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xavie\\Source\\Repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj",
+        "projectUniqueName": "C:\\Users\\xavie\\source\\repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj",
         "projectName": "TransRD",
-        "projectPath": "C:\\Users\\xavie\\Source\\Repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj",
+        "projectPath": "C:\\Users\\xavie\\source\\repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj",
         "packagesPath": "C:\\Users\\xavie\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\xavie\\Source\\Repos\\TransRD-Movil-APP\\TransRD\\obj\\",
         "projectStyle": "PackageReference",
