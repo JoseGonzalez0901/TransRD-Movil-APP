@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:TransRD.ViewModels"
              x:Class="TransRD.Views.AgregarVehiculoPage"
              Title="Agregar Vehículo"
              BackgroundColor="White">
+
+    <ContentPage.BindingContext>
+        <viewmodels:AgregarVehiculoViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
@@ -21,27 +26,27 @@
 
                     <!-- Campo Marca -->
                     <Label Text="Marca" FontSize="14" TextColor="#111827" />
-                    <Entry Placeholder="Marca" Text="Toyota" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Placeholder="Marca" Text="{Binding Marca}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Campo Modelo -->
                     <Label Text="Modelo" FontSize="14" TextColor="#111827" />
-                    <Entry Placeholder="Modelo" Text="Corolla" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Placeholder="Modelo" Text="{Binding Modelo}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Campo Año -->
                     <Label Text="Año" FontSize="14" TextColor="#111827" />
-                    <Entry Placeholder="Año" Text="2015" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Placeholder="Año" Text="{Binding Ano}" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Campo Tipo de Vehículo -->
                     <Label Text="Tipo de Vehículo" FontSize="14" TextColor="#111827" />
-                    <Entry Placeholder="Tipo de Vehículo" Text="Carro público" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Placeholder="Tipo de Vehículo" Text="{Binding TipoVehiculo}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Campo Cantidad de Asientos -->
                     <Label Text="Cantidad de Asientos" FontSize="14" TextColor="#111827" />
-                    <Entry Placeholder="Cantidad de Asientos" Text="5" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Placeholder="Cantidad de Asientos" Text="{Binding CantidadAsientos}" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Campo Placa -->
                     <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Placeholder="Placa" Text="A123456" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Placeholder="Placa" Text="{Binding Placa}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Botón Guardar -->
                     <Button Text="Guardar"
@@ -49,7 +54,8 @@
                             TextColor="White"
                             CornerRadius="12"
                             HeightRequest="48"
-                            FontAttributes="Bold" />
+                            FontAttributes="Bold"
+                            Command="{Binding GuardarVehiculoAsyncCommand}" />
                 </VerticalStackLayout>
             </Frame>
 
