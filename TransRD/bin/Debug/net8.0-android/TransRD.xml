@@ -14,6 +14,37 @@
             Lógica local al cambiar pestaña.
             </summary>
         </member>
+        <member name="T:TransRD.ViewModels.AgregarRutaViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.NombreRuta">
+            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.nombreRuta"/>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Origen">
+            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.origen"/>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Destino">
+            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.destino"/>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Paradas">
+            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.paradas"/>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Horario">
+            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.horario"/>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Estado">
+            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.estado"/>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Placas">
+            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.placas"/>
+        </member>
+        <member name="F:TransRD.ViewModels.AgregarRutaViewModel.guardarRutaCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.AgregarRutaViewModel.GuardarRutaCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.GuardarRutaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.AgregarRutaViewModel.GuardarRutaAsync"/>.</summary>
+        </member>
         <member name="T:TransRD.ViewModels.LoginViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -102,6 +133,27 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NombreRuta">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NombreRuta" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Origen">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Origen" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Destino">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Destino" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Paradas">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Paradas" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Horario">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Horario" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Estado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Estado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Placas">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Placas" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
         </member>
@@ -125,6 +177,27 @@
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NombreRuta">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NombreRuta" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Origen">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Origen" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Destino">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Destino" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Paradas">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Paradas" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Horario">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Horario" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Estado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Estado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Placas">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Placas" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>

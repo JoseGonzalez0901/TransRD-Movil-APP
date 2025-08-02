@@ -2,8 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TransRD.Views.AgregarRutaPage"
-             Title="Agregar Ruta"
-             BackgroundColor="White">
+             xmlns:viewmodels="clr-namespace:TransRD.ViewModels"
+             BackgroundColor="White"
+             Title="Agregar Ruta">
+
+    <ContentPage.BindingContext>
+        <viewmodels:AgregarRutaViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
@@ -16,38 +21,38 @@
                     <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
 
                     <Label Text="Nombre de la Ruta" FontSize="14" TextColor="#111827" />
-                    <Entry Text="OMSA Ruta 10" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding NombreRuta}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Origen" FontSize="14" TextColor="#111827" />
-                    <Entry Text="Av. Máximo Gómez" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Origen}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Destino" FontSize="14" TextColor="#111827" />
-                    <Entry Text="Av. George Washington" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Destino}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Paradas" FontSize="14" TextColor="#111827" />
-                    <Entry Text="7" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Paradas}" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Horario" FontSize="14" TextColor="#111827" />
-                    <Entry Text="8:00 a.m. - 7:00 p.m." BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Horario}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Estado" FontSize="14" TextColor="#111827" />
-                    <Entry Text="Activa" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Estado}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Vehículos Asociados -->
                     <Label Text="Vehículos Asociados" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
                     <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
 
-                    <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A695142" BackgroundColor="#F9FAFB" HeightRequest="44" />
-
-                    <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A621663" BackgroundColor="#F9FAFB" HeightRequest="44" />
-
-                    <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A516512" BackgroundColor="#F9FAFB" HeightRequest="44" />
-
-                    <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A215663" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <!-- Entrada de placas dinámicas -->
+                    <CollectionView ItemsSource="{Binding Placas}" Margin="0,0,0,10">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <VerticalStackLayout Spacing="4">
+                                    <Label Text="Placa" FontSize="14" TextColor="#111827" />
+                                    <Entry Text="{Binding .}" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
 
                     <!-- Botón Guardar -->
                     <Button Text="Guardar"
@@ -55,10 +60,10 @@
                             TextColor="White"
                             CornerRadius="12"
                             HeightRequest="48"
-                            FontAttributes="Bold" />
+                            FontAttributes="Bold"
+                            Command="{Binding GuardarRutaCommand}" />
                 </VerticalStackLayout>
             </Frame>
-
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
