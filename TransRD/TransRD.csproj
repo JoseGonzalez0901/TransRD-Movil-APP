@@ -161,6 +161,9 @@
 		<MauiXaml Update="Views\ReportarProblemaPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Views\ReportesPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\RoutesPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

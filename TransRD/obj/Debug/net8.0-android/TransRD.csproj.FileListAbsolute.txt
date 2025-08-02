@@ -3448,3 +3448,4 @@ C:\Users\xavie\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-android\r
 C:\Users\xavie\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-android\resizetizer\r\drawable\mapgreen_icon.png
 C:\Users\xavie\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-android\resizetizer\r\drawable\reportorange_icon.png
 C:\Users\xavie\source\repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-android\resizetizer\r\drawable\report_icon.png
+C:\Users\xavie\Source\Repos\TransRD-Movil-APP\TransRD\obj\Debug\net8.0-android\resizetizer\r\drawable\busred_icon.png

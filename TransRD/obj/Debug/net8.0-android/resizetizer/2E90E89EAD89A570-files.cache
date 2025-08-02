@@ -7,6 +7,7 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\basura_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bigshield_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bluelocation_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\busblue_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\busred_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bus_green_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bus_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\bus_white_icon.png

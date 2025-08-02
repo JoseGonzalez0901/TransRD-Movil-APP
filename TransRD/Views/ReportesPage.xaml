@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransRD.Views.ReportesPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="24">
+
+            <!-- Gráfico (simulado como imagen temporalmente) -->
+            <Frame CornerRadius="16" BorderColor="#E5E7EB" Padding="10" HasShadow="False">
+                <!-- Reemplaza esto por un gráfico real con librería si es necesario -->
+                <Image Source="chart_placeholder.png" Aspect="AspectFit" HeightRequest="200" />
+            </Frame>
+
+            <!-- Título sección -->
+            <Label Text="Estadísticas" FontSize="18" FontAttributes="Bold" TextColor="#111827" />
+
+            <!-- Tarjeta: Vehículos Activos -->
+            <Frame CornerRadius="12" Padding="12" BorderColor="#E5E7EB" HasShadow="False">
+                <HorizontalStackLayout Spacing="12">
+                    <Frame BackgroundColor="#EEF4FF" Padding="6" CornerRadius="8" HasShadow="False">
+                        <Image Source="busblue_icon.png" WidthRequest="20" HeightRequest="20" />
+                    </Frame>
+                    <Label Text="847" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                    <Label Text="Vehículos Activos" FontSize="14" TextColor="#111827" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame> 
+
+            <!-- Vehículos Inactivos -->
+            <Frame CornerRadius="12" Padding="12" BorderColor="#E5E7EB" HasShadow="False">
+                <HorizontalStackLayout Spacing="12">
+                    <Frame BackgroundColor="#FEE2E2" Padding="6" CornerRadius="8" HasShadow="False">
+                        <Image Source="busred_icon.png" WidthRequest="20" HeightRequest="20" />c
+                    </Frame>
+                    <Label Text="45" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                    <Label Text="Vehículos Inactivos" FontSize="14" TextColor="#111827" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Rutas Activas -->
+            <Frame CornerRadius="12" Padding="12" BorderColor="#E5E7EB" HasShadow="False">
+                <HorizontalStackLayout Spacing="12">
+                    <Frame BackgroundColor="#FFF7ED" Padding="6" CornerRadius="8" HasShadow="False">
+                        <Image Source="icon_routes.png" WidthRequest="20" HeightRequest="20" />
+                    </Frame>
+                    <Label Text="847" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                    <Label Text="Rutas Activas" FontSize="14" TextColor="#111827" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Rutas Inactivas -->
+            <Frame CornerRadius="12" Padding="12" BorderColor="#E5E7EB" HasShadow="False">
+                <HorizontalStackLayout Spacing="12">
+                    <Frame BackgroundColor="#FEE2E2" Padding="6" CornerRadius="8" HasShadow="False">
+                        <Image Source="icon_routes.png" WidthRequest="20" HeightRequest="20" />
+                    </Frame>
+                    <Label Text="20" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                    <Label Text="Rutas Inactivas" FontSize="14" TextColor="#111827" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Usuarios Activos -->
+            <Frame CornerRadius="12" Padding="12" BorderColor="#E5E7EB" HasShadow="False">
+                <HorizontalStackLayout Spacing="12">
+                    <Frame BackgroundColor="#E9FDF1" Padding="6" CornerRadius="8" HasShadow="False">
+                        <Image Source="icon_users.png" WidthRequest="20" HeightRequest="20" />
+                    </Frame>
+                    <Label Text="12.5K" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
+                    <Label Text="Usuarios Activos" FontSize="14" TextColor="#111827" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

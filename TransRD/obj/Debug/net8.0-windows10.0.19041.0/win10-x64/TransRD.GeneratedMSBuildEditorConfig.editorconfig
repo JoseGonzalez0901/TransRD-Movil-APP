@@ -155,6 +155,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ReportarProb
 build_metadata.AdditionalFiles.TargetPath = Views\ReportarProblemaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ReportarProblemaPage.xaml
 
+[C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/ReportesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ReportesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ReportesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ReportesPage.xaml
+
 [C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/RoutesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.RoutesPage.xaml
