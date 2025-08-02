@@ -104,6 +104,12 @@
 
 
 	<ItemGroup>
+	  <Compile Update="Views\ModificarRutaPage.xaml.cs">
+	    <DependentUpon>ModificarRutaPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\AgregarRutaPage.xaml.cs">
+	    <DependentUpon>AgregarRutaPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\AgregarVehiculoPage.xaml.cs">
 	    <DependentUpon>AgregarVehiculoPage.xaml</DependentUpon>
 	  </Compile>
@@ -121,6 +127,12 @@
 		</MauiXaml>
 		<MauiXaml Update="Controls\PasswordEntry.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\ModificarRutaPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\AgregarRutaPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\AgregarVehiculoPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
