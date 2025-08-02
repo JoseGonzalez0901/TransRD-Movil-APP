@@ -13,6 +13,7 @@ public class MonoPackageManager_Resources {
 		"Mapsui.Nts.dll",
 		"Mapsui.Rendering.Skia.dll",
 		"Mapsui.Tiling.dll",
+		"Microcharts.Maui.dll",
 		"Microsoft.Extensions.Configuration.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",
 		"Microsoft.Extensions.DependencyInjection.dll",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AgvSF+CMoQg=",
+  "dgSpecHash": "sksqbZuQGGA=",
   "success": true,
   "projectFilePath": "C:\\Users\\xavie\\Source\\Repos\\TransRD-Movil-APP\\TransRD\\TransRD.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\xavie\\.nuget\\packages\\mapsui.nts\\4.1.9\\mapsui.nts.4.1.9.nupkg.sha512",
     "C:\\Users\\xavie\\.nuget\\packages\\mapsui.rendering.skia\\4.1.9\\mapsui.rendering.skia.4.1.9.nupkg.sha512",
     "C:\\Users\\xavie\\.nuget\\packages\\mapsui.tiling\\4.1.9\\mapsui.tiling.4.1.9.nupkg.sha512",
+    "C:\\Users\\xavie\\.nuget\\packages\\microcharts.maui\\1.0.1\\microcharts.maui.1.0.1.nupkg.sha512",
     "C:\\Users\\xavie\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\xavie\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\xavie\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",

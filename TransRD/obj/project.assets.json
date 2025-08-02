@@ -213,6 +213,23 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -2971,6 +2988,23 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -5691,6 +5725,23 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -8415,6 +8466,23 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -11134,6 +11202,23 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -13847,6 +13932,23 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -16557,6 +16659,23 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -19265,6 +19384,23 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -22024,6 +22160,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -22988,6 +23137,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -23903,6 +24065,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -24822,6 +24997,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -25734,6 +25922,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -26652,6 +26853,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -27577,6 +27791,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -28491,6 +28718,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -29426,6 +29666,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -30372,6 +30625,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -31287,6 +31553,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -32206,6 +32485,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -33120,6 +33412,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -34029,6 +34334,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -34945,6 +35263,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -35857,6 +36188,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -36813,6 +37157,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -38005,6 +38362,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -39074,6 +39444,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -40147,6 +40530,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -41215,6 +41611,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -42280,6 +42689,19 @@
           "lib/net6.0/Mapsui.Tiling.dll": {}
         }
       },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -43343,6 +43765,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -44411,6 +44846,19 @@
         },
         "runtime": {
           "lib/net6.0/Mapsui.Tiling.dll": {}
+        }
+      },
+      "Microcharts.Maui/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.100",
+          "SkiaSharp.Views.Maui.Controls": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/8.0.0": {
@@ -45702,6 +46150,28 @@
         "lib/netstandard2.1/Mapsui.Tiling.dll",
         "mapsui.tiling.4.1.9.nupkg.sha512",
         "mapsui.tiling.nuspec"
+      ]
+    },
+    "Microcharts.Maui/1.0.1": {
+      "sha512": "OlWr45UZs7SPvldOlbaNDKFxcjh00uKyMYVJcFg1D55mAaerm6+VIZymtvLJKG/Jsk1vYy/iIRaYPKB6wZy8lA==",
+      "type": "package",
+      "path": "microcharts.maui/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0-android34.0/Microcharts.Maui.dll",
+        "lib/net8.0-android34.0/Microcharts.Maui.xml",
+        "lib/net8.0-ios18.0/Microcharts.Maui.dll",
+        "lib/net8.0-maccatalyst18.0/Microcharts.Maui.dll",
+        "lib/net8.0-windows10.0.19041/Microcharts.Maui.dll",
+        "lib/net9.0-android35.0/Microcharts.Maui.dll",
+        "lib/net9.0-android35.0/Microcharts.Maui.xml",
+        "lib/net9.0-ios18.0/Microcharts.Maui.dll",
+        "lib/net9.0-maccatalyst18.0/Microcharts.Maui.dll",
+        "lib/net9.0-windows10.0.19041/Microcharts.Maui.dll",
+        "microcharts.maui.1.0.1.nupkg.sha512",
+        "microcharts.maui.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/8.0.0": {
@@ -50706,6 +51176,7 @@
     "net8.0-android34.0": [
       "CommunityToolkit.Mvvm >= 8.3.2",
       "Mapsui.Maui >= 4.1.9",
+      "Microcharts.Maui >= 1.0.1",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
@@ -50714,6 +51185,7 @@
     "net8.0-ios18.0": [
       "CommunityToolkit.Mvvm >= 8.3.2",
       "Mapsui.Maui >= 4.1.9",
+      "Microcharts.Maui >= 1.0.1",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
@@ -50722,6 +51194,7 @@
     "net8.0-maccatalyst18.0": [
       "CommunityToolkit.Mvvm >= 8.3.2",
       "Mapsui.Maui >= 4.1.9",
+      "Microcharts.Maui >= 1.0.1",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
@@ -50730,6 +51203,7 @@
     "net8.0-windows10.0.19041": [
       "CommunityToolkit.Mvvm >= 8.3.2",
       "Mapsui.Maui >= 4.1.9",
+      "Microcharts.Maui >= 1.0.1",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100"
@@ -50810,6 +51284,10 @@
             "target": "Package",
             "version": "[4.1.9, )"
           },
+          "Microcharts.Maui": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.0, )"
@@ -50883,6 +51361,10 @@
             "target": "Package",
             "version": "[4.1.9, )"
           },
+          "Microcharts.Maui": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.0, )"
@@ -50943,6 +51425,10 @@
           "Mapsui.Maui": {
             "target": "Package",
             "version": "[4.1.9, )"
+          },
+          "Microcharts.Maui": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
@@ -51005,6 +51491,10 @@
           "Mapsui.Maui": {
             "target": "Package",
             "version": "[4.1.9, )"
+          },
+          "Microcharts.Maui": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
