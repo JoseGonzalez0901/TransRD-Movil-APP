@@ -1,34 +1,46 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Threading.Tasks;
+using TransRD.Models;
+using TransRD.Services;
 
 namespace TransRD.ViewModels
 {
     public partial class PerfilViewModel : ObservableObject
     {
-        // Datos de usuario
+        private readonly IPerfilService perfilService;
+
+        public PerfilViewModel()
+        {
+            perfilService = new PerfilService();
+            CargarDatosPerfil();
+        }
+
+        // Propiedades del perfil
         [ObservableProperty]
-        private string nombre = "María González";
+        private string nombre;
 
         [ObservableProperty]
-        private string correo = "maria.gonzalez@email.com";
+        private string correo;
 
         [ObservableProperty]
-        private string miembroDesde = "Member since Jan 2024";
+        private string miembroDesde;
 
         [ObservableProperty]
         private int notificaciones;
 
-        public PerfilViewModel()
+        private async void CargarDatosPerfil()
         {
-            CargarNotificaciones();
-        }
+            var perfil = await perfilService.ObtenerPerfilAsync();
+            if (perfil != null)
+            {
+                Nombre = perfil.Nombre;
+                Correo = perfil.Email;
+                MiembroDesde = $"Member since {perfil.MiembroDesde}";
+            }
 
-        private async void CargarNotificaciones()
-        {
-            // Simula llamada a una API
-            await Task.Delay(500);
-            Notificaciones = 3; // Simulación, puedes cambiar por datos reales
+            await Task.Delay(500); // Simula otra llamada para notificaciones
+            Notificaciones = 3;
         }
 
         // COMANDOS DE NAVEGACIÓN
@@ -60,7 +72,7 @@ namespace TransRD.ViewModels
         [RelayCommand]
         private async Task IrAContacto()
         {
-            await Shell.Current.GoToAsync("////ContactoPage");
+            await Shell.Current.GoToAsync("///ContactoPage");
         }
 
         [RelayCommand]

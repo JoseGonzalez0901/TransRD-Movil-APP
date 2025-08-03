@@ -79,6 +79,14 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -96,10 +104,6 @@
               "target": "Package",
               "version": "[8.0.16, )",
               "autoReferenced": true
-            },
-            "System.ObjectModel": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -160,6 +164,14 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -177,10 +189,6 @@
               "target": "Package",
               "version": "[8.0.16, )",
               "autoReferenced": true
-            },
-            "System.ObjectModel": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -229,6 +237,14 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -246,10 +262,6 @@
               "target": "Package",
               "version": "[8.0.16, )",
               "autoReferenced": true
-            },
-            "System.ObjectModel": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -299,6 +311,14 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -310,10 +330,6 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
-            },
-            "System.ObjectModel": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             }
           },
           "imports": [

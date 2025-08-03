@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TransRD.Views.ReportarProblemaPage"
-             x:Name="ThisPage"
-             Title="Reportar un problema">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TransRD.Views.ReportarProblemaPage"
+    x:Name="ThisPage"
+    Title="Reportar un problema">
 
     <Grid RowDefinitions="*,Auto">
 
@@ -19,28 +20,29 @@
                         <DataTemplate>
                             <ContentView>
                                 <ContentView.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={x:Reference ThisPage}, Path=BindingContext.ProblemaSeleccionadoCommand}" CommandParameter="{Binding .}" />
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={x:Reference ThisPage}, Path=BindingContext.ProblemaSeleccionadoCommand}"
+                                        CommandParameter="{Binding .}" />
                                 </ContentView.GestureRecognizers>
 
                                 <Border x:Name="ProblemaBorder"
-                        Stroke="#DDD"
-                        StrokeThickness="1"
-                        StrokeShape="RoundRectangle 12"
-                        BackgroundColor="White"
-                        Padding="12">
-
+                                        Stroke="#DDD"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 12"
+                                        BackgroundColor="White"
+                                        Padding="12">
                                     <Label x:Name="ProblemaLabel"
-                           Text="{Binding .}"
-                           FontSize="14"
-                           VerticalOptions="Center"
-                           TextColor="Black"/>
-
+                                           Text="{Binding .}"
+                                           FontSize="14"
+                                           VerticalOptions="Center"
+                                           TextColor="Black" />
                                     <Border.Triggers>
                                         <DataTrigger TargetType="Border"
-                                     Binding="{Binding ., Source={x:Reference ThisPage}, Path=BindingContext.ProblemaSeleccionado}"
-                                     Value="{Binding .}">
+                                                     Binding="{Binding Source={x:Reference ThisPage}, Path=BindingContext.ProblemaSeleccionado}"
+                                                     Value="{Binding .}">
                                             <Setter Property="BackgroundColor" Value="#E0F2FF"/>
                                             <Setter TargetName="ProblemaLabel" Property="Label.TextColor" Value="#2563EB"/>
+                                            <Setter Property="Stroke" Value="#2563EB"/>
                                         </DataTrigger>
                                     </Border.Triggers>
                                 </Border>
@@ -48,6 +50,7 @@
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </VerticalStackLayout>
+
                 <!-- Información del vehículo -->
                 <Label Text="Información del Vehículo" FontSize="16" FontAttributes="Bold"/>
 
@@ -57,36 +60,39 @@
                         <!-- Tipo de Transporte -->
                         <Label Text="Tipo de Transporte" FontSize="14" FontAttributes="Bold"/>
                         <HorizontalStackLayout Spacing="8" HorizontalOptions="Center"
-                       BindableLayout.ItemsSource="{Binding TiposTransporteDisponibles}">
+                                               BindableLayout.ItemsSource="{Binding TiposTransporteDisponibles}">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
                                     <ContentView>
                                         <ContentView.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Source={x:Reference ThisPage}, Path=BindingContext.TipoTransporteSeleccionadoCommand}" CommandParameter="{Binding .}" />
+                                            <TapGestureRecognizer
+                                                Command="{Binding Source={x:Reference ThisPage}, Path=BindingContext.TipoTransporteSeleccionadoCommand}"
+                                                CommandParameter="{Binding .}" />
                                         </ContentView.GestureRecognizers>
 
                                         <Border x:Name="TransporteBorder"
-                        Stroke="#E2E8F0"
-                        StrokeThickness="1"
-                        StrokeShape="RoundRectangle 12"
-                        BackgroundColor="White"
-                        Padding="10,6"
-                        WidthRequest="100"
-                        HeightRequest="50">
+                                                Stroke="#E2E8F0"
+                                                StrokeThickness="1"
+                                                StrokeShape="RoundRectangle 12"
+                                                BackgroundColor="White"
+                                                Padding="10,6"
+                                                WidthRequest="100"
+                                                HeightRequest="50">
 
                                             <Label x:Name="TransporteLabel"
-                           Text="{Binding .}"
-                           FontSize="13"
-                           TextColor="Black"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
+                                                   Text="{Binding .}"
+                                                   FontSize="13"
+                                                   TextColor="Black"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"/>
 
                                             <Border.Triggers>
                                                 <DataTrigger TargetType="Border"
-                                     Binding="{Binding ., Source={x:Reference ThisPage}, Path=BindingContext.TipoTransporteSeleccionado}"
-                                     Value="{Binding .}">
+                                                             Binding="{Binding Source={x:Reference ThisPage}, Path=BindingContext.TipoTransporteSeleccionado}"
+                                                             Value="{Binding .}">
                                                     <Setter Property="BackgroundColor" Value="#D1FAE5"/>
                                                     <Setter TargetName="TransporteLabel" Property="Label.TextColor" Value="#059669"/>
+                                                    <Setter Property="Stroke" Value="#059669"/>
                                                 </DataTrigger>
                                             </Border.Triggers>
                                         </Border>
@@ -109,7 +115,6 @@
                                 <Image Source="location_icon.png" WidthRequest="20" HeightRequest="20" Grid.Column="1" VerticalOptions="Center"/>
                             </Grid>
                         </Border>
-
                     </VerticalStackLayout>
                 </Border>
 
