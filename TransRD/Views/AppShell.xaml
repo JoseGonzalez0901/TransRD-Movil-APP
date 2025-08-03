@@ -84,4 +84,20 @@
         <ShellContent Route="HomePage" ContentTemplate="{DataTemplate views:HomePage}" />
     </FlyoutItem>
 
+    <!-- CENTRO DE AYUDA -->
+    <FlyoutItem Title="Centro de Ayuda" Icon="help_icon.png">
+        <ShellContent Route="CentroAyudaPage" ContentTemplate="{DataTemplate views:CentroAyudaPage}" />
+    </FlyoutItem>
+
+    <!-- CONTACTO -->
+    <FlyoutItem Title="Contacto" Icon="contact_icon.png">
+        <ShellContent Route="ContactoPage" ContentTemplate="{DataTemplate views:ContactoPage}" />
+    </FlyoutItem>
+
+    <!-- SOBRE -->
+    <FlyoutItem Title="Sobre" Icon="info_icon.png">
+        <ShellContent Route="SobrePage" ContentTemplate="{DataTemplate views:SobrePage}" />
+    </FlyoutItem>
+
+
 </Shell>

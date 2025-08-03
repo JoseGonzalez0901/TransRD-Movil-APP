@@ -224,6 +224,60 @@
         <member name="P:TransRD.ViewModels.PerfilViewModel.IrASobreCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.IrASobre"/>.</summary>
         </member>
+        <member name="T:TransRD.ViewModels.PrivacidadViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.Nombre">
+            <inheritdoc cref="F:TransRD.ViewModels.PrivacidadViewModel.nombre"/>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.Correo">
+            <inheritdoc cref="F:TransRD.ViewModels.PrivacidadViewModel.correo"/>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.Avatar">
+            <inheritdoc cref="F:TransRD.ViewModels.PrivacidadViewModel.avatar"/>
+        </member>
+        <member name="F:TransRD.ViewModels.PrivacidadViewModel.compartirUbicacionCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PrivacidadViewModel.CompartirUbicacionCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.CompartirUbicacionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PrivacidadViewModel.CompartirUbicacion"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PrivacidadViewModel.compartirUbicacionTiempoRealCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PrivacidadViewModel.CompartirUbicacionTiempoRealCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.CompartirUbicacionTiempoRealCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PrivacidadViewModel.CompartirUbicacionTiempoReal"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PrivacidadViewModel.configurarMfaCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PrivacidadViewModel.ConfigurarMfaCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.ConfigurarMfaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PrivacidadViewModel.ConfigurarMfa"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PrivacidadViewModel.ocultarDatosCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PrivacidadViewModel.OcultarDatosCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.OcultarDatosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PrivacidadViewModel.OcultarDatos"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PrivacidadViewModel.eliminarCuentaCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PrivacidadViewModel.EliminarCuentaCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.EliminarCuentaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PrivacidadViewModel.EliminarCuenta"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PrivacidadViewModel.guardarCambiosCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PrivacidadViewModel.GuardarCambiosCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PrivacidadViewModel.GuardarCambiosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PrivacidadViewModel.GuardarCambios"/>.</summary>
+        </member>
         <member name="T:TransRD.ViewModels.RecuperarClaveViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -275,6 +329,45 @@
         </member>
         <member name="P:TransRD.ViewModels.RegisterViewModel.NavigateToLoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.RegisterViewModel.NavigateToLoginAsync"/>.</summary>
+        </member>
+        <member name="T:TransRD.ViewModels.ReportarProblemaViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.ProblemaSeleccionado">
+            <inheritdoc cref="F:TransRD.ViewModels.ReportarProblemaViewModel.problemaSeleccionado"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.TipoTransporteSeleccionado">
+            <inheritdoc cref="F:TransRD.ViewModels.ReportarProblemaViewModel.tipoTransporteSeleccionado"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.Matricula">
+            <inheritdoc cref="F:TransRD.ViewModels.ReportarProblemaViewModel.matricula"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.Ubicacion">
+            <inheritdoc cref="F:TransRD.ViewModels.ReportarProblemaViewModel.ubicacion"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.DetallesAdicionales">
+            <inheritdoc cref="F:TransRD.ViewModels.ReportarProblemaViewModel.detallesAdicionales"/>
+        </member>
+        <member name="F:TransRD.ViewModels.ReportarProblemaViewModel.problemaSeleccionadoCommandCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.ReportarProblemaViewModel.ProblemaSeleccionadoCommandCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.ProblemaSeleccionadoCommandCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TransRD.ViewModels.ReportarProblemaViewModel.ProblemaSeleccionadoCommand(System.String)"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.ReportarProblemaViewModel.tipoTransporteSeleccionadoCommandCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.ReportarProblemaViewModel.TipoTransporteSeleccionadoCommandCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.TipoTransporteSeleccionadoCommandCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TransRD.ViewModels.ReportarProblemaViewModel.TipoTransporteSeleccionadoCommand(System.String)"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.ReportarProblemaViewModel.guardarReporteCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.ReportarProblemaViewModel.GuardarReporteCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.ReportarProblemaViewModel.GuardarReporteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.ReportarProblemaViewModel.GuardarReporteAsync"/>.</summary>
         </member>
         <member name="T:TransRD.ViewModels.ReportesViewModel">
             <inheritdoc/>
@@ -395,6 +488,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Notificaciones">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Notificaciones" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Avatar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Avatar" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Mail">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Mail" generated properties.</summary>
         </member>
@@ -406,6 +502,21 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AcceptTerms">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AcceptTerms" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProblemaSeleccionado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProblemaSeleccionado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TipoTransporteSeleccionado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TipoTransporteSeleccionado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Matricula">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Matricula" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Ubicacion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Ubicacion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DetallesAdicionales">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DetallesAdicionales" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Chart">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Chart" generated properties.</summary>
@@ -518,6 +629,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Notificaciones">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Notificaciones" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Avatar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Avatar" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Mail">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Mail" generated properties.</summary>
         </member>
@@ -529,6 +643,21 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AcceptTerms">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AcceptTerms" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProblemaSeleccionado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProblemaSeleccionado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TipoTransporteSeleccionado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TipoTransporteSeleccionado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Matricula">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Matricula" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Ubicacion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Ubicacion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DetallesAdicionales">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DetallesAdicionales" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Chart">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Chart" generated properties.</summary>

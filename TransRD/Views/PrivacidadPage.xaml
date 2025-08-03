@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TransRD.Views.PrivacidadPage"
-             Title="PrivacidadPage">
+             Title="Privacidad">
 
     <Grid RowDefinitions="*,Auto">
 
@@ -21,19 +21,15 @@
                            IsClippedToBounds="True"
                            BackgroundColor="Transparent"
                            VerticalOptions="Center">
-                            <Image Source="avatar_demo.png"
+                            <Image Source="{Binding Avatar}"
                                Aspect="AspectFill"
                                WidthRequest="80"
                                HeightRequest="80"/>
                         </Frame>
 
                         <VerticalStackLayout VerticalOptions="Center">
-                            <Label Text="María González"
-                               FontAttributes="Bold"
-                               FontSize="16"/>
-                            <Label Text="maria.gonzalez@email.com"
-                               FontSize="14"
-                               TextColor="Gray"/>
+                            <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding Correo}" FontSize="14" TextColor="Gray"/>
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
                 </Frame>
@@ -42,11 +38,14 @@
                 <Frame CornerRadius="16" BackgroundColor="White" Padding="0" HasShadow="False">
                     <VerticalStackLayout Spacing="0">
                         <Label Text="Compartir Ubicación"
-                           FontAttributes="Bold"
-                           FontSize="16"
-                           Padding="16,16,16,8"/>
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               Padding="16,16,16,8"/>
 
                         <Grid Padding="16" ColumnDefinitions="Auto,*,Auto">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CompartirUbicacionCommand}" />
+                            </Grid.GestureRecognizers>
                             <Image Source="point_icon.png" WidthRequest="24" HeightRequest="24" />
                             <Label Text="Ubicación del dispositivo" Grid.Column="1" VerticalOptions="Center" Padding="12,0"/>
                             <Image Source="arrow_icon.png" Grid.Column="2" WidthRequest="16" HeightRequest="16" VerticalOptions="Center"/>
@@ -55,6 +54,9 @@
                         <BoxView HeightRequest="1" Color="#EEE" Margin="16,0"/>
 
                         <Grid Padding="16" ColumnDefinitions="Auto,*,Auto">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CompartirUbicacionTiempoRealCommand}" />
+                            </Grid.GestureRecognizers>
                             <Image Source="location2_icon.png" WidthRequest="24" HeightRequest="24" />
                             <Label Text="Ubicación en Tiempo Real" Grid.Column="1" VerticalOptions="Center" Padding="12,0"/>
                             <Image Source="arrow_icon.png" Grid.Column="2" WidthRequest="16" HeightRequest="16" VerticalOptions="Center"/>
@@ -66,11 +68,14 @@
                 <Frame CornerRadius="16" BackgroundColor="White" Padding="0" HasShadow="False">
                     <VerticalStackLayout Spacing="0">
                         <Label Text="Seguridad de Cuenta"
-                           FontAttributes="Bold"
-                           FontSize="16"
-                           Padding="16,16,16,8"/>
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               Padding="16,16,16,8"/>
 
                         <Grid Padding="16" ColumnDefinitions="Auto,*,Auto">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ConfigurarMfaCommand}" />
+                            </Grid.GestureRecognizers>
                             <Image Source="bigshield_icon.png" WidthRequest="24" HeightRequest="24" />
                             <Label Text="Configurar MFA" Grid.Column="1" VerticalOptions="Center" Padding="12,0"/>
                             <Image Source="arrow_icon.png" Grid.Column="2" WidthRequest="16" HeightRequest="16" VerticalOptions="Center"/>
@@ -79,6 +84,9 @@
                         <BoxView HeightRequest="1" Color="#EEE" Margin="16,0"/>
 
                         <Grid Padding="16" ColumnDefinitions="Auto,*,Auto">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OcultarDatosCommand}" />
+                            </Grid.GestureRecognizers>
                             <Image Source="eye_icon.png" WidthRequest="24" HeightRequest="24" />
                             <Label Text="Ocultar Datos Personales" Grid.Column="1" VerticalOptions="Center" Padding="12,0"/>
                             <Image Source="arrow_icon.png" Grid.Column="2" WidthRequest="16" HeightRequest="16" VerticalOptions="Center"/>
@@ -87,6 +95,9 @@
                         <BoxView HeightRequest="1" Color="#EEE" Margin="16,0"/>
 
                         <Grid Padding="16" ColumnDefinitions="Auto,*,Auto">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding EliminarCuentaCommand}" />
+                            </Grid.GestureRecognizers>
                             <Image Source="delete_icon.png" WidthRequest="24" HeightRequest="24" />
                             <Label Text="Eliminar Cuenta" Grid.Column="1" VerticalOptions="Center" Padding="12,0"/>
                             <Image Source="arrow_icon.png" Grid.Column="2" WidthRequest="16" HeightRequest="16" VerticalOptions="Center"/>
@@ -100,13 +111,13 @@
         <!-- Botón inferior -->
         <Grid Grid.Row="1" Padding="20" BackgroundColor="White">
             <Button Text="Guardar cambios"
-                BackgroundColor="#2563EB"
-                TextColor="White"
-                FontAttributes="Bold"
-                CornerRadius="12"
-                HeightRequest="50"
-                HorizontalOptions="FillAndExpand"/>
+                    Command="{Binding GuardarCambiosCommand}"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"/>
         </Grid>
     </Grid>
-
 </ContentPage>

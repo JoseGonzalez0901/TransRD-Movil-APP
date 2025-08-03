@@ -89,6 +89,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.AppShell.xam
 build_metadata.AdditionalFiles.TargetPath = Views\AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AppShell.xaml
 
+[C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/CentroAyudaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.CentroAyudaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CentroAyudaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CentroAyudaPage.xaml
+
+[C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/ContactoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ContactoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContactoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContactoPage.xaml
+
 [C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/HistorialPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.HistorialPage.xaml
@@ -166,3 +178,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.RoutesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RoutesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RoutesPage.xaml
+
+[C:/Users/xavie/Source/Repos/TransRD-Movil-APP/TransRD/Views/SobrePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.SobrePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SobrePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SobrePage.xaml

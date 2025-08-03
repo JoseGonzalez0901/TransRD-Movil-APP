@@ -2,109 +2,110 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TransRD.Views.ReportarProblemaPage"
-             Title="ReportarProblemaPage">
+             x:Name="ThisPage"
+             Title="Reportar un problema">
+
     <Grid RowDefinitions="*,Auto">
 
         <ScrollView Grid.Row="0">
             <VerticalStackLayout Padding="20" Spacing="16">
 
                 <!-- ¿Cuál es el problema? -->
-                <Label Text="Cual es el problema?" FontSize="16" FontAttributes="Bold"/>
+                <Label Text="¿Cuál es el problema?" FontSize="16" FontAttributes="Bold"/>
 
-                <!-- Opción: Retraso -->
-                <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="12">
-                    <HorizontalStackLayout Spacing="12">
-                        <Image Source="delay_icon.png" WidthRequest="24" HeightRequest="24"/>
-                        <Label Text="Retraso" VerticalOptions="Center" FontSize="14"/>
-                    </HorizontalStackLayout>
-                </Border>
+                <!-- Lista de problemas -->
+                <VerticalStackLayout BindableLayout.ItemsSource="{Binding ProblemasDisponibles}" Spacing="8">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <ContentView>
+                                <ContentView.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference ThisPage}, Path=BindingContext.ProblemaSeleccionadoCommand}" CommandParameter="{Binding .}" />
+                                </ContentView.GestureRecognizers>
 
-                <!-- Opción: Averías -->
-                <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="12">
-                    <HorizontalStackLayout Spacing="12">
-                        <Image Source="warning_icon.png" WidthRequest="24" HeightRequest="24"/>
-                        <Label Text="Averías del Vehículo" VerticalOptions="Center" FontSize="14"/>
-                    </HorizontalStackLayout>
-                </Border>
+                                <Border x:Name="ProblemaBorder"
+                        Stroke="#DDD"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 12"
+                        BackgroundColor="White"
+                        Padding="12">
 
-                <!-- Opción: Seguridad -->
-                <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="12">
-                    <HorizontalStackLayout Spacing="12">
-                        <Image Source="security_icon.png" WidthRequest="24" HeightRequest="24"/>
-                        <Label Text="Preocupacion de Seguridad" VerticalOptions="Center" FontSize="14"/>
-                    </HorizontalStackLayout>
-                </Border>
+                                    <Label x:Name="ProblemaLabel"
+                           Text="{Binding .}"
+                           FontSize="14"
+                           VerticalOptions="Center"
+                           TextColor="Black"/>
 
-                <!-- Opción: Otro -->
-                <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="12">
-                    <HorizontalStackLayout Spacing="12">
-                        <Image Source="more_icon.png" WidthRequest="24" HeightRequest="24"/>
-                        <VerticalStackLayout>
-                            <Label Text="Otro" FontSize="14"/>
-                            <Label Text="Algo mas" FontSize="12" TextColor="Gray"/>
-                        </VerticalStackLayout>
-                    </HorizontalStackLayout>
-                </Border>
-
+                                    <Border.Triggers>
+                                        <DataTrigger TargetType="Border"
+                                     Binding="{Binding ., Source={x:Reference ThisPage}, Path=BindingContext.ProblemaSeleccionado}"
+                                     Value="{Binding .}">
+                                            <Setter Property="BackgroundColor" Value="#E0F2FF"/>
+                                            <Setter TargetName="ProblemaLabel" Property="Label.TextColor" Value="#2563EB"/>
+                                        </DataTrigger>
+                                    </Border.Triggers>
+                                </Border>
+                            </ContentView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
                 <!-- Información del vehículo -->
-                <Label Text="Informacion del Vehiculo" FontSize="16" FontAttributes="Bold"/>
+                <Label Text="Información del Vehículo" FontSize="16" FontAttributes="Bold"/>
 
                 <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="16">
                     <VerticalStackLayout Spacing="12">
 
                         <!-- Tipo de Transporte -->
                         <Label Text="Tipo de Transporte" FontSize="14" FontAttributes="Bold"/>
-                        <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <HorizontalStackLayout Spacing="8" HorizontalOptions="Center"
+                       BindableLayout.ItemsSource="{Binding TiposTransporteDisponibles}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <ContentView>
+                                        <ContentView.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:Reference ThisPage}, Path=BindingContext.TipoTransporteSeleccionadoCommand}" CommandParameter="{Binding .}" />
+                                        </ContentView.GestureRecognizers>
 
-                            <!-- Metro -->
-                            <Border Stroke="#E2E8F0" StrokeThickness="1" StrokeShape="RoundRectangle 12"
-                                    BackgroundColor="White"
-                                    Padding="10,6"
-                                    WidthRequest="100"
-                                    HeightRequest="50">
-                                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
-                                    <Image Source="icon_metro.png" WidthRequest="18" HeightRequest="18"/>
-                                    <Label Text="Metro" FontSize="13" TextColor="Black" VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Border>
+                                        <Border x:Name="TransporteBorder"
+                        Stroke="#E2E8F0"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 12"
+                        BackgroundColor="White"
+                        Padding="10,6"
+                        WidthRequest="100"
+                        HeightRequest="50">
 
-                            <!-- OMSA -->
-                            <Border Stroke="#E2E8F0" StrokeThickness="1" StrokeShape="RoundRectangle 12"
-                                    BackgroundColor="White"
-                                    Padding="10,6"
-                                    WidthRequest="100"
-                                    HeightRequest="50">
-                                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
-                                    <Image Source="icon_bus.png" WidthRequest="18" HeightRequest="18"/>
-                                    <Label Text="OMSA" FontSize="13" TextColor="Black" VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Border>
+                                            <Label x:Name="TransporteLabel"
+                           Text="{Binding .}"
+                           FontSize="13"
+                           TextColor="Black"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
 
-                            <!-- Carro -->
-                            <Border Stroke="#E2E8F0" StrokeThickness="1" StrokeShape="RoundRectangle 12"
-                                    BackgroundColor="White"
-                                    Padding="10,6"
-                                    WidthRequest="100"
-                                    HeightRequest="50">
-                                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="4">
-                                    <Image Source="icon_car.png" WidthRequest="18" HeightRequest="18"/>
-                                    <Label Text="Carro" FontSize="13" TextColor="Black" VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Border>
-
+                                            <Border.Triggers>
+                                                <DataTrigger TargetType="Border"
+                                     Binding="{Binding ., Source={x:Reference ThisPage}, Path=BindingContext.TipoTransporteSeleccionado}"
+                                     Value="{Binding .}">
+                                                    <Setter Property="BackgroundColor" Value="#D1FAE5"/>
+                                                    <Setter TargetName="TransporteLabel" Property="Label.TextColor" Value="#059669"/>
+                                                </DataTrigger>
+                                            </Border.Triggers>
+                                        </Border>
+                                    </ContentView>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
                         </HorizontalStackLayout>
 
                         <!-- Matrícula -->
-                        <Label Text="Matricula o ID" FontSize="14"/>
+                        <Label Text="Matrícula o ID" FontSize="14"/>
                         <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 8" BackgroundColor="White" Padding="8">
-                            <Entry Text="A34526" BackgroundColor="Transparent"/>
+                            <Entry Text="{Binding Matricula}" BackgroundColor="Transparent"/>
                         </Border>
 
                         <!-- Ubicación -->
                         <Label Text="Ubicación" FontSize="14"/>
                         <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 8" BackgroundColor="White" Padding="8">
                             <Grid ColumnDefinitions="*,Auto">
-                                <Entry Text="Ubicacion actual" BackgroundColor="Transparent"/>
+                                <Entry Text="{Binding Ubicacion}" BackgroundColor="Transparent"/>
                                 <Image Source="location_icon.png" WidthRequest="20" HeightRequest="20" Grid.Column="1" VerticalOptions="Center"/>
                             </Grid>
                         </Border>
@@ -115,10 +116,11 @@
                 <!-- Detalles adicionales -->
                 <Label Text="Detalles adicionales" FontSize="16" FontAttributes="Bold"/>
                 <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12" BackgroundColor="White" Padding="8">
-                    <Editor Placeholder="Describir el problema (opcional)"
-                        AutoSize="TextChanges"
-                        BackgroundColor="Transparent"
-                        FontSize="14"/>
+                    <Editor Text="{Binding DetallesAdicionales}"
+                            Placeholder="Describir el problema (opcional)"
+                            AutoSize="TextChanges"
+                            BackgroundColor="Transparent"
+                            FontSize="14"/>
                 </Border>
 
             </VerticalStackLayout>
@@ -127,13 +129,13 @@
         <!-- Botón fijo -->
         <Grid Grid.Row="1" Padding="20" BackgroundColor="White">
             <Button Text="Guardar Reporte"
-                BackgroundColor="#2563EB"
-                TextColor="White"
-                FontAttributes="Bold"
-                CornerRadius="12"
-                HeightRequest="50"
-                HorizontalOptions="FillAndExpand"/>
+                    Command="{Binding GuardarReporteCommand}"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"/>
         </Grid>
     </Grid>
-
 </ContentPage>

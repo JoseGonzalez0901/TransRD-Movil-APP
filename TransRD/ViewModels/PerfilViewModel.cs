@@ -36,37 +36,37 @@ namespace TransRD.ViewModels
         [RelayCommand]
         private async Task IrAInformacionPersonal()
         {
-            await Shell.Current.GoToAsync("/PersonalDataPage");
+            await Shell.Current.GoToAsync("///PersonalDataPage");
         }
 
         [RelayCommand]
         private async Task IrAMetodosPago()
         {
-            await Shell.Current.GoToAsync("/PaymentMethodsPage");
+            await Shell.Current.GoToAsync("///PaymentMethodsPage");
         }
 
         [RelayCommand]
         private async Task IrAPrivacidad()
         {
-            await Shell.Current.GoToAsync("/PrivacidadPage");
+            await Shell.Current.GoToAsync("///PrivacidadPage");
         }
 
         [RelayCommand]
         private async Task IrACentroDeAyuda()
         {
-            await Shell.Current.GoToAsync("/CentroAyudaPage");
+            await Shell.Current.GoToAsync("///CentroAyudaPage");
         }
 
         [RelayCommand]
         private async Task IrAContacto()
         {
-            await Shell.Current.GoToAsync("/ContactoPage");
+            await Shell.Current.GoToAsync("////ContactoPage");
         }
 
         [RelayCommand]
         private async Task IrASobre()
         {
-            await Shell.Current.GoToAsync("/SobrePage");
+            await Shell.Current.GoToAsync("///SobrePage");
         }
     }
 }
