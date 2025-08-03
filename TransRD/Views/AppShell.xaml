@@ -1,31 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:TransRD.Views"
        x:Class="TransRD.AppShell">
 
-    <TabBar x:Name="MainTabBar">
-        <ShellContent
-            Title="Inicio"
-            Icon="inicio.png"
-            Route="inicio"
-            ContentTemplate="{DataTemplate views:Homepage}" />
+    <!-- Dashboard -->
+    <FlyoutItem Title="Dashboard" Icon="dashboard_icon.png">
+        <ShellContent Route="AdminDashboardPage" ContentTemplate="{DataTemplate views:AdminDashboardPage}" />
+    </FlyoutItem>
 
-        <ShellContent
-            Title="Rutas"
-            Icon="rutas.png"
-            Route="rutas"
-            ContentTemplate="{DataTemplate views:RoutesPage}" />
+    <!-- Historial -->
+    <FlyoutItem Title="Historial" Icon="history_icon.png">
+        <ShellContent Route="HistorialPage" ContentTemplate="{DataTemplate views:HistorialPage}" />
+    </FlyoutItem>
 
-        <ShellContent
-            Title="Historial"
-            Icon="historial.png"
-            Route="historial"
-            ContentTemplate="{DataTemplate views:HistorialPage}" />
+    <!-- Reportes -->
+    <FlyoutItem Title="Reportes" Icon="report_icon.png">
+        <ShellContent Route="ReportesPage" ContentTemplate="{DataTemplate views:ReportesPage}" />
+    </FlyoutItem>
 
-        <ShellContent
-            Title="Perfil"
-            Icon="perfil.png"
-            Route="perfil"
-            ContentTemplate="{DataTemplate views:PerfilPage}" />
-    </TabBar>
+    <!-- Métodos de Pago -->
+    <FlyoutItem Title="Métodos de Pago" Icon="payment_icon.png">
+        <ShellContent Route="PaymentMethodsPage" ContentTemplate="{DataTemplate views:PaymentMethodsPage}" />
+    </FlyoutItem>
+
+    <!-- Perfil -->
+    <FlyoutItem Title="Perfil" Icon="profile_icon.png">
+        <ShellContent Route="PerfilPage" ContentTemplate="{DataTemplate views:PerfilPage}" />
+    </FlyoutItem>
+
+    <!-- Datos Personales -->
+    <FlyoutItem Title="Datos Personales" Icon="personal_icon.png">
+        <ShellContent Route="PersonalDataPage" ContentTemplate="{DataTemplate views:PersonalDataPage}" />
+    </FlyoutItem>
+
+    <!-- Privacidad -->
+    <FlyoutItem Title="Privacidad" Icon="privacy_icon.png">
+        <ShellContent Route="PrivacidadPage" ContentTemplate="{DataTemplate views:PrivacidadPage}" />
+    </FlyoutItem>
+
+    <!-- Rutas -->
+    <FlyoutItem Title="Rutas" Icon="routes_icon.png">
+        <ShellContent Route="RoutesPage" ContentTemplate="{DataTemplate views:RoutesPage}" />
+    </FlyoutItem>
+
+    <!-- Agregar Ruta -->
+    <FlyoutItem Title="Agregar Ruta" Icon="addruta_icon.png">
+        <ShellContent Route="AgregarRutaPage" ContentTemplate="{DataTemplate views:AgregarRutaPage}" />
+    </FlyoutItem>
+
+    <!-- Modificar Ruta -->
+    <FlyoutItem Title="Modificar Ruta" Icon="editroute_icon.png">
+        <ShellContent Route="ModificarRutaPage" ContentTemplate="{DataTemplate views:ModificarRutaPage}" />
+    </FlyoutItem>
+
+    <!-- Agregar Vehículo -->
+    <FlyoutItem Title="Agregar Vehículo" Icon="addvehicle_icon.png">
+        <ShellContent Route="AgregarVehiculoPage" ContentTemplate="{DataTemplate views:AgregarVehiculoPage}" />
+    </FlyoutItem>
+
+    <!-- Reportar Problema -->
+    <FlyoutItem Title="Reportar Problema" Icon="reportproblem_icon.png">
+        <ShellContent Route="ReportarProblemaPage" ContentTemplate="{DataTemplate views:ReportarProblemaPage}" />
+    </FlyoutItem>
+
+    <!-- Recuperar Clave -->
+    <FlyoutItem Title="Recuperar Clave" Icon="recover_icon.png">
+        <ShellContent Route="RecuperarClavePage" ContentTemplate="{DataTemplate views:RecuperarClavePage}" />
+    </FlyoutItem>
+
+    <!-- Registro -->
+    <FlyoutItem Title="Registro" Icon="register_icon.png">
+        <ShellContent Route="RegisterPage" ContentTemplate="{DataTemplate views:RegisterPage}" />
+    </FlyoutItem>
+
+    <!-- Login -->
+    <FlyoutItem Title="Login" Icon="login_icon.png">
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate views:LoginPage}" />
+    </FlyoutItem>
+
+    <!-- Página de Inicio -->
+    <FlyoutItem Title="Inicio" Icon="home_icon.png">
+        <ShellContent Route="HomePage" ContentTemplate="{DataTemplate views:HomePage}" />
+    </FlyoutItem>
+
 </Shell>

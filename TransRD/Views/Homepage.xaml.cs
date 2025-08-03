@@ -1,8 +1,8 @@
 namespace TransRD.Views;
 
-public partial class Homepage : ContentPage
+public partial class HomePage : ContentPage
 {
-	public Homepage()
+	public HomePage()
 	{
 		InitializeComponent();
 	}

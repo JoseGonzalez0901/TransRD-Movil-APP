@@ -2,7 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             xmlns:converters="clr-namespace:TransRD.Converters"
+             xmlns:vm="clr-namespace:TransRD.ViewModels"
              x:Class="TransRD.Views.ReportesPage">
+
+    <ContentPage.BindingContext>
+        <vm:ReportesViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CategoriaColorConverter x:Key="CategoriaColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
 
     <ScrollView VerticalScrollBarVisibility="Never">
         <VerticalStackLayout Padding="20" Spacing="24">
@@ -10,9 +24,29 @@
             <!-- Título -->
             <Label Text="Reportes" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
 
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button Text="Vehículos" 
+            Command="{Binding CambiarCategoriaCommand}" 
+            CommandParameter="Vehículos" 
+            BackgroundColor="{Binding SelectedCategory, Converter={StaticResource CategoriaColorConverter}, ConverterParameter=Vehículos}" 
+            TextColor="White" />
+
+                <Button Text="Rutas" 
+            Command="{Binding CambiarCategoriaCommand}" 
+            CommandParameter="Rutas"
+            BackgroundColor="{Binding SelectedCategory, Converter={StaticResource CategoriaColorConverter}, ConverterParameter=Rutas}" 
+            TextColor="White" />
+
+                <Button Text="Usuarios" 
+            Command="{Binding CambiarCategoriaCommand}" 
+            CommandParameter="Usuarios"
+            BackgroundColor="{Binding SelectedCategory, Converter={StaticResource CategoriaColorConverter}, ConverterParameter=Usuarios}" 
+            TextColor="White" />
+            </HorizontalStackLayout>
+
             <!-- Gráfico con Microcharts -->
             <Frame CornerRadius="12" BorderColor="#E5E7EB" HasShadow="False" Padding="12">
-                <microcharts:ChartView x:Name="Chart" HeightRequest="200" />
+                <microcharts:ChartView Chart="{Binding Chart}" HeightRequest="200" />
             </Frame>
 
             <!-- Título estadísticas -->
@@ -20,60 +54,67 @@
 
             <!-- Estadísticas -->
             <VerticalStackLayout Spacing="12">
-                <!-- Item: Vehículos Activos -->
+
+                <!-- Vehículos Activos -->
                 <Frame CornerRadius="12" BorderColor="#E5E7EB" BackgroundColor="White" Padding="12" HasShadow="False">
                     <HorizontalStackLayout Spacing="12">
                         <Frame BackgroundColor="#EEF4FF" Padding="6" CornerRadius="8" HasShadow="False">
                             <Image Source="busblue_icon.png" WidthRequest="20" HeightRequest="20" />
                         </Frame>
-                        <Label Text="847" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
-                        <Label Text="Vehículos Activos" FontSize="14" TextColor="#6B7280" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                        <Label Text="{Binding VehiculosActivos}" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Vehículos Activos" FontSize="14" TextColor="#6B7280" 
+                               HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                     </HorizontalStackLayout>
                 </Frame>
 
-                <!-- Item: Vehículos Inactivos -->
+                <!-- Vehículos Inactivos -->
                 <Frame CornerRadius="12" BorderColor="#E5E7EB" BackgroundColor="White" Padding="12" HasShadow="False">
                     <HorizontalStackLayout Spacing="12">
                         <Frame BackgroundColor="#FEE2E2" Padding="6" CornerRadius="8" HasShadow="False">
                             <Image Source="busred_icon.png" WidthRequest="20" HeightRequest="20" />
                         </Frame>
-                        <Label Text="45" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
-                        <Label Text="Vehículos Inactivos" FontSize="14" TextColor="#6B7280" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                        <Label Text="{Binding VehiculosInactivos}" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Vehículos Inactivos" FontSize="14" TextColor="#6B7280" 
+                               HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                     </HorizontalStackLayout>
                 </Frame>
 
-                <!-- Item: Rutas Activas -->
+                <!-- Rutas Activas -->
                 <Frame CornerRadius="12" BorderColor="#E5E7EB" BackgroundColor="White" Padding="12" HasShadow="False">
                     <HorizontalStackLayout Spacing="12">
                         <Frame BackgroundColor="#FFF3ED" Padding="6" CornerRadius="8" HasShadow="False">
                             <Image Source="icon_routes.png" WidthRequest="20" HeightRequest="20" />
                         </Frame>
-                        <Label Text="847" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
-                        <Label Text="Rutas Activas" FontSize="14" TextColor="#6B7280" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                        <Label Text="{Binding RutasActivas}" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Rutas Activas" FontSize="14" TextColor="#6B7280" 
+                               HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                     </HorizontalStackLayout>
                 </Frame>
 
-                <!-- Item: Rutas Inactivas -->
+                <!-- Rutas Inactivas -->
                 <Frame CornerRadius="12" BorderColor="#E5E7EB" BackgroundColor="White" Padding="12" HasShadow="False">
                     <HorizontalStackLayout Spacing="12">
                         <Frame BackgroundColor="#FEE2E2" Padding="6" CornerRadius="8" HasShadow="False">
                             <Image Source="icon_routes.png" WidthRequest="20" HeightRequest="20" />
                         </Frame>
-                        <Label Text="20" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
-                        <Label Text="Rutas Inactivas" FontSize="14" TextColor="#6B7280" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                        <Label Text="{Binding RutasInactivas}" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Rutas Inactivas" FontSize="14" TextColor="#6B7280" 
+                               HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                     </HorizontalStackLayout>
                 </Frame>
 
-                <!-- Item: Usuarios Activos -->
+                <!-- Usuarios Activos -->
                 <Frame CornerRadius="12" BorderColor="#E5E7EB" BackgroundColor="White" Padding="12" HasShadow="False">
                     <HorizontalStackLayout Spacing="12">
                         <Frame BackgroundColor="#E9FDF1" Padding="6" CornerRadius="8" HasShadow="False">
                             <Image Source="icon_users.png" WidthRequest="20" HeightRequest="20" />
                         </Frame>
-                        <Label Text="12.5K" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
-                        <Label Text="Usuarios Activos" FontSize="14" TextColor="#6B7280" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                        <Label Text="{Binding UsuariosActivos}" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Usuarios Activos" FontSize="14" TextColor="#6B7280" 
+                               HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                     </HorizontalStackLayout>
                 </Frame>
+
             </VerticalStackLayout>
 
         </VerticalStackLayout>
