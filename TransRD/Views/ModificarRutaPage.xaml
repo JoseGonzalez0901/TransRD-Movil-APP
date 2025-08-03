@@ -16,41 +16,42 @@
                     <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
 
                     <Label Text="Nombre de la Ruta" FontSize="14" TextColor="#111827" />
-                    <Entry Text="OMSA Ruta 10" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding NombreRuta}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Origen" FontSize="14" TextColor="#111827" />
-                    <Entry Text="Av. Máximo Gómez" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Origen}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Destino" FontSize="14" TextColor="#111827" />
-                    <Entry Text="Av. George Washington" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Destino}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Paradas" FontSize="14" TextColor="#111827" />
-                    <Entry Text="7" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Paradas}" Keyboard="Numeric" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Horario" FontSize="14" TextColor="#111827" />
-                    <Entry Text="8:00 a.m. - 7:00 p.m." BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Horario}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Estado" FontSize="14" TextColor="#111827" />
-                    <Entry Text="Activa" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Estado}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Vehículos Asociados -->
                     <Label Text="Vehículos Asociados" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
                     <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
 
                     <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A695142" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Placas[0]}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A621663" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Placas[1]}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A516512" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Placas[2]}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <Label Text="Placa" FontSize="14" TextColor="#111827" />
-                    <Entry Text="A215663" BackgroundColor="#F9FAFB" HeightRequest="44" />
+                    <Entry Text="{Binding Placas[3]}" BackgroundColor="#F9FAFB" HeightRequest="44" />
 
                     <!-- Botón Guardar -->
                     <Button Text="Guardar"
+                            Command="{Binding GuardarCommand}"
                             BackgroundColor="#2563EB"
                             TextColor="White"
                             CornerRadius="12"

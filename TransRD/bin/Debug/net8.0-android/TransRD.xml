@@ -112,6 +112,37 @@
         <member name="P:TransRD.ViewModels.LoginViewModel.NavigateToResetPasswordCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.LoginViewModel.NavigateToResetPasswordAsync"/>.</summary>
         </member>
+        <member name="T:TransRD.ViewModels.ModificarRutaViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.NombreRuta">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.nombreRuta"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Origen">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.origen"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Destino">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.destino"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Paradas">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.paradas"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Horario">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.horario"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Estado">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.estado"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Placas">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.placas"/>
+        </member>
+        <member name="F:TransRD.ViewModels.ModificarRutaViewModel.guardarCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.ModificarRutaViewModel.GuardarCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.GuardarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.ModificarRutaViewModel.GuardarAsync"/>.</summary>
+        </member>
         <member name="T:TransRD.ViewModels.PaymentMethodsViewModel">
             <inheritdoc/>
         </member>
@@ -135,6 +166,63 @@
         </member>
         <member name="P:TransRD.ViewModels.PaymentMethodsViewModel.EscvvValido">
             <inheritdoc cref="F:TransRD.ViewModels.PaymentMethodsViewModel.escvvValido"/>
+        </member>
+        <member name="T:TransRD.ViewModels.PerfilViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.Nombre">
+            <inheritdoc cref="F:TransRD.ViewModels.PerfilViewModel.nombre"/>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.Correo">
+            <inheritdoc cref="F:TransRD.ViewModels.PerfilViewModel.correo"/>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.MiembroDesde">
+            <inheritdoc cref="F:TransRD.ViewModels.PerfilViewModel.miembroDesde"/>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.Notificaciones">
+            <inheritdoc cref="F:TransRD.ViewModels.PerfilViewModel.notificaciones"/>
+        </member>
+        <member name="F:TransRD.ViewModels.PerfilViewModel.irAInformacionPersonalCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.IrAInformacionPersonalCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.IrAInformacionPersonalCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.IrAInformacionPersonal"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PerfilViewModel.irAMetodosPagoCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.IrAMetodosPagoCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.IrAMetodosPagoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.IrAMetodosPago"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PerfilViewModel.irAPrivacidadCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.IrAPrivacidadCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.IrAPrivacidadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.IrAPrivacidad"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PerfilViewModel.irACentroDeAyudaCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.IrACentroDeAyudaCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.IrACentroDeAyudaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.IrACentroDeAyuda"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PerfilViewModel.irAContactoCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.IrAContactoCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.IrAContactoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.IrAContacto"/>.</summary>
+        </member>
+        <member name="F:TransRD.ViewModels.PerfilViewModel.irASobreCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.IrASobreCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.IrASobreCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.IrASobre"/>.</summary>
         </member>
         <member name="T:TransRD.ViewModels.RecuperarClaveViewModel">
             <inheritdoc/>
@@ -295,6 +383,18 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EscvvValido">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EscvvValido" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Correo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Correo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MiembroDesde">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MiembroDesde" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Notificaciones">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Notificaciones" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Mail">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Mail" generated properties.</summary>
         </member>
@@ -405,6 +505,18 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EscvvValido">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EscvvValido" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Correo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Correo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MiembroDesde">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MiembroDesde" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Notificaciones">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Notificaciones" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Mail">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Mail" generated properties.</summary>
