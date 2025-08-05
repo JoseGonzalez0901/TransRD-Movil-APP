@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TransRD.Views.CentroAyudaPage"
-             Title="Centro de Ayuda"
-             BackgroundColor="White">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TransRD.Views.CentroAyudaPage"
+    Shell.NavBarIsVisible="True"
+    Shell.BackgroundColor="White"
+    Shell.NavBarHasShadow="False"
+    Shell.ForegroundColor="Black"
+    BackgroundColor="White">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="16">
-            <Label Text="Preguntas frecuentes" FontSize="20" FontAttributes="Bold" />
-            <Label Text="Aquí puedes encontrar respuestas a las preguntas más comunes sobre la aplicación." />
+            <Label Text="Preguntas frecuentes" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="Aquí puedes encontrar respuestas a las preguntas más comunes sobre la aplicación." TextColor="Black" />
             <!-- Agrega aquí más contenido como Expanders o CollectionView -->
         </VerticalStackLayout>
     </ScrollView>

@@ -11666,7 +11666,8 @@ public final class R {
     public static final int visa_icon=0x7f070126;
     public static final int visibility_icon=0x7f070127;
     public static final int visibilityoff_icon=0x7f070128;
-    public static final int warning_icon=0x7f070129;
+    public static final int warning_40p=0x7f070129;
+    public static final int warning_icon=0x7f07012a;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

@@ -58,5 +58,10 @@ namespace TransRD.ViewModels
         {
             await Shell.Current.DisplayAlert("Privacidad", "Cambios guardados correctamente", "OK");
         }
+        public PrivacidadViewModel()
+        {
+            // Aquí podrías cargar datos del usuario desde un servicio o base de datos
+            // Por ejemplo, cargar el nombre, correo y avatar desde un servicio de usuario
+        }
     }
 }

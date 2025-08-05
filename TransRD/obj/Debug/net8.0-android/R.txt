@@ -3150,7 +3150,8 @@ int drawable user_icon 0x7f070125
 int drawable visa_icon 0x7f070126
 int drawable visibility_icon 0x7f070127
 int drawable visibilityoff_icon 0x7f070128
-int drawable warning_icon 0x7f070129
+int drawable warning_40p 0x7f070129
+int drawable warning_icon 0x7f07012a
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002

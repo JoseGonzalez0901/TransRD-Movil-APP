@@ -1,11 +1,13 @@
+using TransRD.Models;
+using TransRD.ViewModels;
 namespace TransRD.Views;
 
 public partial class RegisterPage : ContentPage
 {
-	public RegisterPage()
+	public RegisterPage(RegisterViewModel viewModel)
 	{
 		InitializeComponent();
-		BindingContext = new ViewModels.RegisterViewModel();
+		BindingContext = viewModel;
 
     }
 }

@@ -1,13 +1,19 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using TransRD.Models;
 using TransRD.Views;
+using TransRD.Interfaces;
+using static Microsoft.Maui.ApplicationModel.Permissions;
+
 namespace TransRD.ViewModels
 {
     public partial class RegisterViewModel : ObservableObject
     {
+        private readonly IAuthService _authService;
+
         [ObservableProperty]
         private string fullName;
 
@@ -23,9 +29,9 @@ namespace TransRD.ViewModels
         [ObservableProperty]
         private bool acceptTerms;
 
-        public RegisterViewModel()
+        public RegisterViewModel(IAuthService authService)
         {
-            
+            _authService = authService;
         }
 
         [RelayCommand]
@@ -34,7 +40,7 @@ namespace TransRD.ViewModels
             if (string.IsNullOrWhiteSpace(FullName) ||
                 string.IsNullOrWhiteSpace(Email) ||
                 string.IsNullOrWhiteSpace(Password) ||
-                string.IsNullOrWhiteSpace(ConfirmPassword))
+                string.IsNullOrWhiteSpace(ConfirmPassword)) 
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Por favor completa todos los campos.", "OK");
                 return;
@@ -52,17 +58,33 @@ namespace TransRD.ViewModels
                 return;
             }
 
-            // Aquí va la lógica de registro real
-            await Application.Current.MainPage.DisplayAlert("Éxito", "Usuario registrado correctamente.", "OK");
-            await Shell.Current.GoToAsync(nameof(LoginPage));
+            try
+            {
+                var request = new RegisterRequest
+                {
+                    Username = FullName,
+                    Email = Email,
+                    NumberPhone = "Phone",
+                    Password = Password,
+                    DateCreation= DateTime.UtcNow,
+                    Status = "Activo"
+                };
 
+                var result = await _authService.RegisterAsync(request);
+
+                await Application.Current.MainPage.DisplayAlert("Éxito", "Usuario registrado correctamente.", "OK");
+                await Shell.Current.GoToAsync(nameof(LoginPage));
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", $"Error al registrar: {ex.Message}", "OK");
+            }
         }
 
         [RelayCommand]
         private async Task NavigateToLoginAsync()
         {
             await Shell.Current.GoToAsync(nameof(LoginPage));
-
         }
     }
 }

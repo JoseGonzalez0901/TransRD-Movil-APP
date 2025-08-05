@@ -35,21 +35,18 @@ namespace TransRD.ViewModels
             "Metro", "OMSA", "Carro"
         };
 
-        // Comando de selección de problema
         [RelayCommand]
-        private void ProblemaSeleccionadoCommand(string problema)
+        private void SeleccionarProblema(string problema)
         {
             ProblemaSeleccionado = problema;
         }
 
-        // Comando de selección de transporte
         [RelayCommand]
-        private void TipoTransporteSeleccionadoCommand(string tipo)
+        private void SeleccionarTransporte(string tipo)
         {
             TipoTransporteSeleccionado = tipo;
         }
 
-        // Comando de guardar reporte
         [RelayCommand]
         private async Task GuardarReporteAsync()
         {
@@ -67,7 +64,7 @@ namespace TransRD.ViewModels
 
             await Shell.Current.DisplayAlert("Reporte Enviado", "Gracias por tu reporte. Hemos recibido la información.", "OK");
 
-            // Lógica de envío real opcional (API, base de datos, etc.)
+            // Enviar reporte real a API si es necesario
         }
     }
 }

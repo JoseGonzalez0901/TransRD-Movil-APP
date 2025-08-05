@@ -1,10 +1,15 @@
-﻿using System.Threading.Tasks;
-using TransRD.Models;
-
-namespace TransRD.Services
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TransRD.Models.Usuarios_Model;
+namespace TransRD.Interfaces
 {
     public interface IPerfilService
     {
-        Task<Perfil?> ObtenerPerfilAsync();
+        Task<Usuario?> ObtenerPerfilAsync();
+        Task<bool> GuardarPerfilAsync(Usuario usuario);
     }
+
 }

@@ -1,21 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using TransRD.Models;
-using TransRD.Services;
+using TransRD.Interfaces;
+using TransRD.Views;
+using TransRD.Models.Usuarios_Model;
 
 namespace TransRD.ViewModels
 {
     public partial class PerfilViewModel : ObservableObject
     {
-        private readonly IPerfilService perfilService;
-
-        public PerfilViewModel()
-        {
-            perfilService = new PerfilService();
-            CargarDatosPerfil();
-        }
-
         // Propiedades del perfil
         [ObservableProperty]
         private string nombre;
@@ -29,56 +24,78 @@ namespace TransRD.ViewModels
         [ObservableProperty]
         private int notificaciones;
 
-        private async void CargarDatosPerfil()
+        private readonly IAuthService _authService;
+        private readonly IPerfilService _perfilservice;
+        public PerfilViewModel(IPerfilService perfilService)
         {
-            var perfil = await perfilService.ObtenerPerfilAsync();
-            if (perfil != null)
-            {
-                Nombre = perfil.Nombre;
-                Correo = perfil.Email;
-                MiembroDesde = $"Member since {perfil.MiembroDesde}";
-            }
+            _perfilservice = perfilService;
 
-            await Task.Delay(500); // Simula otra llamada para notificaciones
-            Notificaciones = 3;
+            CargarPerfil();
         }
+
+        public async Task CargarPerfil()
+        {
+            try
+            {
+                var usuario = await _perfilservice.ObtenerPerfilAsync();
+
+                if (usuario != null)
+                {
+                    Nombre = usuario.Nombre;
+                    Correo = usuario.Email;
+                    MiembroDesde = usuario.FechaRegistro?.ToString("MMMM yyyy") ?? "Desconocido";
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error al cargar el perfil: {ex.Message}");
+            }
+        }
+
+
+
 
         // COMANDOS DE NAVEGACIÓN
 
         [RelayCommand]
         private async Task IrAInformacionPersonal()
         {
-            await Shell.Current.GoToAsync("///PersonalDataPage");
+            await Shell.Current.GoToAsync(nameof(PersonalDataPage));
+
         }
 
         [RelayCommand]
         private async Task IrAMetodosPago()
         {
-            await Shell.Current.GoToAsync("///PaymentMethodsPage");
+            await Shell.Current.GoToAsync(nameof(PaymentMethodsPage));
+
         }
 
         [RelayCommand]
         private async Task IrAPrivacidad()
         {
-            await Shell.Current.GoToAsync("///PrivacidadPage");
+            await Shell.Current.GoToAsync(nameof(PrivacidadPage));
+
         }
 
         [RelayCommand]
         private async Task IrACentroDeAyuda()
         {
-            await Shell.Current.GoToAsync("///CentroAyudaPage");
+            await Shell.Current.GoToAsync(nameof(CentroAyudaPage));
         }
 
         [RelayCommand]
         private async Task IrAContacto()
         {
-            await Shell.Current.GoToAsync("///ContactoPage");
+            await Shell.Current.GoToAsync(nameof(ContactoPage));
+
         }
 
         [RelayCommand]
         private async Task IrASobre()
         {
-            await Shell.Current.GoToAsync("///SobrePage");
+            await Shell.Current.GoToAsync(nameof(SobrePage));
+
         }
     }
 }

@@ -6,7 +6,7 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="*,Auto">
+    <Grid RowDefinitions="*">
 
         <!-- CONTENIDO SCROLLABLE -->
         <ScrollView Grid.Row="0">
@@ -29,12 +29,12 @@
                 </Grid>
 
                 <!-- Usuario -->
-                <Frame CornerRadius="10" BorderColor="#ddd" Padding="10" HasShadow="False">
+                <Frame CornerRadius="10" BorderColor="#E0E0E0" Padding="10" HasShadow="False" BackgroundColor="White">
                     <HorizontalStackLayout Spacing="10">
                         <Image Source="profile_placeholder.png" WidthRequest="60" HeightRequest="60" 
                                BackgroundColor="#eee" Aspect="AspectFill" VerticalOptions="Center" Clip="Circle" />
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="16" />
+                        <VerticalStackLayout VerticalOptions="Center" WidthRequest="200">
+                            <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
                             <Label Text="{Binding Correo}" FontSize="13" TextColor="Gray"/>
                             <Label Text="{Binding MiembroDesde}" FontSize="11" TextColor="Gray"/>
                         </VerticalStackLayout>
@@ -165,12 +165,16 @@
                             <Label Text="Versión de app e info" FontSize="12" TextColor="#8E8E93" />
                         </VerticalStackLayout>
                     </Frame>
-
+                    <Button Text="Cerrar sesión"
+        Command="{Binding LogoutCommand}"
+        BackgroundColor="#EF4444"
+        TextColor="White"
+        CornerRadius="12"
+        FontAttributes="Bold"
+        FontSize="14"
+        HeightRequest="50" />
                 </VerticalStackLayout>
             </VerticalStackLayout>
         </ScrollView>
-
-        <!-- BOTTOM MENU -->
-        <controls:BottomMenuView Grid.Row="1" />
     </Grid>
 </ContentPage>

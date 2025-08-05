@@ -8,9 +8,14 @@ namespace TransRD.Models
 {
     public class RegisterRequest
     {
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public string Username { get; set; }           // Nombre
+        public string Email { get; set; }              // Email
+        public string NumberPhone { get; set; }        // Teléfono
+        public DateTime DateCreation { get; set; }     // Fecha de creación
+        public string Status { get; set; }             // Estado
+        public string Password { get; set; }           // Contraseña
     }
+
+
 
 }

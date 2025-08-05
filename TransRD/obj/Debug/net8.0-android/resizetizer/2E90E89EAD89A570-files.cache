@@ -63,6 +63,7 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\user_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\visa_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\visibilityoff_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\visibility_icon.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\warning_40p.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\warning_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\direction_icon.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png

@@ -4,9 +4,18 @@
              xmlns:vm="clr-namespace:TransRD.ViewModels"
              xmlns:converters="clr-namespace:TransRD.Converters"
              x:Class="TransRD.Views.PaymentMethodsPage"
-             Title="Métodos de pago"
-             BackgroundColor="#F5F6FA">
-
+                Shell.NavBarIsVisible="True"
+                Shell.NavBarHasShadow="False"
+                Shell.BackgroundColor="White"
+                Shell.ForegroundColor="Black"
+                BackgroundColor="White">
+<Shell.TitleView>
+        <Label Text="Métodos de pago"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="Black"
+                />
+    </Shell.TitleView>
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:CardIconConverter x:Key="CardIconConverter"/>
@@ -24,10 +33,10 @@
             <VerticalStackLayout Padding="20" Spacing="16">
 
                 <!-- Título -->
-                <Label Text="Tus métodos de pago" FontSize="16" FontAttributes="Bold"/>
+                <Label Text="Tus métodos de pago" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
 
                 <!-- Lista de tarjetas existentes -->
-                <CollectionView ItemsSource="{Binding Metodos}" Margin="0">
+                <CollectionView ItemsSource="{Binding Tarjetas}" Margin="0">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame CornerRadius="12" BackgroundColor="White" Padding="12" HasShadow="False">
@@ -35,8 +44,12 @@
                                     <Image Source="{Binding Tipo, Converter={StaticResource CardIconConverter}}"
                                            WidthRequest="40" HeightRequest="24" VerticalOptions="Center"/>
                                     <VerticalStackLayout Grid.Column="1" Padding="10,0" VerticalOptions="Center">
-                                        <Label Text="{Binding Numero}" FontSize="16" FontAttributes="Bold"/>
-                                        <Label Text="Expires {Binding Expira}" FontSize="12" TextColor="Gray"/>
+                                        <Label Text="{Binding NumeroTarjeta}" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Expires " TextColor="Black" />
+                                            <Label Text="{Binding FechaExpiracion}" TextColor="Black" />
+                                        </HorizontalStackLayout>
+
                                     </VerticalStackLayout>
                                     <ImageButton Source="edit_icon.png"
                                                  WidthRequest="24"
@@ -61,7 +74,7 @@
                 <!-- Formulario para nuevo método -->
                 <Frame CornerRadius="12" BackgroundColor="White" Padding="16" HasShadow="False">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="Agregar un nuevo método de pago" FontSize="16" FontAttributes="Bold"/>
+                        <Label Text="Agregar un nuevo método de pago" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
 
                         <!-- Número tarjeta -->
                         <Label Text="Número de tarjeta" FontSize="13" TextColor="Gray"/>
@@ -70,7 +83,8 @@
                                 <Entry Placeholder="1234 5678 9012 3456"
                                        BackgroundColor="Transparent"
                                        FontSize="14"
-                                       Text="{Binding NumeroTarjeta}" />
+                                       Text="{Binding NumeroTarjeta}"
+                                       TextColor="Black"/>
                                 <Image Source="card_icon.png" WidthRequest="24" HeightRequest="24" Grid.Column="1" VerticalOptions="Center"/>
                             </Grid>
                         </Frame>
@@ -81,7 +95,7 @@
                             <VerticalStackLayout WidthRequest="150" VerticalOptions="Start">
                                 <Label Text="Fecha de expiración" FontSize="13" TextColor="Gray"/>
                                 <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False" BorderColor="#E0E0E0" HeightRequest="45">
-                                    <Entry Placeholder="MM/YY" BackgroundColor="Transparent" FontSize="14" VerticalOptions="Center" Text="{Binding Expiracion}" />
+                                    <Entry TextColor="Black" Placeholder="MM/YY" BackgroundColor="Transparent" FontSize="14" VerticalOptions="Center" Text="{Binding Expiracion}" />
                                 </Frame>
                             </VerticalStackLayout>
 
@@ -89,7 +103,7 @@
                             <VerticalStackLayout WidthRequest="100" VerticalOptions="Start">
                                 <Label Text="CVV" FontSize="13" TextColor="Gray"/>
                                 <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False" BorderColor="#E0E0E0" HeightRequest="45">
-                                    <Entry Placeholder="•••" BackgroundColor="Transparent" FontSize="14" IsPassword="True" VerticalOptions="Center" Text="{Binding Cvv}" />
+                                    <Entry TextColor="Black" Placeholder="•••" BackgroundColor="Transparent" FontSize="14" IsPassword="True" VerticalOptions="Center" Text="{Binding Cvv}" />
                                 </Frame>
                             </VerticalStackLayout>
                         </HorizontalStackLayout>
@@ -97,16 +111,30 @@
                         <!-- Apodo -->
                         <Label Text="Apodo" FontSize="13" TextColor="Gray"/>
                         <Frame BackgroundColor="#F5F5F5" CornerRadius="8" Padding="4" HasShadow="False" BorderColor="#E0E0E0">
-                            <Entry Placeholder="John Doe" BackgroundColor="Transparent" FontSize="14" Text="{Binding Apodo}" />
+                            <Entry TextColor="Black"  Placeholder="John Doe" BackgroundColor="Transparent" FontSize="14" Text="{Binding Apodo}" />
                         </Frame>
 
                         <!-- Seguridad -->
-                        <Frame BackgroundColor="#EAF2FF" Padding="8" CornerRadius="8" HasShadow="False">
-                            <HorizontalStackLayout Spacing="6">
-                                <Image Source="shieldblue_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center"/>
-                                <Label Text="Su información de pago está encriptada y segura" FontSize="12" VerticalOptions="Center"/>
+                        <Frame BackgroundColor="#F1F7FF"
+                           Padding="12"
+                           CornerRadius="12"
+                           HasShadow="False"
+                           BorderColor="#D0E4FF">
+
+                            <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
+                                <Image Source="shieldblue_icon.png"
+                                   WidthRequest="18"
+                                   HeightRequest="18"
+                                   VerticalOptions="Center"/>
+
+                                <Label Text="Su información de pago está encriptada y segura"
+                                   FontSize="13"
+                                   FontAttributes="None"
+                                   TextColor="#1E4BD2"
+                                   VerticalOptions="Center"/>       
                             </HorizontalStackLayout>
                         </Frame>
+
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>

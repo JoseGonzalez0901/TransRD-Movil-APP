@@ -5,6 +5,8 @@ using Microsoft.Maui.Controls;
 using TransRD.Models;
 using TransRD.Interfaces;
 using System.Threading.Tasks;
+using TransRD.Views;
+using Microsoft.Maui.Storage;
 
 namespace TransRD.ViewModels
 {
@@ -21,8 +23,20 @@ namespace TransRD.ViewModels
         public LoginViewModel(IAuthService authService)
         {
             _authService = authService;
-        }
+            MainThread.BeginInvokeOnMainThread(async () => await VerifyTokenAsync());
 
+        }
+        private async Task VerifyTokenAsync()
+        {
+            var token = Preferences.Get("auth_token", string.Empty);
+
+            if (!string.IsNullOrEmpty(token))
+            {
+                // Usuario autenticado → cargar TabBar dinámico y navegar
+                ShellNavigationHelper.CargarTabBarPrincipal();
+                await Shell.Current.GoToAsync(nameof(HomePage)); // uso de ruta absoluta
+            }
+        }
         [RelayCommand]
         private async Task LoginAsync()
         {
@@ -46,10 +60,12 @@ namespace TransRD.ViewModels
                 if (!string.IsNullOrWhiteSpace(response.Token))
                 {
                     // Puedes guardarlo en Preferences si deseas
-                    // Preferences.Set("auth_token", response.Token);
+                    Preferences.Set("auth_token", response.Token);
 
                     //await Application.Current.MainPage.DisplayAlert("Bienvenido", $"Hola {response.UserName}", "OK");
-                    Application.Current.MainPage = new AppShell();
+                    ShellNavigationHelper.CargarTabBarPrincipal();
+                    await Shell.Current.GoToAsync(nameof(HomePage));
+
                 }
                 else
                 {
@@ -65,13 +81,14 @@ namespace TransRD.ViewModels
         [RelayCommand]
         private async Task NavigateToRegisterAsync()
         {
-            Navigate.NavigateToPage(new Views.RegisterPage(), false);
+            await Shell.Current.GoToAsync(nameof(RegisterPage));
+
         }
 
         [RelayCommand]
         private async Task NavigateToResetPasswordAsync()
         {
-            Navigate.NavigateToPage(new Views.RecuperarClavePage(), true);
+            await Shell.Current.GoToAsync(nameof(RecuperarClavePage));
         }
     }
 }
