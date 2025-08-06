@@ -213,6 +213,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:TransRD.ViewModels.PerfilViewModel.Nombre">
             <inheritdoc cref="F:TransRD.ViewModels.PerfilViewModel.nombre"/>
@@ -225,6 +226,12 @@
         </member>
         <member name="P:TransRD.ViewModels.PerfilViewModel.Notificaciones">
             <inheritdoc cref="F:TransRD.ViewModels.PerfilViewModel.notificaciones"/>
+        </member>
+        <member name="F:TransRD.ViewModels.PerfilViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:TransRD.ViewModels.PerfilViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.PerfilViewModel.Logout"/>.</summary>
         </member>
         <member name="F:TransRD.ViewModels.PerfilViewModel.irAInformacionPersonalCommand">
             <summary>The backing field for <see cref="P:TransRD.ViewModels.PerfilViewModel.IrAInformacionPersonalCommand"/>.</summary>

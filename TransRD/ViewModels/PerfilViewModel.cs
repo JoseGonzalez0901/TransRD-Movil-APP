@@ -53,6 +53,19 @@ namespace TransRD.ViewModels
         }
 
 
+        [RelayCommand]
+        private async Task Logout()
+        {
+            bool confirm = await Application.Current.MainPage.DisplayAlert(
+                "Cerrar sesión", "¿Estás seguro que deseas cerrar sesión?", "Sí", "No");
+
+            if (!confirm) return;
+
+            Preferences.Remove("auth_token");
+
+            // Reiniciar la raíz del Shell para evitar errores
+            Application.Current.MainPage = new AppShell();
+        }
 
 
         // COMANDOS DE NAVEGACIÓN
