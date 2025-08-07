@@ -10,7 +10,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
-        // Registro de rutas
+        // Registro de rutas Usuario
         Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
         Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
         Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
@@ -22,6 +22,13 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(ContactoPage), typeof(ContactoPage));
         Routing.RegisterRoute(nameof(SobrePage), typeof(SobrePage));
         Routing.RegisterRoute(nameof(ReportarProblemaPage), typeof(ReportarProblemaPage));
+
+        //Registro de rutas Admin
+
+        Routing.RegisterRoute(nameof(AdminDashboardPage), typeof(AdminDashboardPage));
+        Routing.RegisterRoute(nameof(AgregarRutaPage), typeof(AgregarRutaPage));
+        Routing.RegisterRoute(nameof(ReportesPage), typeof(ReportesPage));
+
 
         // Llamada diferida para navegación segura
         // MainThread.BeginInvokeOnMainThread(async () => await VerifyTokenAsync());

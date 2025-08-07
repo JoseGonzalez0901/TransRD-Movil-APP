@@ -14,6 +14,7 @@ namespace TransRD.Models
         public DateTime DateCreation { get; set; }     // Fecha de creación
         public string Status { get; set; }             // Estado
         public string Password { get; set; }           // Contraseña
+        public string Rol { get; set; }                // Rol (por ejemplo, "Admin", "User", etc.)
     }
 
 

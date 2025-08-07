@@ -39,7 +39,7 @@ namespace TransRD
                 var httpClient = new HttpClient(handler);
 
                 // ✅ AQUÍ es donde debes colocar la línea:
-                httpClient.BaseAddress = new Uri("http://10.0.0.9:5203/");
+                httpClient.BaseAddress = new Uri("http://10.135.184.26:5203/");
 
                 return new AuthService(httpClient);
             });
@@ -52,7 +52,7 @@ namespace TransRD
 #endif
 
                 var httpClient = new HttpClient(handler);
-                httpClient.BaseAddress = new Uri("http://10.0.0.9:5203/");
+                httpClient.BaseAddress = new Uri("http://10.135.184.26:5203/");
 
                 return new PerfilService(httpClient);
             });

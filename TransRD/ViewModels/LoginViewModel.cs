@@ -13,6 +13,7 @@ namespace TransRD.ViewModels
     public partial class LoginViewModel : ObservableObject
     {
         private readonly IAuthService _authService;
+        private string Rol { get; set; } = "Usuario";
 
         [ObservableProperty]
         private string email;
@@ -29,12 +30,29 @@ namespace TransRD.ViewModels
         private async Task VerifyTokenAsync()
         {
             var token = Preferences.Get("auth_token", string.Empty);
-
+            
             if (!string.IsNullOrEmpty(token))
             {
                 // Usuario autenticado → cargar TabBar dinámico y navegar
-                ShellNavigationHelper.CargarTabBarPrincipal();
-                await Shell.Current.GoToAsync(nameof(HomePage)); // uso de ruta absoluta
+                await VerifyRolAsync();
+            }
+        }
+        private async Task VerifyRolAsync()
+        {
+            var rol = Preferences.Get("rol", string.Empty);
+            if (!string.IsNullOrEmpty(rol))
+            {
+                Rol = rol;
+                if (Rol == "Admin")
+                {
+                    ShellNavigationHelper.CargarTabarAdmin();
+                    await Shell.Current.GoToAsync(nameof(AdminDashboardPage));
+                }
+                else
+                {
+                    ShellNavigationHelper.CargarTabBarPrincipal();
+                    await Shell.Current.GoToAsync(nameof(HomePage));
+                }
             }
         }
         [RelayCommand]
@@ -51,7 +69,8 @@ namespace TransRD.ViewModels
                 var request = new LoginRequest
                 {
                     Email = Email,
-                    Password = Password
+                    Password = Password,
+                    
                 };
 
                 var response = await _authService.LoginAsync(request);
@@ -59,22 +78,31 @@ namespace TransRD.ViewModels
                 // Guardar token local si es necesario
                 if (!string.IsNullOrWhiteSpace(response.Token))
                 {
+
                     // Puedes guardarlo en Preferences si deseas
                     Preferences.Set("auth_token", response.Token);
 
-                    //await Application.Current.MainPage.DisplayAlert("Bienvenido", $"Hola {response.UserName}", "OK");
-                    ShellNavigationHelper.CargarTabBarPrincipal();
-                    await Shell.Current.GoToAsync(nameof(HomePage));
+                    if (!string.IsNullOrWhiteSpace(response.Rol))
+                    {
+                        Preferences.Set("rol", response.Rol);
+                    }
+                    else
+                    {
+                        Preferences.Set("rol", "Usuario");
+
+                    }
+
+                    await VerifyRolAsync();
 
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Token inválido en respuesta", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Error", "Error al iniciar sesion", "OK");
                 }
             }
             catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", $"Error al iniciar sesión: {ex.Message}", "OK");
+                await Application.Current.MainPage.DisplayAlert("Error", $"Error al iniciar sesión", "OK");
             }
         }
 

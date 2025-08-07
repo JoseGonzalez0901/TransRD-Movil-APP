@@ -3510,3 +3510,4 @@ C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-android\
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-android\resizetizer\r\drawable\warning_40p.png
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-android\resizetizer\f\MaterialIcons-Regular.ttf

@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace TransRD.Models
 {
-    public class LoginRequest
+    class ShellAdminNavigationHelper
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string Rol { get; set; } 
     }
-
 }

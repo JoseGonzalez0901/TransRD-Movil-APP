@@ -51,6 +51,34 @@ namespace TransRD.Models
 
             appShell.Items.Add(tabBar);
         }
+        public static void CargarTabarAdmin()
+        {
+            var appShell = AppShell.Current;
+
+            appShell.Items.Clear();
+
+            var tabBar = new TabBar();
+
+            tabBar.Items.Add(new ShellContent
+            {
+                Title = "Inicio_Admin",
+                Icon = "inicio.png",
+                Route = "inicio_admin",
+                ContentTemplate = new DataTemplate(typeof(AdminDashboardPage))
+            });
+
+            tabBar.Items.Add(new ShellContent
+            {
+                Title = "Perfil",
+                Icon = "perfil.png",
+                Route = "perfil",
+                ContentTemplate = new DataTemplate(typeof(PerfilPage))
+            });
+
+            appShell.Items.Add(tabBar);
+
+        }
+
     }
 
 }

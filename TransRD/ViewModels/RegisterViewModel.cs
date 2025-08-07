@@ -67,7 +67,8 @@ namespace TransRD.ViewModels
                     NumberPhone = "Phone",
                     Password = Password,
                     DateCreation= DateTime.UtcNow,
-                    Status = "Activo"
+                    Status = "Activo",
+                    Rol = "User" // Asignar un rol por defecto, puede ser "Admin" o "User"
                 };
 
                 var result = await _authService.RegisterAsync(request);
