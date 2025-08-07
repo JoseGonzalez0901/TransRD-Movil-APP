@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using TransRD.Models;
+using TransRD.Service;
 using TransRD.Views;
 
 namespace TransRD.ViewModels
@@ -22,13 +23,33 @@ namespace TransRD.ViewModels
 
         [ObservableProperty] private ObservableCollection<Alerta> alertas;
 
-        public HomeViewModel()
+
+        ProblemaService _problemaService;
+        public HomeViewModel(ProblemaService problemaService)
         {
-            Alertas = new ObservableCollection<Alerta>
+            _problemaService = problemaService;
+            
+        }
+        public List<string> ProblemasDisponibles { get; } = new()
+        {
+            "Retraso",
+            "Averías del Vehículo",
+            "Preocupación de Seguridad",
+            "Otro"
+        };
+        public async Task LoadAlertasAsync()
+        {
+            var alertasList = await _problemaService.ObtenerReportesAsync();
+            foreach (var alerta in alertasList)
             {
-                new Alerta { Titulo = "Desvío en ruta", Descripcion = "Se realizará un cambio temporal de ruta", Fecha = DateTime.Now.AddMinutes(-10) },
-                new Alerta { Titulo = "Retraso", Descripcion = "Retraso estimado de 5 minutos", Fecha = DateTime.Now.AddMinutes(-25) }
-            };
+                Alertas.Add(
+                    new Alerta
+                    {
+                        Titulo = ProblemasDisponibles[alerta.tipoProblemaId - 1],
+                        Descripcion = alerta.desc_Problema,
+                    }
+                    );
+            }
         }
 
         [RelayCommand]

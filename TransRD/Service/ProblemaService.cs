@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using TransRD.Models;
-namespace TransRD.Services
+namespace TransRD.Service
 {
     public class ProblemaService
     {

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransRD.Views.PlanificarRutaPage"
+             Title="Planificar Ruta"
+             BackgroundColor="White">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+
+        <Label Text="Planificar Ruta" TextColor="Black" FontSize="24" FontAttributes="Bold"/>
+
+        <!-- Filtros -->
+        <ScrollView Orientation="Horizontal">
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Todas" BackgroundColor="#2563EB" TextColor="White" CornerRadius="20" />
+                <Button Text="Express" BackgroundColor="#F3F4F6" TextColor="Black" CornerRadius="20" />
+                <Button Text="Publico" BackgroundColor="#F3F4F6" TextColor="Black" CornerRadius="20" />
+                <Button Text="Metro" BackgroundColor="#F3F4F6" TextColor="Black" CornerRadius="20" />
+            </HorizontalStackLayout>
+        </ScrollView>
+
+        <!-- Tarjetas de rutas -->
+        <VerticalStackLayout Spacing="12">
+
+            <!-- Reutiliza este Frame para cada tarjeta -->
+            <Frame BorderColor="#E5E7EB" CornerRadius="12" Padding="12" BackgroundColor="White">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Image Source="bus_icon.png" WidthRequest="24" HeightRequest="24" />
+                        <Label Text="Omsa" FontSize="16" FontAttributes="Bold" />
+                        <Label Text="25 min" FontSize="16" HorizontalOptions="EndAndExpand" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout>
+                        <Label Text="Directo" FontSize="12" TextColor="Gray" />
+                        <Label Text="$2.50" FontSize="12" HorizontalOptions="EndAndExpand" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="6" Margin="0,8,0,0">
+                        <Label Text="Siguiente : 3 min" FontSize="12" TextColor="Gray" />
+                        <Label Text="Pocos" FontSize="12" TextColor="Gray" />
+                        <Label Text="A tiempo" FontSize="10" TextColor="Green" BackgroundColor="#E0F7E9" Padding="4,2"  />
+                        <Label Text="WiFi" FontSize="10" TextColor="Blue" BackgroundColor="#E0F0FF" Padding="4,2"  />
+                    </HorizontalStackLayout>
+
+                    <Label Text="Ver detalles >" TextColor="#2563EB" FontSize="12" HorizontalOptions="End" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Agrega más tarjetas como la de arriba cambiando el contenido -->
+
+        </VerticalStackLayout>
+
+        <!-- Botones de abajo -->
+        <Grid ColumnDefinitions="*,*" Margin="0,8,0,0">
+            <Button Text="Actualizar" BackgroundColor="#F3F4F6" TextColor="Black" Grid.Column="0" />
+            <Button Text="Guardar ruta" BackgroundColor="#2563EB" TextColor="White" Grid.Column="1" />
+        </Grid>
+
+    </VerticalStackLayout>
+
+</ContentPage>

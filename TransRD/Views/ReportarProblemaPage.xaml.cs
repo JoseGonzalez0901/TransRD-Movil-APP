@@ -4,9 +4,9 @@ namespace TransRD.Views;
 
 public partial class ReportarProblemaPage : ContentPage
 {
-	public ReportarProblemaPage()
+	public ReportarProblemaPage(ReportarProblemaViewModel viewModel)
 	{
 		InitializeComponent();
-        BindingContext = new ReportarProblemaViewModel();
+        BindingContext = viewModel;
     }
 }

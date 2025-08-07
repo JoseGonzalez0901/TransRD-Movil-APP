@@ -137,6 +137,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PersonalData
 build_metadata.AdditionalFiles.TargetPath = Views\PersonalDataPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PersonalDataPage.xaml
 
+[C:/Users/3898272/Source/Repos/TransRD-Movil-APP-/TransRD/Views/PlanificarRutaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PlanificarRutaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PlanificarRutaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PlanificarRutaPage.xaml
+
 [C:/Users/3898272/Source/Repos/TransRD-Movil-APP-/TransRD/Views/PrivacidadPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PrivacidadPage.xaml

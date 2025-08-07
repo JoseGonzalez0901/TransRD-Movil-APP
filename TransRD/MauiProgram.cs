@@ -10,12 +10,16 @@ using TransRD.ViewModels;
 using TransRD.Views;
 using System.Net.Http;
 
+
 namespace TransRD
 {
+
+    
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
         {
+            string IP = "http://10.135.184.26:5203/"; // Cambia por tu IP/API real
             var builder = MauiApp.CreateBuilder();
 
             builder
@@ -39,7 +43,7 @@ namespace TransRD
                 var httpClient = new HttpClient(handler);
 
                 // ✅ AQUÍ es donde debes colocar la línea:
-                httpClient.BaseAddress = new Uri("http://10.135.184.26:5203/");
+                httpClient.BaseAddress = new Uri(IP);
 
                 return new AuthService(httpClient);
             });
@@ -52,10 +56,41 @@ namespace TransRD
 #endif
 
                 var httpClient = new HttpClient(handler);
-                httpClient.BaseAddress = new Uri("http://10.135.184.26:5203/");
+                httpClient.BaseAddress = new Uri(IP);
 
                 return new PerfilService(httpClient);
             });
+
+
+            builder.Services.AddScoped<ProblemaService>(provider =>
+            {
+                var handler = new HttpClientHandler();
+
+#if ANDROID
+    handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+#endif
+
+                var httpClient = new HttpClient(handler);
+                httpClient.BaseAddress = new Uri(IP); // Cambia por tu IP/API real
+
+                return new ProblemaService(httpClient);
+            });
+
+
+            builder.Services.AddScoped<ViajesService>(provider =>
+            {
+                var handler = new HttpClientHandler();
+
+#if ANDROID
+    handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+#endif
+
+                var httpClient = new HttpClient(handler);
+                httpClient.BaseAddress = new Uri(IP); // Igual que arriba
+
+                return new ViajesService(httpClient);
+            });
+
 
             // Registrar VM y Pages
             builder.Services.AddTransient<LoginViewModel>();
@@ -69,6 +104,15 @@ namespace TransRD
 
             builder.Services.AddTransient<PersonalDataViewModel>();
             builder.Services.AddTransient<PersonalDataPage>();
+
+            builder.Services.AddTransient<ReportarProblemaViewModel>();
+            builder.Services.AddTransient<ReportarProblemaPage>();
+
+            builder.Services.AddTransient<HomeViewModel>();
+            builder.Services.AddTransient<HomePage>();
+
+            builder.Services.AddTransient<RoutesViewModel>();
+            builder.Services.AddTransient<RoutesPage>();
             
 
 #if DEBUG

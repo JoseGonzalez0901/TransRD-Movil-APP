@@ -9,10 +9,10 @@ public partial class RoutesPage : ContentPage
 {
     private bool _isFirstLoad = true;
 
-    public RoutesPage()
+    public RoutesPage(RoutesViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = new RoutesViewModel();
+        BindingContext = viewModel;
     }
 
     protected override async void OnAppearing()

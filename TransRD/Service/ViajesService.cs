@@ -5,8 +5,8 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-
-namespace TransRD.Services
+using TransRD.Models;
+namespace TransRD.Service
 {
     public class ViajesService
     {

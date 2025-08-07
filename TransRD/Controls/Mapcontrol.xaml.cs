@@ -65,7 +65,7 @@ public partial class Mapcontrol : ContentView
         var myLocation = await GetMyLocationAsync();
         GoToLocation(myLocation.Longitude, myLocation.Latitude, 50);
     }
-    private static async Task<Position> GetMyLocationAsync()
+    public static async Task<Position> GetMyLocationAsync()
     {
         try
         {

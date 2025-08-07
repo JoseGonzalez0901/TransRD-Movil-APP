@@ -3,13 +3,14 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Maui.Graphics;
 using TransRD.Models;
+using TransRD.Service;
 
 namespace TransRD.ViewModels
 {
     public class RoutesViewModel : ObservableObject
     {
         public ObservableCollection<Route> AvailableRoutes { get; set; } = new();
-
+        public ViajesService _viajesService;
         public ICommand SelectTransportCommand { get; }
 
         private string _selectedTransport;
@@ -39,18 +40,22 @@ namespace TransRD.ViewModels
         public Color PublicosBackground => SelectedTransport == "Públicos" ? Color.FromArgb("#aa00ff") : Colors.LightGray;
         public Color PublicosTextColor => SelectedTransport == "Públicos" ? Colors.White : Colors.Black;
 
-        public RoutesViewModel()
+        public RoutesViewModel(ViajesService viajesService)
         {
             SelectTransportCommand = new Command<string>(OnSelectTransport);
             SelectedTransport = "Metro";
+            _viajesService = viajesService;
         }
 
         public async Task LoadAsync()
         {
             // Simulación de carga de datos iniciales
-            await Task.Delay(50); // opcional
+            
 
             AvailableRoutes.Clear();
+          var rutas=  _viajesService.ObtenerViajesAsync();
+
+
             AvailableRoutes.Add(new Route
             {
                 Line = "Línea 1 - Centro",

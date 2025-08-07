@@ -1,8 +1,10 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using BruTile.Wms;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using TransRD.Service;
+using TransRD.Controls;
 namespace TransRD.ViewModels
 {
     public partial class ReportarProblemaViewModel : ObservableObject
@@ -14,14 +16,20 @@ namespace TransRD.ViewModels
         private string tipoTransporteSeleccionado;
 
         [ObservableProperty]
-        private string matricula = "A34526";
+        private string matricula;
 
         [ObservableProperty]
-        private string ubicacion = "Ubicación actual";
+        private string ubicacion;
 
         [ObservableProperty]
         private string detallesAdicionales;
 
+        private readonly ProblemaService _problemaService;
+
+        public ReportarProblemaViewModel(ProblemaService  problemaService)
+        {
+            _problemaService= problemaService;
+        }
         public List<string> ProblemasDisponibles { get; } = new()
         {
             "Retraso",
@@ -61,10 +69,30 @@ namespace TransRD.ViewModels
                 await Shell.Current.DisplayAlert("Error", "Selecciona el tipo de transporte", "OK");
                 return;
             }
+           var location= await Mapcontrol.GetMyLocationAsync();
 
-            await Shell.Current.DisplayAlert("Reporte Enviado", "Gracias por tu reporte. Hemos recibido la información.", "OK");
+            
+            
+            var request= new Models.ReportarProblemaRequest
+            {
+                tipoProblemaId = ProblemasDisponibles.IndexOf(ProblemaSeleccionado)+1 ,
+                tipoTransporteId = TiposTransporteDisponibles.IndexOf(TipoTransporteSeleccionado)+1,
+                origen_Lat = location.Latitude,
+                origen_Lng = location.Longitude,
+                desc_Problema = DetallesAdicionales
+            };
 
-            // Enviar reporte real a API si es necesario
+            bool resultado = await _problemaService.ReportarProblemaAsync(request);
+
+            if (resultado)
+                await Shell.Current.DisplayAlert("Reporte Enviado", "Gracias por tu reporte. Hemos recibido la información.", "OK");
+
+            else
+                await Shell.Current.DisplayAlert("Error", "Hubo un problema al reportar", "Cerrar");
+
+
+
+            
         }
     }
 }
