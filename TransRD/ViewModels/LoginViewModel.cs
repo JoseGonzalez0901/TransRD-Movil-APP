@@ -82,6 +82,8 @@ namespace TransRD.ViewModels
                     // Puedes guardarlo en Preferences si deseas
                     Preferences.Set("auth_token", response.Token);
 
+                    Preferences.Set("user_id", response.UserId);
+
                     if (!string.IsNullOrWhiteSpace(response.Rol))
                     {
                         Preferences.Set("rol", response.Rol);

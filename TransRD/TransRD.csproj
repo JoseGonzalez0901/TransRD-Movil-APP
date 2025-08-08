@@ -73,6 +73,7 @@
 	  <None Remove="Resources\Images\car_icon.png" />
 	  <None Remove="Resources\Images\credit_card_icon.png" />
 	  <None Remove="Resources\Images\direction_icon.svg" />
+	  <None Remove="Resources\Images\edit_icon.png" />
 	  <None Remove="Resources\Images\historial.png" />
 	  <None Remove="Resources\Images\historial_activo.png" />
 	  <None Remove="Resources\Images\inicio.png" />
@@ -125,6 +126,9 @@
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\ContactoPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\GestionarRutaPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\HistorialPage.xaml">

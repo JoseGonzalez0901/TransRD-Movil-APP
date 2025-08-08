@@ -28,6 +28,9 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(AdminDashboardPage), typeof(AdminDashboardPage));
         Routing.RegisterRoute(nameof(AgregarRutaPage), typeof(AgregarRutaPage));
         Routing.RegisterRoute(nameof(ReportesPage), typeof(ReportesPage));
+        Routing.RegisterRoute(nameof(GestionarRutaPage), typeof(GestionarRutaPage));
+        Routing.RegisterRoute(nameof(AgregarVehiculoPage), typeof(AgregarVehiculoPage));
+        Routing.RegisterRoute(nameof(ModificarRutaPage), typeof(ModificarRutaPage));
 
 
         // Llamada diferida para navegación segura

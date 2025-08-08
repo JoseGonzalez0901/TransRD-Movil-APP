@@ -1,44 +1,86 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using TransRD.Models;
+using TransRD.Service;
 
-namespace TransRD.ViewModels
+namespace TransRD.ViewModels;
+
+public partial class ModificarRutaViewModel : ObservableObject
 {
-    public partial class ModificarRutaViewModel : ObservableObject
+    private readonly ViajesService _viajesService;
+
+    // Id del viaje que se actualiza
+    [ObservableProperty] private int viajeId;
+
+    // Campos mínimos para el PUT (ajústalos a tus bindings/controles)
+    [ObservableProperty] private int usuarioId = 1;
+    [ObservableProperty] private int tipoId = 2; // 1=Metro, 2=OMSA, etc.
+
+    // En tu UI tienes "Origen" y "Destino" como texto; los mapeo a UbicActual/Destino
+    [ObservableProperty] private string origen = "Av. Máximo Gómez";          // -> UbicActual
+    [ObservableProperty] private string destino = "Av. George Washington";     // -> Destino
+
+    // Si no tienes capturas de lat/long en la UI, pon valores reales o deja 0
+    [ObservableProperty] private double origenLat;
+    [ObservableProperty] private double origenLong;
+    [ObservableProperty] private double destLat;
+    [ObservableProperty] private double destLong;
+
+    // Horario: usa DateTime para el PUT (tu UI puede tener DatePicker/TimePicker)
+    [ObservableProperty] private DateTime fechaInicio = DateTime.UtcNow;
+    [ObservableProperty] private DateTime fechaFin    = DateTime.UtcNow.AddMinutes(30);
+
+    [ObservableProperty] private decimal costo = 0;
+
+    public ModificarRutaViewModel(ViajesService viajesService)
     {
-        [ObservableProperty]
-        private string nombreRuta = "OMSA Ruta 10";
+        _viajesService = viajesService;
+    }
 
-        [ObservableProperty]
-        private string origen = "Av. Máximo Gómez";
+    // Llámalo al navegar para precargar el formulario con el Viaje seleccionado
+    public void CargarDesde(ViajeDto v)
+    {
+        ViajeId   = v.ViajeId;
+        UsuarioId = v.UsuarioId;
+        TipoId    = v.TipoId;
 
-        [ObservableProperty]
-        private string destino = "Av. George Washington";
+        Origen    = v.UbicActual ?? Origen;
+        Destino   = v.Destino ?? Destino;
 
-        [ObservableProperty]
-        private string paradas = "7";
+        OrigenLat  = v.OrigenLat;
+        OrigenLong = v.OrigenLong;
+        DestLat    = v.DestLat;
+        DestLong   = v.DestLong;
 
-        [ObservableProperty]
-        private string horario = "8:00 a.m. - 7:00 p.m.";
+        FechaInicio = v.FechaInicio;
+        FechaFin    = v.FechaFin;
 
-        [ObservableProperty]
-        private string estado = "Activa";
+        Costo = v.Costo;
+    }
 
-        [ObservableProperty]
-        private ObservableCollection<string> placas = new()
+    [RelayCommand]
+    private async Task GuardarAsync()
+    {
+        var dto = new ViajeRequest
         {
-            "A695142",
-            "A621663",
-            "A516512",
-            "A215663"
+            UsuarioId   = UsuarioId,
+            TipoId      = TipoId,
+            OrigenLat   = OrigenLat,
+            OrigenLong  = OrigenLong,
+            DestLat     = DestLat,
+            DestLong    = DestLong,
+            FechaInicio = FechaInicio, // ideal en UTC si tu API espera UTC
+            FechaFin    = FechaFin,
+            Costo       = Costo,
+            UbicActual  = Origen,   // mapeo del campo de tu UI
+            Destino     = Destino
         };
 
-        [RelayCommand]
-        private async Task GuardarAsync()
-        {
-            // Aquí podrías hacer una llamada a un servicio o guardar en base de datos
-            await Application.Current.MainPage.DisplayAlert("Ruta", "Ruta guardada correctamente", "OK");
-        }
+        var ok = await _viajesService.ActualizarViajeAsync(ViajeId, dto);
+        if (ok)
+            await Application.Current.MainPage.DisplayAlert("Éxito", "Viaje actualizado", "OK");
+        else
+            await Application.Current.MainPage.DisplayAlert("Error", "No se pudo actualizar el viaje", "OK");
     }
 }

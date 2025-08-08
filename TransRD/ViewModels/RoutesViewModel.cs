@@ -47,28 +47,61 @@ namespace TransRD.ViewModels
             _viajesService = viajesService;
         }
 
-        public async Task LoadAsync()
+        public async Task LoadAsync(CancellationToken ct = default)
         {
-            // Simulación de carga de datos iniciales
-            
-
-            AvailableRoutes.Clear();
-          var rutas=  _viajesService.ObtenerViajesAsync();
-
-
-            AvailableRoutes.Add(new Route
+            try
             {
-                Line = "Línea 1 - Centro",
-                Time = "10 min · 3 paradas",
-                Status = "A tiempo",
-                StatusColor = Colors.Green,
-                Icon = "train_white_icon.png",
-                Backgraound = Color.FromArgb("#ff6d00")
-            });
+                // 1) Llamar al servicio y ESPERAR la respuesta
+                var viajes = await _viajesService.ObtenerViajesAsync(ct);
 
-            OnPropertyChanged(nameof(AvailableRoutes));
+                // 2) Actualizar la lista (en el hilo de UI por seguridad)
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    AvailableRoutes.Clear();
+
+                    foreach (var v in viajes)
+                    {
+                        var (status, color) = GetStatus(v);
+
+                        var (icon, bg) = v.TipoId switch
+                        {
+                            1 => ("train_white_icon.png", Color.FromArgb("#ff6d00")), // Metro
+                            2 => ("bus_white_icon.png", Color.FromArgb("#16a34a")), // OMSA
+                            _ => ("car_white_icon.png", Color.FromArgb("#7c3aed"))  // Carro/otro
+                        };
+
+                        AvailableRoutes.Add(new Route
+                        {
+                            Line = $"Viaje {v.ViajeId}",
+                            // Muestra origen → destino (ajústalo a tu UI)
+                            Time = $"{v.UbicActual} → {v.Destino}",
+                            Status = status,
+                            StatusColor = color,
+                            Icon = icon,
+                            Backgraound = bg
+                        });
+                    }
+                });
+
+                OnPropertyChanged(nameof(AvailableRoutes));
+            }
+            catch (Exception ex)
+            {
+                // Loguea o muestra un alert si quieres
+                System.Diagnostics.Debug.WriteLine(ex);
+            }
         }
+        private static (string status, Color color) GetStatus(ViajeDto v)
+        {
+            // Si tu API entrega UTC con "Z", compara en UTC
+            var now = DateTime.UtcNow;
 
+            if (now < v.FechaInicio) return ("Pendiente", Colors.Gray);
+            if (now <= v.FechaFin) return ("En curso", Colors.Orange);
+            return ("Completado", Colors.Green);
+        }
+        
+        
         private void OnSelectTransport(string selected)
         {
             SelectedTransport = selected;

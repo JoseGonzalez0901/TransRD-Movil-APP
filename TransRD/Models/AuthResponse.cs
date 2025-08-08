@@ -11,6 +11,7 @@ namespace TransRD.Models
         public string Token { get; set; }
         public string Rol { get; set; } // opcional, si se maneja roles
         public string Message { get; set; } // opcional
+        public string UserId { get; set; } // opcional, si se maneja ID de usuario
     }
 
 }

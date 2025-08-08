@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
+using TransRD.Views;
 namespace TransRD.ViewModels;
 
 public partial class AdminDashboardViewModel : ObservableObject
@@ -40,14 +40,16 @@ public partial class AdminDashboardViewModel : ObservableObject
         // Lógica para navegación o mostrar estado detallado
     }
 
-    private void OnAgregarVehiculo()
+    private  async void OnAgregarVehiculo()
     {
-        // Navegación o acción
+        await Shell.Current.GoToAsync(nameof(AgregarVehiculoPage));
+
     }
 
-    private void OnGestionarRutas()
+    private async void OnGestionarRutas()
     {
-        // Navegación o acción
+          //  await Shell.Current.GoToAsync(nameof());
+
     }
 
     private void OnVerReportes()

@@ -14,6 +14,24 @@
             Lógica local al cambiar pestaña.
             </summary>
         </member>
+        <member name="T:TransRD.Models.RutaItem">
+            <inheritdoc/>
+        </member>
+        <member name="P:TransRD.Models.RutaItem.Nombre">
+            <inheritdoc cref="F:TransRD.Models.RutaItem.nombre"/>
+        </member>
+        <member name="P:TransRD.Models.RutaItem.Subtitulo">
+            <inheritdoc cref="F:TransRD.Models.RutaItem.subtitulo"/>
+        </member>
+        <member name="P:TransRD.Models.RutaItem.Icon">
+            <inheritdoc cref="F:TransRD.Models.RutaItem.icon"/>
+        </member>
+        <member name="P:TransRD.Models.RutaItem.IconBg">
+            <inheritdoc cref="F:TransRD.Models.RutaItem.iconBg"/>
+        </member>
+        <member name="P:TransRD.Models.RutaItem.ShowTopDivider">
+            <inheritdoc cref="F:TransRD.Models.RutaItem.showTopDivider"/>
+        </member>
         <member name="T:TransRD.ViewModels.AdminDashboardViewModel">
             <inheritdoc/>
         </member>
@@ -51,14 +69,17 @@
         <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Estado">
             <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.estado"/>
         </member>
-        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.Placas">
-            <inheritdoc cref="F:TransRD.ViewModels.AgregarRutaViewModel.placas"/>
+        <member name="F:TransRD.ViewModels.AgregarRutaViewModel.guardarCommand">
+            <summary>The backing field for <see cref="P:TransRD.ViewModels.AgregarRutaViewModel.GuardarCommand"/>.</summary>
         </member>
-        <member name="F:TransRD.ViewModels.AgregarRutaViewModel.guardarRutaCommand">
-            <summary>The backing field for <see cref="P:TransRD.ViewModels.AgregarRutaViewModel.GuardarRutaCommand"/>.</summary>
+        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.GuardarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.AgregarRutaViewModel.Guardar"/>.</summary>
         </member>
-        <member name="P:TransRD.ViewModels.AgregarRutaViewModel.GuardarRutaCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TransRD.ViewModels.AgregarRutaViewModel.GuardarRutaAsync"/>.</summary>
+        <member name="T:TransRD.ViewModels.VehiculoItem">
+            <inheritdoc/>
+        </member>
+        <member name="P:TransRD.ViewModels.VehiculoItem.Placa">
+            <inheritdoc cref="F:TransRD.ViewModels.VehiculoItem.placa"/>
         </member>
         <member name="T:TransRD.ViewModels.AgregarVehiculoViewModel">
             <inheritdoc/>
@@ -169,8 +190,14 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.NombreRuta">
-            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.nombreRuta"/>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.ViajeId">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.viajeId"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.UsuarioId">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.usuarioId"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.TipoId">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.tipoId"/>
         </member>
         <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Origen">
             <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.origen"/>
@@ -178,17 +205,26 @@
         <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Destino">
             <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.destino"/>
         </member>
-        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Paradas">
-            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.paradas"/>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.OrigenLat">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.origenLat"/>
         </member>
-        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Horario">
-            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.horario"/>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.OrigenLong">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.origenLong"/>
         </member>
-        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Estado">
-            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.estado"/>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.DestLat">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.destLat"/>
         </member>
-        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Placas">
-            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.placas"/>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.DestLong">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.destLong"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.FechaInicio">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.fechaInicio"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.FechaFin">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.fechaFin"/>
+        </member>
+        <member name="P:TransRD.ViewModels.ModificarRutaViewModel.Costo">
+            <inheritdoc cref="F:TransRD.ViewModels.ModificarRutaViewModel.costo"/>
         </member>
         <member name="F:TransRD.ViewModels.ModificarRutaViewModel.guardarCommand">
             <summary>The backing field for <see cref="P:TransRD.ViewModels.ModificarRutaViewModel.GuardarCommand"/>.</summary>
@@ -495,6 +531,21 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Subtitulo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Subtitulo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Icon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Icon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IconBg">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IconBg" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShowTopDivider">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShowTopDivider" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.VehiculosActivos">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "VehiculosActivos" generated properties.</summary>
         </member>
@@ -525,8 +576,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Estado">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Estado" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Placas">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Placas" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Placa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Placa" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Marca">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Marca" generated properties.</summary>
@@ -542,9 +593,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CantidadAsientos">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CantidadAsientos" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Placa">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Placa" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ViajesFiltrados">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ViajesFiltrados" generated properties.</summary>
@@ -576,6 +624,36 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ViajeId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ViajeId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UsuarioId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UsuarioId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TipoId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TipoId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrigenLat">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrigenLat" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrigenLong">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrigenLong" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DestLat">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DestLat" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DestLong">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DestLong" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FechaInicio">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FechaInicio" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FechaFin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FechaFin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Costo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Costo" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tarjetas">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tarjetas" generated properties.</summary>
         </member>
@@ -596,9 +674,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EscvvValido">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EscvvValido" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Nombre">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Nombre" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Correo">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Correo" generated properties.</summary>
@@ -672,6 +747,21 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Subtitulo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Subtitulo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Icon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Icon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IconBg">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IconBg" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShowTopDivider">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShowTopDivider" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.VehiculosActivos">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "VehiculosActivos" generated properties.</summary>
         </member>
@@ -702,8 +792,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Estado">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Estado" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Placas">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Placas" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Placa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Placa" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Marca">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Marca" generated properties.</summary>
@@ -719,9 +809,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CantidadAsientos">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CantidadAsientos" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Placa">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Placa" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ViajesFiltrados">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ViajesFiltrados" generated properties.</summary>
@@ -753,6 +840,36 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ViajeId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ViajeId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UsuarioId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UsuarioId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TipoId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TipoId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrigenLat">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrigenLat" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrigenLong">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrigenLong" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DestLat">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DestLat" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DestLong">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DestLong" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FechaInicio">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FechaInicio" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FechaFin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FechaFin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Costo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Costo" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tarjetas">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tarjetas" generated properties.</summary>
         </member>
@@ -773,9 +890,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EscvvValido">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EscvvValido" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Nombre">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Nombre" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Correo">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Correo" generated properties.</summary>

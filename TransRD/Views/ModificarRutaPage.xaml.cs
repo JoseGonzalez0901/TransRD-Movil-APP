@@ -4,9 +4,9 @@ namespace TransRD.Views;
 
 public partial class ModificarRutaPage : ContentPage
 {
-	public ModificarRutaPage()
+	public ModificarRutaPage(ModificarRutaViewModel  viewModel)
 	{
 		InitializeComponent();
-        BindingContext = new ModificarRutaViewModel();
+        BindingContext = viewModel;
     }
 }
