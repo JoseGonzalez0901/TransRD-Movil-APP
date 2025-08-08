@@ -8,7 +8,6 @@ namespace TransRD.Models
 {
     public class ReporteProblemaDto
     {
-        public int Id { get; set; }
         public int tipoProblemaId { get; set; }
         public int tipoTransporteId { get; set; }
         public double origen_Lat { get; set; }

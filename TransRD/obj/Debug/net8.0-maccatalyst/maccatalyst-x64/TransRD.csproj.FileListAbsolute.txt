@@ -778,3 +778,4 @@ C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-maccatal
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TransRD.csproj.Up2Date
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TransRD.genruntimeconfig.cache
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\TransRD.dll
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\MaterialIcons-Regular.ttf

@@ -28,7 +28,8 @@ namespace TransRD.ViewModels
         public HomeViewModel(ProblemaService problemaService)
         {
             _problemaService = problemaService;
-            
+            alertas = new ObservableCollection<Alerta>();
+
         }
         public List<string> ProblemasDisponibles { get; } = new()
         {

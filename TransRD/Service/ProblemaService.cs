@@ -19,9 +19,18 @@ namespace TransRD.Service
         // Obtener todos los reportes
         public async Task<List<ReporteProblemaDto>> ObtenerReportesAsync()
         {
-            return await _httpClient.GetFromJsonAsync<List<ReporteProblemaDto>>("api/ReportarProblema");
-        }
+            var response = await _httpClient.GetAsync("api/ReportarProblema");
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
 
+                // Deserializar el JSON completo con la propiedad "result"
+                var apiResponse = JsonSerializer.Deserialize<ReporteServiceResponse>(json);
+                return apiResponse.result;
+            }
+            return new List<ReporteProblemaDto>();
+        }
+        
         // Crear un nuevo reporte
         public async Task<bool> ReportarProblemaAsync(ReportarProblemaRequest request)
         {

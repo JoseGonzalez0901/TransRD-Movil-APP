@@ -19,7 +19,7 @@ namespace TransRD
     {
         public static MauiApp CreateMauiApp()
         {
-            string IP = "http://10.135.184.26:5203/"; // Cambia por tu IP/API real
+            string IP = "http://10.235.33.26:5203/"; // Cambia por tu IP/API real
             var builder = MauiApp.CreateBuilder();
 
             builder

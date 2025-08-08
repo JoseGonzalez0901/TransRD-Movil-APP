@@ -1221,3 +1221,11 @@ C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows1
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FluentUI.cs
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MaterialIcons-Regular.ttf
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\OpenSans-Regular.ttf
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\OpenSans-Semibold.ttf
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\FluentUI.cs
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\MaterialIcons-Regular.ttf
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
