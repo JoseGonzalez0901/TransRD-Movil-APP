@@ -4,6 +4,8 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "TransRD.dll" comes first in this list. */
 		"TransRD.dll",
 		"BruTile.dll",
+		"CommunityToolkit.Maui.dll",
+		"CommunityToolkit.Maui.Core.dll",
 		"CommunityToolkit.Mvvm.dll",
 		"ExCSS.dll",
 		"GoogleGson.dll",
@@ -172,9 +174,6 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",
-		"Microsoft.Maui.Controls.HotReload.Forms.dll",
-		"Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll",
-		"Microsoft.VisualStudio.DesignTools.TapContract.dll",
 		"_Microsoft.Android.Resource.Designer.dll",
 	};
 	public static String[] Dependencies = new String[]{

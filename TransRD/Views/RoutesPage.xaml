@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mapsui="clr-namespace:Mapsui.UI.Maui;assembly=Mapsui.UI.Maui"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewmodel="clr-namespace:TransRD.ViewModels"
              xmlns:models="clr-namespace:TransRD.Models"
              xmlns:controls="clr-namespace:TransRD.Controls"
@@ -104,29 +105,74 @@
         <ScrollView Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <VerticalStackLayout Spacing="15" Padding="0">
 
-                <CollectionView ItemsSource="{Binding AvailableRoutes}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <CollectionView x:Name="RoutesList"
+                        ItemsSource="{Binding AvailableRoutes}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedRoute, Mode=TwoWay}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
                     </CollectionView.ItemsLayout>
+
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="models:Route">
-                            <Frame CornerRadius="10" Padding="10" BackgroundColor="White" BorderColor="LightGray" HasShadow="False" HorizontalOptions="FillAndExpand">
-                                <!-- 👇 Tap al Frame: llama al Command del ViewModel y pasa la ruta como parámetro -->
+                            <Frame CornerRadius="10"
+                           Padding="10"
+                           BackgroundColor="White"
+                           BorderColor="LightGray"
+                           HasShadow="False"
+                           HorizontalOptions="FillAndExpand">
+
+                                <!-- Tap: llama al Command en el VM con la ruta como parámetro -->
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer
                                 Command="{Binding BindingContext.SeleccionarRutaCommand, Source={x:Reference ThisPage}}"
                                 CommandParameter="{Binding .}" />
                                 </Frame.GestureRecognizers>
 
+                                <!-- Resalta cuando el item está seleccionado por CollectionView -->
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Normal"/>
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="#EEF2FF"/>
+                                                <Setter Property="BorderColor" Value="#6366F1"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+
                                 <Grid ColumnDefinitions="Auto,*" VerticalOptions="Center">
-                                    <controls:CircleIcon Grid.Column="0" Size="30" IconSize="20" BackgroundColor="{Binding Backgraound}" ImageSource="{Binding Icon}" Margin="0,0,15,0" VerticalOptions="Center" />
-                                    <Grid Grid.Column="1" ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" ColumnSpacing="5">
-                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Line}" FontAttributes="Bold" TextColor="Black" FontSize="14" />
-                                        <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="5" HorizontalOptions="End" VerticalOptions="Center">
+                                    <controls:CircleIcon Grid.Column="0"
+                                                 Size="30"
+                                                 IconSize="20"
+                                                 BackgroundColor="{Binding Backgraound}"
+                                                 ImageSource="{Binding Icon}"
+                                                 Margin="0,0,15,0"
+                                                 VerticalOptions="Center" />
+                                    <Grid Grid.Column="1"
+                                  ColumnDefinitions="*,Auto"
+                                  RowDefinitions="Auto,Auto"
+                                  ColumnSpacing="5">
+                                        <Label Grid.Row="0" Grid.Column="0"
+                                       Text="{Binding Line}"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"
+                                       FontSize="14" />
+                                        <HorizontalStackLayout Grid.Row="0" Grid.Column="1"
+                                                       Spacing="5"
+                                                       HorizontalOptions="End"
+                                                       VerticalOptions="Center">
                                             <Label Text="{Binding Status}" FontSize="12" TextColor="{Binding StatusColor}" />
                                             <controls:CircleIcon Size="12" IconSize="0" BackgroundColor="{Binding StatusColor}" />
                                         </HorizontalStackLayout>
-                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding Time}" FontSize="12" TextColor="Gray" />
+                                        <Label Grid.Row="1" Grid.Column="0"
+                                       Text="{Binding Time}"
+                                       FontSize="12"
+                                       TextColor="Gray" />
                                     </Grid>
                                 </Grid>
                             </Frame>
@@ -147,7 +193,8 @@
                 TextColor="White"
                 CornerRadius="20"
                 HeightRequest="50"
-                HorizontalOptions="FillAndExpand" />
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding PlanificarCommand}"/>
             <!-- Menú inferior -->
 
         </VerticalStackLayout>

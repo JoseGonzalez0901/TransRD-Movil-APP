@@ -23,9 +23,7 @@
                             <Label Text="Vehículos Activos" FontSize="14" TextColor="#6B7280" />
                             <Label Text="{Binding VehiculosActivos}" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
                         </VerticalStackLayout>
-                        <Frame Padding="4" BackgroundColor="#EEF4FF" CornerRadius="8" HasShadow="False">
-                            <Image Source="busblue_icon.png" WidthRequest="20" HeightRequest="20" />
-                        </Frame>
+                       
                     </HorizontalStackLayout>
                 </Frame>
 
@@ -37,9 +35,7 @@
                             <Label Text="Usuarios Activos" FontSize="14" TextColor="#6B7280" />
                             <Label Text="{Binding UsuariosActivos}" FontSize="22" FontAttributes="Bold" TextColor="#111827" />
                         </VerticalStackLayout>
-                        <Frame Padding="4" BackgroundColor="#E9FDF1" CornerRadius="8" HasShadow="False">
-                            <Image Source="icon_users.png" WidthRequest="20" HeightRequest="20" />
-                        </Frame>
+                        
                     </HorizontalStackLayout>
                 </Frame>
 

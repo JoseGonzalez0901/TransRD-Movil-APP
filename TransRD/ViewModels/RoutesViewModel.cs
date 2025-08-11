@@ -12,7 +12,10 @@ namespace TransRD.ViewModels
     {
         public ObservableCollection<Route> AvailableRoutes { get; set; } = new();
         public ViajesService _viajesService;
+        public IniciarViajeRequest ViajeDto { get; set; } = new();
         List<Route> showoutes = new();
+        [ObservableProperty]
+        private Route? selectedRoute;
         public ICommand SelectTransportCommand { get; }
 
         private string _selectedTransport;
@@ -77,9 +80,10 @@ namespace TransRD.ViewModels
 
                         showoutes.Add(new Route
                         {
+                            Id_Ruta = v.ViajeId,
                             Nombre_Ruta = v.nombre_actual,
                             Tipo_Viaje = v.TipoId,
-                            Line = $"Viaje {v.nombre_actual}",
+                            Line = $"{v.nombre_actual}",
                             // Muestra origen → destino (ajústalo a tu UI)
                             Time = $"{v.UbicActual} → {v.Destino}",
                             Status = v.Estado,
@@ -166,12 +170,56 @@ namespace TransRD.ViewModels
             }
         }
         [RelayCommand]
-        Task SeleccionarRuta(Route route) { 
+        private async Task Planificar()
+        {
+            if(ViajeDto is null || SelectedRoute is null)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Viaje no seleccionado", "OK");
+            }
+            else
+            {
+                var confirm = _viajesService.IniciarViaje(ViajeDto);
+                ViajeDto = new IniciarViajeRequest();
+                SelectedRoute = null;
+            }
+      
             
-            
-            
-            
-            /* tu lógica */ return Task.CompletedTask; }
+        }
+        [RelayCommand]
+        private async Task SeleccionarRuta(Route? route)
+        {
+            if (route is null) return;
+
+         var ID=  Convert.ToInt16( Preferences.Get("user_id", null));
+            ViajeDto = new IniciarViajeRequest
+            {
+                ViajeId=route.Id_Ruta, // Asigna el ID del viaje si es necesario
+                Costo = 0, // Asigna el costo si es necesario
+                Origen = "route.UbicacionActual",
+                OrigenLat = 21, // Asigna latitud real si tienes
+                OrigenLong = 21, // Asigna longitud real si tienes
+                DestLat = 21, // Asigna latitud real si tienes
+                DestLong = 21, // Asigna longitud real si tienes
+                FechaInicio = DateTime.UtcNow, // Usa UTC si tu API lo espera
+                FechaFin = DateTime.UtcNow.AddMinutes(30), // Ajusta según tu lógica
+                UserId=ID,
+                NombreActual = route.Nombre_Ruta,
+                TipoId = route.Tipo_Viaje,
+                UbicacionActual = route.Time.Split('→')[0].Trim(),
+                Destino = route.Time.Split('→')[1].Trim(),
+                Estado = route.Status
+            };
+            // 1) Selecciona para que el VisualState "Selected" pinte el Frame
+            SelectedRoute = route;
+
+            // 2) Tu acción (navegar, llamar API, etc.)
+            // await Shell.Current.GoToAsync($"{nameof(DetalleRutaPage)}?id={route.Id}");
+
+            // 3) Deja ver el highlight un instante y desmarca
+            await Task.Delay(120);
+             // vuelve al estado normal sin salir de la página
+        }
+
         private void UpdateTransportVisuals()
         {
             OnPropertyChanged(nameof(MetroBackground));

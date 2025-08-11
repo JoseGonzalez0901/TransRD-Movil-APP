@@ -109,6 +109,7 @@ namespace TransRD.ViewModels
                 UbicacionActual= viajeactual.Destino
             };
             _viajesService.finalizarViajeActulAsync(ID,finalizar);
+            await LoadAlertasAsync();
             // Navegación o visualización de ruta
             //await Shell.Current.DisplayAlert("Ruta", "Mostrando ruta actual", "OK");
         }

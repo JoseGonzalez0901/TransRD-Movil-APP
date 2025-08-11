@@ -14,12 +14,12 @@ public partial class ModificarRutaViewModel : ObservableObject
     [ObservableProperty] private int viajeId;
 
     // Campos mínimos para el PUT (ajústalos a tus bindings/controles)
-    [ObservableProperty] private int usuarioId = 1;
-    [ObservableProperty] private int tipoId = 2; // 1=Metro, 2=OMSA, etc.
+    [ObservableProperty] private int usuarioId ;
+    [ObservableProperty] private int tipoId ; // 1=Metro, 2=OMSA, etc.
 
     // En tu UI tienes "Origen" y "Destino" como texto; los mapeo a UbicActual/Destino
-    [ObservableProperty] private string origen = "Av. Máximo Gómez";          // -> UbicActual
-    [ObservableProperty] private string destino = "Av. George Washington";     // -> Destino
+    [ObservableProperty] private string origen;          // -> UbicActual
+    [ObservableProperty] private string destino;     // -> Destino
 
     // Si no tienes capturas de lat/long en la UI, pon valores reales o deja 0
     [ObservableProperty] private double origenLat;

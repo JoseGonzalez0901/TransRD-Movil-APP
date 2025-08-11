@@ -10,6 +10,7 @@ using TransRD.ViewModels;
 using TransRD.Views;
 using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
+using CommunityToolkit.Maui;
 
 
 namespace TransRD
@@ -20,18 +21,18 @@ namespace TransRD
     {
         public static MauiApp CreateMauiApp()
         {
-            string IP = "https://10.200.83.26:7194/"; // Cambia por tu IP/API real
+            string IP = "https://10.192.215.26:7194/"; // Cambia por tu IP/API real
             var builder = MauiApp.CreateBuilder();
 
             builder
                 .UseMauiApp<App>() // DI para App
                 .UseSkiaSharp()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
             // Registrar AuthService con HttpClient
             builder.Services.AddScoped<IAuthService, AuthService>(provider =>
             {
@@ -113,8 +114,15 @@ namespace TransRD
             
             builder.Services.AddTransient<AgregarRutaViewModel>();
             builder.Services.AddTransient<AgregarRutaPage>();
+
             builder.Services.AddTransient<HistorialViewModel>();
             builder.Services.AddTransient<HistorialPage>();
+
+            builder.Services.AddTransient<GestionarRutaViewModel>();
+            builder.Services.AddTransient<GestionarRutaPage>();
+
+            builder.Services.AddTransient<ModificarRutaViewModel>();
+            builder.Services.AddTransient<ModificarRutaPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

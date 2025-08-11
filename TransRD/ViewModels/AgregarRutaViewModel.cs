@@ -19,11 +19,6 @@ public partial class AgregarRutaViewModel : ObservableObject
     public AgregarRutaViewModel(ViajesService viajesService)
     {
         _viajesService = viajesService;
-        // Ejemplo de 4 campos de placas
-        Vehiculos.Add(new VehiculoItem { Placa = "" });
-        Vehiculos.Add(new VehiculoItem { Placa = "" });
-        Vehiculos.Add(new VehiculoItem { Placa = "" });
-        Vehiculos.Add(new VehiculoItem { Placa = "" });
     }
 
     [RelayCommand]

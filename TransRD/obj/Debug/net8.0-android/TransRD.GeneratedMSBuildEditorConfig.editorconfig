@@ -13,181 +13,179 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TransRD
-build_property.ProjectDir = C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\
+build_property.ProjectDir = C:\Users\3898272\source\repos\TransRD-Movil-APP-\TransRD\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/App.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Controls/BottomMenuView.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Controls/BottomMenuView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Controls.BottomMenuView.xaml
 build_metadata.AdditionalFiles.TargetPath = Controls\BottomMenuView.xaml
 build_metadata.AdditionalFiles.RelativePath = Controls\BottomMenuView.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Controls/CircleIcon.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Controls/CircleIcon.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Controls.CircleIcon.xaml
 build_metadata.AdditionalFiles.TargetPath = Controls\CircleIcon.xaml
 build_metadata.AdditionalFiles.RelativePath = Controls\CircleIcon.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Controls/Mapcontrol.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Controls/Mapcontrol.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Controls.Mapcontrol.xaml
 build_metadata.AdditionalFiles.TargetPath = Controls\Mapcontrol.xaml
 build_metadata.AdditionalFiles.RelativePath = Controls\Mapcontrol.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Controls/PasswordEntry.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Controls/PasswordEntry.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Controls.PasswordEntry.xaml
 build_metadata.AdditionalFiles.TargetPath = Controls\PasswordEntry.xaml
 build_metadata.AdditionalFiles.RelativePath = Controls\PasswordEntry.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Resources/Styles/Colors.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Resources/Styles/Styles.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/AdminDashboardPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/AdminDashboardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.AdminDashboardPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AdminDashboardPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AdminDashboardPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/AgregarRutaPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/AgregarRutaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.AgregarRutaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AgregarRutaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AgregarRutaPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/AgregarVehiculoPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/AgregarVehiculoPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.AgregarVehiculoPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AgregarVehiculoPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AgregarVehiculoPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/AppShell.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AppShell.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/CentroAyudaPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/CentroAyudaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.CentroAyudaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CentroAyudaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CentroAyudaPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/ContactoPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/ContactoPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ContactoPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ContactoPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ContactoPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/GestionarRutaPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/GestionarRutaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.GestionarRutaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\GestionarRutaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\GestionarRutaPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/HistorialPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/HistorialPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.HistorialPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\HistorialPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\HistorialPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/Homepage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/Homepage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.Homepage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Homepage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Homepage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/LoginPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/ModificarRutaPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/ModificarRutaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ModificarRutaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ModificarRutaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ModificarRutaPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/PaymentMethodsPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/PaymentMethodsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PaymentMethodsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PaymentMethodsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PaymentMethodsPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/PerfilPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/PerfilPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PerfilPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PerfilPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PerfilPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/PersonalDataPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/PersonalDataPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PersonalDataPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PersonalDataPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PersonalDataPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/PlanificarRutaPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/PlanificarRutaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PlanificarRutaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PlanificarRutaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PlanificarRutaPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/PrivacidadPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/PrivacidadPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.PrivacidadPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PrivacidadPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PrivacidadPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/RecuperarClavePage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/RecuperarClavePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.RecuperarClavePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RecuperarClavePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RecuperarClavePage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/RegisterPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/RegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.RegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RegisterPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/ReportarProblemaPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/ReportarProblemaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ReportarProblemaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ReportarProblemaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ReportarProblemaPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/ReportesPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/ReportesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.ReportesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ReportesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ReportesPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/RoutesPage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/RoutesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.RoutesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RoutesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RoutesPage.xaml
 
-[C:/Users/joser/source/repos/TransRD-Movil-APP-/TransRD/Views/SobrePage.xaml]
+[C:/Users/3898272/source/repos/TransRD-Movil-APP-/TransRD/Views/SobrePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TransRD.Views.SobrePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SobrePage.xaml

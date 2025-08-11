@@ -8,10 +8,6 @@
     BackgroundColor="#F3F4F6"
     Title="Gestionar Ruta">
 
-    <ContentPage.BindingContext>
-        <viewmodels:GestionarRutaViewModel />
-    </ContentPage.BindingContext>
-
     <Grid RowDefinitions="Auto,*,Auto" Padding="16">
 
         <!-- Header -->

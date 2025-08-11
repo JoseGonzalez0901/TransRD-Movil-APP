@@ -25,6 +25,19 @@ public class ViajesService
         _http.DefaultRequestHeaders.Authorization =
             string.IsNullOrWhiteSpace(token) ? null : new AuthenticationHeaderValue("Bearer", token);
     }
+    public async Task<bool> IniciarViaje(IniciarViajeRequest viaje, CancellationToken ct = default)
+    {
+        EnsureAuthHeader();
+        var content = new StringContent(JsonSerializer.Serialize(viaje, _json), Encoding.UTF8, "application/json");
+        var resp = await _http.PostAsync("api/Viajes/actual/post", content, ct);
+        if (resp.IsSuccessStatusCode)
+        {
+            await Application.Current.MainPage.DisplayAlert("Exito", "Viaje iniciado corretamente.", "OK");
+            return true;
+        }
+        await Application.Current.MainPage.DisplayAlert("Error", "Comuniquese con soporte", "OK");
+        return false;
+    }
     public async Task<FinalizarViaje>finalizarViajeActulAsync(string id, FinalizarViaje request, CancellationToken ct = default)
     {
         EnsureAuthHeader();

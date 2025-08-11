@@ -98,6 +98,7 @@
 
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
 		<PackageReference Include="Mapsui.Maui" Version="4.1.9" />
 		<PackageReference Include="Microcharts.Maui" Version="1.0.1" />

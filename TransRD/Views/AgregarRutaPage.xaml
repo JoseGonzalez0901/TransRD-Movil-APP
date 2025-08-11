@@ -28,51 +28,34 @@
 
                     <VerticalStackLayout Spacing="8">
                         <Label Text="Nombre de la Ruta" FontSize="14" TextColor="#374151" />
-                        <Entry Text="{Binding NombreRuta}" Placeholder="Nombre de la ruta" />
+                        <Entry Text="{Binding NombreRuta}" Placeholder="Nombre de la ruta" TextColor="Black" />
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="8">
                         <Label Text="Origen" FontSize="14" TextColor="#374151" />
-                        <Entry Text="{Binding Origen}" Placeholder="Origen" />
+                        <Entry Text="{Binding Origen}" Placeholder="Origen" TextColor="Black" />
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="8">
                         <Label Text="Destino" FontSize="14" TextColor="#374151" />
-                        <Entry Text="{Binding Destino}" Placeholder="Destino" />
+                        <Entry Text="{Binding Destino}" Placeholder="Destino" TextColor="Black"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="8">
                         <Label Text="Paradas" FontSize="14" TextColor="#374151" />
-                        <Entry Text="{Binding Paradas}" Keyboard="Numeric" Placeholder="Cantidad" />
+                        <Entry Text="{Binding Paradas}" Keyboard="Numeric" Placeholder="Cantidad" TextColor="Black" />
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="8">
                         <Label Text="Horario" FontSize="14" TextColor="#374151" />
-                        <Entry Text="{Binding Horario}" Placeholder="Ej. 8:00 a.m. - 7:00 p.m." />
+                        <Entry Text="{Binding Horario}" Placeholder="Ej. 8:00 a.m. - 7:00 p.m." TextColor="Black" />
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="8">
                         <Label Text="Estado" FontSize="14" TextColor="#374151" />
-                        <Entry Text="{Binding Estado}" Placeholder="Activa/Inactiva" />
+                        <Entry Text="{Binding Estado}" Placeholder="Activa/Inactiva" TextColor="Black" />
                     </VerticalStackLayout>
 
-                    <!-- Vehículos Asociados -->
-                    <Label Text="Vehículos Asociados"
-                           FontAttributes="Bold"
-                           FontSize="16"
-                           TextColor="#111827"
-                           Margin="0,8,0,0"/>
-
-                    <CollectionView ItemsSource="{Binding Vehiculos}" SelectionMode="None">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <VerticalStackLayout Spacing="8">
-                                    <Label Text="Placa" FontSize="14" TextColor="#374151" />
-                                    <Entry Text="{Binding Placa}" Placeholder="Número de placa" />
-                                </VerticalStackLayout>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
 
                 </VerticalStackLayout>
             </Frame>

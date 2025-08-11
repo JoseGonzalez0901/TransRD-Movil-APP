@@ -20,8 +20,9 @@ public partial class GestionarRutaViewModel : ObservableObject
     public IRelayCommand<RutaItem> EliminarCommand { get; }
     public IRelayCommand AgregarCommand { get; }
 
-    public GestionarRutaViewModel()
+    public GestionarRutaViewModel(ViajesService viajesService)
     {
+        _viajesService = viajesService;
         GoBackCommand = new RelayCommand(async () =>
         {
             // Navegación hacia atrás
@@ -50,7 +51,7 @@ public partial class GestionarRutaViewModel : ObservableObject
             Shell.Current.GoToAsync(nameof(AgregarRutaPage));
         });
 
-        Seed();
+        //Seed();
     }
     public async Task LoadAsync(CancellationToken ct = default)
     {
@@ -74,20 +75,18 @@ public partial class GestionarRutaViewModel : ObservableObject
                         2 => ("bus_white_icon.png", Color.FromArgb("#16a34a")), // OMSA
                         _ => ("car_white_icon.png", Color.FromArgb("#7c3aed"))  // Carro/otro
                     };
-
-                    AvailableRoutes.Add(new Route
+                    Rutas.Add(new RutaItem
                     {
-                        Line = $"Viaje {v.ViajeId}",
-                        // Muestra origen → destino (ajústalo a tu UI)
-                        Time = $"{v.UbicActual} → {v.Destino}",
-                        Status = status,
-                        StatusColor = color,
-                        Icon = icon
-                       
+                        Id = v.ViajeId.ToString(),
+                        Nombre = $"{v.nombre_actual}",
+                        Subtitulo = $"{v.UbicActual} → {v.Destino}",
+                        Icon = icon,
+                        IconBg = bg
                     });
                 }
             });
-
+            for (int i = 0; i < Rutas.Count; i++)
+                Rutas[i].ShowTopDivider = i != 0;
             OnPropertyChanged(nameof(AvailableRoutes));
         }
         catch (Exception ex)
@@ -124,8 +123,7 @@ public partial class GestionarRutaViewModel : ObservableObject
         Add("OMSA Ruta 210", "30 autobuses activos", "ic_bus.png", verde);
 
         // marcar separadores (muestra línea sobre cada item excepto el primero)
-        for (int i = 0; i < Rutas.Count; i++)
-            Rutas[i].ShowTopDivider = i != 0;
+        
     }
 
     private void Add(string nombre, string subtitulo, string icon, Color bg)
