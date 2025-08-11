@@ -8,8 +8,8 @@ namespace TransRD.Interfaces
 {
     public interface IPerfilService
     {
-        Task<Usuario?> ObtenerPerfilAsync();
-        Task<bool> GuardarPerfilAsync(Usuario usuario);
+        Task<Usuario?>  ObtenerPerfilAsync();
+        Task<bool> GuardarPerfilAsync(Usuario usuario, CancellationToken ct = default);
     }
 
 }

@@ -17,12 +17,12 @@
 
                     <VerticalStackLayout Spacing="2">
                         <Label Text="Portal principal" FontAttributes="Bold" FontSize="18" TextColor="White"/>
-                        <Label Text="Ruta #45A - OMSA" FontSize="13" TextColor="White"/>
+                        <Label Text="{Binding RutaName}" FontSize="13" TextColor="White"/>
                     </VerticalStackLayout>
 
                     <HorizontalStackLayout Grid.Column="1" Spacing="6" VerticalOptions="Center">
-                        <Ellipse WidthRequest="10" HeightRequest="10" Fill="LimeGreen"/>
-                        <Label Text="Activo" TextColor="White" FontSize="13"/>
+                        <Ellipse WidthRequest="10" HeightRequest="10" Fill="{Binding Estado}"/>
+                        <Label Text="{Binding EstadoName}" TextColor="White" FontSize="13"/>
                     </HorizontalStackLayout>
                 </Grid>
             </Frame>
@@ -45,12 +45,12 @@
                     <Frame Grid.Column="1"
                        Padding="10,2"
                        CornerRadius="50"
-                       BackgroundColor="#22C55E"   
+                       BackgroundColor="{Binding Estado}"   
                                         HasShadow="False"
                        VerticalOptions="Center"
                        HorizontalOptions="End"
                        IsClippedToBounds="True">
-                    <Label Text="Activo"
+                        <Label Text="{Binding EstadoName}"
                         TextColor="White"
                         FontSize="12"
                         FontAttributes="Bold"
@@ -96,7 +96,7 @@
                 </Frame>
 
                 <!-- Ver Ruta -->
-                <Frame BackgroundColor="#3B82F6"
+                <Frame BackgroundColor="#EF4444"
            CornerRadius="12"
            Padding="12"
            WidthRequest="150"
@@ -109,7 +109,7 @@
 
                         <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="6">
                             <Image Source="route_icon.png" WidthRequest="16" HeightRequest="16"/>
-                            <Label Text="Ver Ruta" TextColor="White" FontSize="14" VerticalOptions="Center"/>
+                            <Label Text="Finalizar" TextColor="White" FontSize="14" VerticalOptions="Center"/>
                         </HorizontalStackLayout>
                     </Grid>
                 </Frame>

@@ -19,7 +19,7 @@ namespace TransRD
     {
         public static MauiApp CreateMauiApp()
         {
-            string IP = "http://10.235.33.26:5203/"; // Cambia por tu IP/API real
+            string IP = "https://10.0.0.9:7194/"; // Cambia por tu IP/API real
             var builder = MauiApp.CreateBuilder();
 
             builder
@@ -60,8 +60,6 @@ namespace TransRD
 
                 return new PerfilService(httpClient);
             });
-
-
             builder.Services.AddScoped<ProblemaService>(provider =>
             {
                 var handler = new HttpClientHandler();
@@ -75,8 +73,6 @@ namespace TransRD
 
                 return new ProblemaService(httpClient);
             });
-
-
             builder.Services.AddScoped<ViajesService>(provider =>
             {
                 var handler = new HttpClientHandler();
@@ -114,6 +110,8 @@ namespace TransRD
             builder.Services.AddTransient<RoutesViewModel>();
             builder.Services.AddTransient<RoutesPage>();
             
+            builder.Services.AddTransient<AgregarRutaViewModel>();
+            builder.Services.AddTransient<AgregarRutaPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

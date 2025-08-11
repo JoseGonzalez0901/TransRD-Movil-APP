@@ -44,12 +44,7 @@ namespace TransRD.ViewModels
         {
             return new List<Viaje>
             {
-                new Viaje("Metro línea 1", "Centro Olímpico → Villa Mella", "2:45 PM", "35 min", "RD$20", "Terminado", "Metro"),
-                new Viaje("OMSA", "Zona Colonial → Gazcue", "11:20 AM", "22 min", "RD$15", "Terminado", "OMSA"),
-                new Viaje("Carro Público", "Malecón → Plaza de Armas", "6:15 PM", "18 min", "RD$25", "Terminado", "Autos"),
-                new Viaje("Metro línea 2", "Mamá Tingó → Villa Mella", "2:30 PM", "42 min", "RD$20", "Cancelado", "Metro"),
-                new Viaje("OMSA Route 8", "Los Alcarrizos → Centro", "9:45 AM", "28 min", "RD$15", "Terminado", "OMSA"),
-                new Viaje("Carro Público", "Bella Vista → Naco", "Lunes 4:20 PM", "15 min", "RD$30", "Terminado", "Autos")
+      
             };
         }
     }

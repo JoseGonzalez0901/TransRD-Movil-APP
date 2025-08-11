@@ -1242,3 +1242,4 @@ C:\Users\3898272\Source\Repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-ios\io
 C:\Users\3898272\Source\Repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\TransRD.genruntimeconfig.cache
 C:\Users\3898272\Source\Repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\ref\TransRD.dll
 C:\Users\3898272\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\edit_icon.png
+C:\Users\joser\source\repos\TransRD-Movil-APP-\TransRD\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\edit_icon.png

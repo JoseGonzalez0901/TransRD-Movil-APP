@@ -63,6 +63,16 @@ namespace TransRD.ViewModels
         private async Task GuardarCambios()
         {
             // Aquí deberías enviar los datos a tu API real
+            Usuario usuario = new Usuario
+            {
+                Nombre = nombre,
+                Email=correo,
+                Telefono=telefono
+
+
+
+            };
+            _perfilService.GuardarPerfilAsync(usuario);
             await Application.Current.MainPage.DisplayAlert("Guardado", "Tus datos han sido actualizados.", "OK");
         }
     }

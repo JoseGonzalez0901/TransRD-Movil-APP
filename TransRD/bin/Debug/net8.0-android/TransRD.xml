@@ -123,6 +123,15 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
+        <member name="P:TransRD.ViewModels.HomeViewModel.RutaName">
+            <inheritdoc cref="F:TransRD.ViewModels.HomeViewModel.rutaName"/>
+        </member>
+        <member name="P:TransRD.ViewModels.HomeViewModel.EstadoName">
+            <inheritdoc cref="F:TransRD.ViewModels.HomeViewModel.estadoName"/>
+        </member>
+        <member name="P:TransRD.ViewModels.HomeViewModel.Estado">
+            <inheritdoc cref="F:TransRD.ViewModels.HomeViewModel.estado"/>
+        </member>
         <member name="P:TransRD.ViewModels.HomeViewModel.SiguienteParada">
             <inheritdoc cref="F:TransRD.ViewModels.HomeViewModel.siguienteParada"/>
         </member>
@@ -600,6 +609,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CategoriaSeleccionada">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CategoriaSeleccionada" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RutaName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RutaName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EstadoName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EstadoName" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SiguienteParada">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SiguienteParada" generated properties.</summary>
         </member>
@@ -815,6 +830,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CategoriaSeleccionada">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CategoriaSeleccionada" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RutaName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RutaName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EstadoName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EstadoName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SiguienteParada">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SiguienteParada" generated properties.</summary>

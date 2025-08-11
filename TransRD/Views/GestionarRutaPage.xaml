@@ -117,7 +117,7 @@
                 CornerRadius="10"
                 BackgroundColor="#2563EB"
                 TextColor="White"
-                Clicked="OnAgregarRutaClicked"
+                Command="{Binding BindingContext.AgregarCommand, Source={x:Reference ThisPage}}"
                 ImageSource="plus_icon.png"
                 ContentLayout="Left,12"
                 FontAttributes="Bold"

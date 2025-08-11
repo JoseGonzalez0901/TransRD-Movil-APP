@@ -8,9 +8,6 @@
     BackgroundColor="#F3F4F6"
     Title="Agregar Ruta">
 
-    <ContentPage.BindingContext>
-        <viewmodels:AgregarRutaViewModel />
-    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout Padding="16" Spacing="16">

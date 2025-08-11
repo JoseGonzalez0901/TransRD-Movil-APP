@@ -9,6 +9,8 @@ namespace TransRD.Models
 {
     public class ViajeDto
     {
+        public string Origen { get; set; }
+        public string nombre_actual { get; set; }
         [JsonPropertyName("viajeId")] public int ViajeId { get; set; }
         [JsonPropertyName("usuarioId")] public int UsuarioId { get; set; }
         [JsonPropertyName("tipoId")] public int TipoId { get; set; }
@@ -21,5 +23,7 @@ namespace TransRD.Models
         [JsonPropertyName("costo")] public decimal Costo { get; set; }
         [JsonPropertyName("ubicActual")] public string? UbicActual { get; set; }
         [JsonPropertyName("destino")] public string? Destino { get; set; }
+
+        [JsonPropertyName("estado")] public string Estado { get; set; }
     }
 }

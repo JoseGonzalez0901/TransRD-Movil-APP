@@ -4,9 +4,9 @@ namespace TransRD.Views;
 
 public partial class AgregarRutaPage : ContentPage
 {
-	public AgregarRutaPage()
+	public AgregarRutaPage(AgregarRutaViewModel viewModel)
 	{
         InitializeComponent();
-        BindingContext = new AgregarRutaViewModel();
+        BindingContext = viewModel;
     }
 }

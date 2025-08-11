@@ -8,6 +8,9 @@ using TransRD.Interfaces;
 using System.Net.Http;
 using System.Text.Json;
 using TransRD.Models.Usuarios_Model;
+using System.Net.Http.Headers;
+using System.Text.Json.Serialization;
+using TransRD.Models;
 namespace TransRD.Service
 {
     public class PerfilService : IPerfilService
@@ -31,18 +34,57 @@ namespace TransRD.Service
                 return null;
 
             var json = await response.Content.ReadAsStringAsync();
-            var wrapper = JsonSerializer.Deserialize<UsuarioResponse>(json, new JsonSerializerOptions
+            var wrapper = JsonSerializer.Deserialize<UsuarioEnvelope>(json, new JsonSerializerOptions
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             });
 
-            return wrapper?.Result?.Usuario;
+            return wrapper?.Usuario;
         }
-
-        public async Task<bool> GuardarPerfilAsync(Usuario usuario)
+        private void EnsureAuthHeader()
         {
-            var response = await _httpClient.PutAsJsonAsync("api/Perfil", usuario);
-            return response.IsSuccessStatusCode;
+            var token = Preferences.Get("auth_token", null); // <- tu clave
+            _httpClient.DefaultRequestHeaders.Authorization =
+                string.IsNullOrWhiteSpace(token) ? null : new AuthenticationHeaderValue("Bearer", token);
+        }
+        public async Task<bool> GuardarPerfilAsync(Usuario usuario, CancellationToken ct = default)
+        {
+
+            var token = Preferences.Get("auth_token", string.Empty);
+            if (string.IsNullOrWhiteSpace(token))
+                return false;
+
+            // Authorization header (recomendado)
+            using var req = new HttpRequestMessage(HttpMethod.Put, "api/Usuarios/me");
+            req.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            // Body según el contrato que mostraste
+            var payload = new UpdateUsuarioRequest
+            {
+                Token = token, // si tu API lo requiere también en el body
+                Usuario = new UsuarioUpdate
+                {
+                    Nombre= usuario.Nombre,
+                    Email = usuario.Email,
+                    Telefono = usuario.Telefono,
+                    Estado = "Activo",
+                    Foto = "usuario.Foto",
+                    Roles = "Usuario",
+                    FechaRegistro = DateTime.UtcNow, // o la fecha que quieras
+                }
+            };
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
+
+            var json = JsonSerializer.Serialize(payload, options);
+            req.Content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            using var res = await _httpClient.SendAsync(req, ct);
+            return res.IsSuccessStatusCode;
         }
     }
 

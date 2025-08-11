@@ -25,7 +25,44 @@ public class ViajesService
         _http.DefaultRequestHeaders.Authorization =
             string.IsNullOrWhiteSpace(token) ? null : new AuthenticationHeaderValue("Bearer", token);
     }
+    public async Task<FinalizarViaje>finalizarViajeActulAsync(int id, FinalizarViaje request, CancellationToken ct = default)
+    {
+        EnsureAuthHeader();
+        var content = new StringContent(JsonSerializer.Serialize(request, _json), Encoding.UTF8, "application/json");
+        var resp = await _http.PutAsync($"api/Viajes/actual/Put/{id}", content, ct);
+        resp.EnsureSuccessStatusCode();
+        var env = await resp.Content.ReadFromJsonAsync<ApiEnvelope<FinalizarViaje>>(_json, ct);
+        return new FinalizarViaje();
+    }
+    public async Task<ViajeDto?> obtenerHistorialViajes(CancellationToken ct = default)
+    {
+        EnsureAuthHeader();
+        var resp = await _http.GetAsync("api/Viajes", ct);
+        resp.EnsureSuccessStatusCode();
+        var env = await resp.Content.ReadFromJsonAsync<ApiEnvelope<List<ViajeDto>>>(_json, ct);
+        return new ViajeDto();
+    }
 
+    public async Task <ViajeDto?> ObtenerViajeActualAsync(string ID,CancellationToken ct = default)
+    {
+        EnsureAuthHeader();
+        try
+        {
+            var resp = await _http.GetAsync($"api/Viajes/actual/Get/{ID}", ct);
+            if (resp.StatusCode == System.Net.HttpStatusCode.NotFound) return null;
+            resp.EnsureSuccessStatusCode();
+            var env = await resp.Content.ReadFromJsonAsync<ApiEnvelope<ViajeDto>>(_json, ct);
+            return env?.Result;
+        }
+        catch
+        {
+            // Manejo de excepciones, por ejemplo, si el servidor no responde
+
+            return null; // o lanzar una excepción personalizada
+        }
+        
+        
+    }
     public async Task<List<ViajeDto>> ObtenerViajesAsync(CancellationToken ct = default)
     {
         EnsureAuthHeader();

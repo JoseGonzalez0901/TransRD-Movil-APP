@@ -1,16 +1,18 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Graphics;
 using TransRD.Models;
 using TransRD.Service;
 
 namespace TransRD.ViewModels
 {
-    public class RoutesViewModel : ObservableObject
+    public partial class RoutesViewModel : ObservableObject
     {
         public ObservableCollection<Route> AvailableRoutes { get; set; } = new();
         public ViajesService _viajesService;
+        List<Route> showoutes = new();
         public ICommand SelectTransportCommand { get; }
 
         private string _selectedTransport;
@@ -54,10 +56,11 @@ namespace TransRD.ViewModels
                 // 1) Llamar al servicio y ESPERAR la respuesta
                 var viajes = await _viajesService.ObtenerViajesAsync(ct);
 
+            
                 // 2) Actualizar la lista (en el hilo de UI por seguridad)
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    AvailableRoutes.Clear();
+                    showoutes.Clear();
 
                     foreach (var v in viajes)
                     {
@@ -70,8 +73,11 @@ namespace TransRD.ViewModels
                             _ => ("car_white_icon.png", Color.FromArgb("#7c3aed"))  // Carro/otro
                         };
 
-                        AvailableRoutes.Add(new Route
+
+
+                        showoutes.Add(new Route
                         {
+                            Id = v.ViajeId.ToString(),
                             Line = $"Viaje {v.ViajeId}",
                             // Muestra origen → destino (ajústalo a tu UI)
                             Time = $"{v.UbicActual} → {v.Destino}",
@@ -82,6 +88,10 @@ namespace TransRD.ViewModels
                         });
                     }
                 });
+                if (viajes.Count > 0)
+                {
+                    OnSelectTransport(SelectedTransport);
+                }
 
                 OnPropertyChanged(nameof(AvailableRoutes));
             }
@@ -100,8 +110,11 @@ namespace TransRD.ViewModels
             if (now <= v.FechaFin) return ("En curso", Colors.Orange);
             return ("Completado", Colors.Green);
         }
-        
-        
+        public List<string> TiposTransporteDisponibles { get; } = new()
+        {
+            "Metro", "OMSA", "Carro"
+        };
+
         private void OnSelectTransport(string selected)
         {
             SelectedTransport = selected;
@@ -130,17 +143,39 @@ namespace TransRD.ViewModels
                 _ => ("Desconocido", Colors.Gray)
             };
 
-            if (AvailableRoutes.Count > 0)
+           var id_transporte= TiposTransporteDisponibles.IndexOf(selected)+1;
+
+            AvailableRoutes.Clear();
+
+            if (showoutes.Count > 0)
             {
-                var route = AvailableRoutes[0];
-                route.Icon = icon;
-                route.Backgraound = color;
-                route.Status = status.Item1;
-                route.StatusColor = status.Item2;
+                foreach (var route in showoutes)
+                {
+                    if(route.Id==id_transporte.ToString())
+                    {
+                        route.Line = $"Viaje {route.Id}";
+                        route.Icon = icon;
+                        route.Backgraound = color;
+                        route.Status = status.Item1;
+                        route.StatusColor = status.Item2;
+                        AvailableRoutes.Add(route);
+                    }
+                }
                 OnPropertyChanged(nameof(AvailableRoutes));
             }
         }
+        //[RelayCommand]
+      /*  private void SelectRoute(Route route)
+        {
+            if (route == null) return;
 
+            // Desmarcar todos
+            foreach (var r in AvailableRoutes)
+                r.IsSelected = false;
+
+            // Marcar seleccionado
+            route.IsSelected = true;
+        }*/
         private void UpdateTransportVisuals()
         {
             OnPropertyChanged(nameof(MetroBackground));

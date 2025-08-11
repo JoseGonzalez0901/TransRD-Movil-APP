@@ -10,9 +10,12 @@ namespace TransRD.ViewModels
 {
     public partial class HomeViewModel : ObservableObject
     {
-        [ObservableProperty] private string siguienteParada = "Plaza de la Cultura";
+        [ObservableProperty] private string rutaName;
+        [ObservableProperty] private string estadoName;
+        [ObservableProperty] private Color estado;
+        [ObservableProperty] private string siguienteParada ;
         [ObservableProperty] private string eta = "3 min";
-        [ObservableProperty] private string pasajeros = "12/45";
+        [ObservableProperty] private string pasajeros = "1/45";
         [ObservableProperty]
         private string titulo = "Mi título de ejemplo";
         [ObservableProperty]
@@ -23,10 +26,12 @@ namespace TransRD.ViewModels
 
         [ObservableProperty] private ObservableCollection<Alerta> alertas;
 
-
+        ViajesService _viajesService;
         ProblemaService _problemaService;
-        public HomeViewModel(ProblemaService problemaService)
+        private int IDViajeactual { get; set; }
+        public HomeViewModel(ProblemaService problemaService,ViajesService viajesService)
         {
+            _viajesService = viajesService;
             _problemaService = problemaService;
             alertas = new ObservableCollection<Alerta>();
 
@@ -40,7 +45,25 @@ namespace TransRD.ViewModels
         };
         public async Task LoadAlertasAsync()
         {
+           var ID= Preferences.Get("user_id", null);
+
             var alertasList = await _problemaService.ObtenerReportesAsync();
+            var viajeactual = await _viajesService.ObtenerViajeActualAsync(ID);
+            if(viajeactual!=null)
+            {
+                RutaName = viajeactual.nombre_actual;
+                Estado = Colors.LimeGreen;
+                SiguienteParada = viajeactual.Destino;
+                EstadoName = "Activo";
+                IDViajeactual = viajeactual.ViajeId;
+            }
+            else
+            {
+                EstadoName= "Inactivo";
+                estado = Colors.Red;
+                siguienteParada = "No hay viaje actual";
+            }
+            Alertas.Clear();
             foreach (var alerta in alertasList)
             {
                 Alertas.Add(
@@ -64,6 +87,20 @@ namespace TransRD.ViewModels
         [RelayCommand]
         private async Task VerRuta()
         {
+            bool confirm = await Application.Current.MainPage.DisplayAlert(
+               "Terminar Viaje", "¿Estás seguro que deseas Terminar el viaje?", "Sí", "No");
+
+            if (!confirm) return;
+            var ID = Preferences.Get("user_id", null);
+            var viajeactual = await _viajesService.ObtenerViajeActualAsync(ID);
+            var finalizar = new FinalizarViaje
+            {
+                Estado = "Terminado",
+                Destino=viajeactual.Destino,
+                Origen = viajeactual.Origen,
+                UbicacionActual= viajeactual.Destino
+            };
+            _viajesService.finalizarViajeActulAsync(IDViajeactual,finalizar);
             // Navegación o visualización de ruta
             await Shell.Current.DisplayAlert("Ruta", "Mostrando ruta actual", "OK");
         }

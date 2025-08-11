@@ -12,6 +12,6 @@
     <ShellContent
         Title="Login"
         Route="loginpage"
-        ContentTemplate="{DataTemplate views:ModificarRutaPage}" />
+        ContentTemplate="{DataTemplate views:LoginPage}" />
 
 </Shell>

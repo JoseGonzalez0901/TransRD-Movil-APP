@@ -82,8 +82,8 @@ public partial class GestionarRutaViewModel : ObservableObject
                         Time = $"{v.UbicActual} → {v.Destino}",
                         Status = status,
                         StatusColor = color,
-                        Icon = icon,
-                        Backgraound = bg
+                        Icon = icon
+                       
                     });
                 }
             });

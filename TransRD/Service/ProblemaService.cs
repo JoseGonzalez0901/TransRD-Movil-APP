@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
@@ -15,25 +16,43 @@ namespace TransRD.Service
         {
             _httpClient = httpClient;
         }
+        private static readonly JsonSerializerOptions _jsonOptions = new()
+        {
+            PropertyNameCaseInsensitive = true // tolera mayúsculas/minúsculas
+        };
+        private void EnsureAuthHeader()
+        {
+            var token = Preferences.Get("auth_token", null); // <- tu clave
+            _httpClient.DefaultRequestHeaders.Authorization =
+                string.IsNullOrWhiteSpace(token) ? null : new AuthenticationHeaderValue("bearer", token);
+        }
 
         // Obtener todos los reportes
-        public async Task<List<ReporteProblemaDto>> ObtenerReportesAsync()
+        public async Task<List<ReporteProblemaDto>> ObtenerReportesAsync(CancellationToken ct = default)
         {
-            var response = await _httpClient.GetAsync("api/ReportarProblema");
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
+            EnsureAuthHeader();
 
-                // Deserializar el JSON completo con la propiedad "result"
-                var apiResponse = JsonSerializer.Deserialize<ReporteServiceResponse>(json);
-                return apiResponse.result;
+            using var response = await _httpClient.GetAsync("api/ReportarProblema", ct);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                // Si quieres, aquí puedes disparar un flujo de refresh/login
+                return new List<ReporteProblemaDto>();
             }
-            return new List<ReporteProblemaDto>();
+
+            response.EnsureSuccessStatusCode();
+
+            var json = await response.Content.ReadAsStringAsync(ct);
+
+            var envelope = JsonSerializer.Deserialize<ApiEnvelope<List<ReporteProblemaDto>>>(json, _jsonOptions);
+
+            return envelope?.Result ?? new List<ReporteProblemaDto>();
         }
-        
+
         // Crear un nuevo reporte
         public async Task<bool> ReportarProblemaAsync(ReportarProblemaRequest request)
         {
+            EnsureAuthHeader();
             var json = JsonSerializer.Serialize(request);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 

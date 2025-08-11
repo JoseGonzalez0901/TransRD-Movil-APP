@@ -48,7 +48,7 @@ public partial class AdminDashboardViewModel : ObservableObject
 
     private async void OnGestionarRutas()
     {
-          //  await Shell.Current.GoToAsync(nameof());
+          await Shell.Current.GoToAsync(nameof(GestionarRutaPage));
 
     }
 

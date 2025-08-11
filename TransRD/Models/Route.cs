@@ -6,6 +6,7 @@ namespace TransRD.Models
 {
     public class Route : INotifyPropertyChanged
     {
+        private string id;
         private string line;
         private string time;
         private string status;
@@ -13,6 +14,11 @@ namespace TransRD.Models
         private string icon;
         private Color backgraound;
 
+        public string Id
+        {
+            get => id;
+            set => SetProperty(ref id, value);
+        }
         public string Line
         {
             get => line;
