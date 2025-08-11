@@ -18,13 +18,13 @@ public partial class RoutesPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-
+        if (BindingContext is RoutesViewModel vm)
+            await vm.LoadAsync();
         if (_isFirstLoad)
         {
             _isFirstLoad = false;
 
-            if (BindingContext is RoutesViewModel vm)
-                await vm.LoadAsync();
+            
 
             var map = MyMapControl.Map;
 

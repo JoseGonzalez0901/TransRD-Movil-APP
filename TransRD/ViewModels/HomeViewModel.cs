@@ -49,7 +49,7 @@ namespace TransRD.ViewModels
 
             var alertasList = await _problemaService.ObtenerReportesAsync();
             var viajeactual = await _viajesService.ObtenerViajeActualAsync(ID);
-            if(viajeactual!=null)
+            if(viajeactual!=null&&viajeactual.Estado=="Disponible")
             {
                 RutaName = viajeactual.nombre_actual;
                 Estado = Colors.LimeGreen;
@@ -59,9 +59,11 @@ namespace TransRD.ViewModels
             }
             else
             {
-                EstadoName= "Inactivo";
-                estado = Colors.Red;
-                siguienteParada = "No hay viaje actual";
+                RutaName = "No hay viaje actual";
+                EstadoName = "Inactivo";
+                Eta = "N/A";
+                Estado = Colors.Red;
+                SiguienteParada = "No hay viaje actual";
             }
             Alertas.Clear();
             foreach (var alerta in alertasList)
@@ -87,12 +89,18 @@ namespace TransRD.ViewModels
         [RelayCommand]
         private async Task VerRuta()
         {
+            var ID = Preferences.Get("user_id", null);
+            var viajeactual = await _viajesService.ObtenerViajeActualAsync(ID);
+            if (viajeactual == null)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "No hay viaje actual para finalizar.", "OK");
+                return;
+            }
             bool confirm = await Application.Current.MainPage.DisplayAlert(
                "Terminar Viaje", "¿Estás seguro que deseas Terminar el viaje?", "Sí", "No");
 
             if (!confirm) return;
-            var ID = Preferences.Get("user_id", null);
-            var viajeactual = await _viajesService.ObtenerViajeActualAsync(ID);
+           
             var finalizar = new FinalizarViaje
             {
                 Estado = "Terminado",
@@ -100,9 +108,9 @@ namespace TransRD.ViewModels
                 Origen = viajeactual.Origen,
                 UbicacionActual= viajeactual.Destino
             };
-            _viajesService.finalizarViajeActulAsync(IDViajeactual,finalizar);
+            _viajesService.finalizarViajeActulAsync(ID,finalizar);
             // Navegación o visualización de ruta
-            await Shell.Current.DisplayAlert("Ruta", "Mostrando ruta actual", "OK");
+            //await Shell.Current.DisplayAlert("Ruta", "Mostrando ruta actual", "OK");
         }
     }
 }

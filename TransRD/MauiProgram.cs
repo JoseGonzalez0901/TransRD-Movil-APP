@@ -9,6 +9,7 @@ using TransRD.Service;
 using TransRD.ViewModels;
 using TransRD.Views;
 using System.Net.Http;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace TransRD
@@ -19,7 +20,7 @@ namespace TransRD
     {
         public static MauiApp CreateMauiApp()
         {
-            string IP = "https://10.0.0.9:7194/"; // Cambia por tu IP/API real
+            string IP = "https://10.200.83.26:7194/"; // Cambia por tu IP/API real
             var builder = MauiApp.CreateBuilder();
 
             builder
@@ -112,6 +113,8 @@ namespace TransRD
             
             builder.Services.AddTransient<AgregarRutaViewModel>();
             builder.Services.AddTransient<AgregarRutaPage>();
+            builder.Services.AddTransient<HistorialViewModel>();
+            builder.Services.AddTransient<HistorialPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

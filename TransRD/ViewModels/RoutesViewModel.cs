@@ -77,11 +77,12 @@ namespace TransRD.ViewModels
 
                         showoutes.Add(new Route
                         {
-                            Id = v.ViajeId.ToString(),
-                            Line = $"Viaje {v.ViajeId}",
+                            Nombre_Ruta = v.nombre_actual,
+                            Tipo_Viaje = v.TipoId,
+                            Line = $"Viaje {v.nombre_actual}",
                             // Muestra origen → destino (ajústalo a tu UI)
                             Time = $"{v.UbicActual} → {v.Destino}",
-                            Status = status,
+                            Status = v.Estado,
                             StatusColor = color,
                             Icon = icon,
                             Backgraound = bg
@@ -151,12 +152,12 @@ namespace TransRD.ViewModels
             {
                 foreach (var route in showoutes)
                 {
-                    if(route.Id==id_transporte.ToString())
+                    if(route.Tipo_Viaje==id_transporte)
                     {
-                        route.Line = $"Viaje {route.Id}";
+                        route.Line = $"{route.Line}";
                         route.Icon = icon;
                         route.Backgraound = color;
-                        route.Status = status.Item1;
+                        route.Status = route.Status;
                         route.StatusColor = status.Item2;
                         AvailableRoutes.Add(route);
                     }
@@ -164,18 +165,13 @@ namespace TransRD.ViewModels
                 OnPropertyChanged(nameof(AvailableRoutes));
             }
         }
-        //[RelayCommand]
-      /*  private void SelectRoute(Route route)
-        {
-            if (route == null) return;
-
-            // Desmarcar todos
-            foreach (var r in AvailableRoutes)
-                r.IsSelected = false;
-
-            // Marcar seleccionado
-            route.IsSelected = true;
-        }*/
+        [RelayCommand]
+        Task SeleccionarRuta(Route route) { 
+            
+            
+            
+            
+            /* tu lógica */ return Task.CompletedTask; }
         private void UpdateTransportVisuals()
         {
             OnPropertyChanged(nameof(MetroBackground));

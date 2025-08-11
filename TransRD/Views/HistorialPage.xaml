@@ -8,9 +8,6 @@
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False">
 
-    <ContentPage.BindingContext>
-        <vm:HistorialViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <ResourceDictionary>

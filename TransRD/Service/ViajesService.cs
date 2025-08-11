@@ -25,7 +25,7 @@ public class ViajesService
         _http.DefaultRequestHeaders.Authorization =
             string.IsNullOrWhiteSpace(token) ? null : new AuthenticationHeaderValue("Bearer", token);
     }
-    public async Task<FinalizarViaje>finalizarViajeActulAsync(int id, FinalizarViaje request, CancellationToken ct = default)
+    public async Task<FinalizarViaje>finalizarViajeActulAsync(string id, FinalizarViaje request, CancellationToken ct = default)
     {
         EnsureAuthHeader();
         var content = new StringContent(JsonSerializer.Serialize(request, _json), Encoding.UTF8, "application/json");
@@ -34,14 +34,17 @@ public class ViajesService
         var env = await resp.Content.ReadFromJsonAsync<ApiEnvelope<FinalizarViaje>>(_json, ct);
         return new FinalizarViaje();
     }
-    public async Task<ViajeDto?> obtenerHistorialViajes(CancellationToken ct = default)
+    // Devuelve lista vacía si 404 o 204
+    public async Task<List<ViajeDto>> ObtenerHistorialViajesAsync(string id, CancellationToken ct = default)
     {
+
         EnsureAuthHeader();
-        var resp = await _http.GetAsync("api/Viajes", ct);
+        var resp = await _http.GetAsync($"api/Viajes/historial/{id}", ct);
         resp.EnsureSuccessStatusCode();
         var env = await resp.Content.ReadFromJsonAsync<ApiEnvelope<List<ViajeDto>>>(_json, ct);
-        return new ViajeDto();
+        return env?.Result ?? new();
     }
+
 
     public async Task <ViajeDto?> ObtenerViajeActualAsync(string ID,CancellationToken ct = default)
     {

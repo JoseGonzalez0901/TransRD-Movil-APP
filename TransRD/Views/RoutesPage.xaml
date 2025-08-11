@@ -7,6 +7,7 @@
              xmlns:controls="clr-namespace:TransRD.Controls"
              x:Class="TransRD.Views.RoutesPage"
              x:DataType="viewmodel:RoutesViewModel"
+             x:Name="ThisPage"
              BackgroundColor="White"
              Title="TransRD"
              NavigationPage.HasNavigationBar="False">
@@ -110,6 +111,13 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="models:Route">
                             <Frame CornerRadius="10" Padding="10" BackgroundColor="White" BorderColor="LightGray" HasShadow="False" HorizontalOptions="FillAndExpand">
+                                <!-- 👇 Tap al Frame: llama al Command del ViewModel y pasa la ruta como parámetro -->
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                Command="{Binding BindingContext.SeleccionarRutaCommand, Source={x:Reference ThisPage}}"
+                                CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+
                                 <Grid ColumnDefinitions="Auto,*" VerticalOptions="Center">
                                     <controls:CircleIcon Grid.Column="0" Size="30" IconSize="20" BackgroundColor="{Binding Backgraound}" ImageSource="{Binding Icon}" Margin="0,0,15,0" VerticalOptions="Center" />
                                     <Grid Grid.Column="1" ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" ColumnSpacing="5">
